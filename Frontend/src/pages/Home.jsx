@@ -3,8 +3,20 @@ import { Link } from "react-router-dom";
 import logo from "../assets/SiteSliceLogo.svg";
 import TextCycleInput from "../components/TextCycleInput";
 import { motion } from "framer-motion";
-import isUrlHttp from 'is-url-http';
 import ErrorMsg from "../components/ErrorMsg";
+
+function isUrlHttp(str){
+  const pattern = new RegExp(
+    '^([a-zA-Z]+:\\/\\/)?' + // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR IP (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+      '(\\#[-a-z\\d_]*)?$', // fragment locator
+    'i'
+  );
+  return pattern.test(str);
+}
 
 export default function Home() {
   const [siteLink, setSitLink] = useState(null);
@@ -50,7 +62,7 @@ export default function Home() {
         className={`mt-4 h-10 relative hover-slice flex justify-center items-center h-auto bg-gradient-to-r from-red-400 to-orange-300 px-4 py-2 text-lg rounded-md text-white font-bold`}>
         Slice it!
       </Link>
-      : <ErrorMsg text="Enter a URL to start editing"/>
+      : <ErrorMsg text="Enter a link to a webpage you own to start editing. It should start with either https:// or http://"/>
     }
     </div>
     

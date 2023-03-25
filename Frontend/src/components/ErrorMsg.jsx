@@ -6,7 +6,7 @@ const ErrorMsg = ({ text }) => {
   
 
   return (
-    <div className="mt-4 h-10 relative flex justify-center items-center h-auto bg-gradient-to-r from-red-400 to-orange-300 px-4 py-2 text-lg rounded-md text-white font-bold">
+    <div className="mt-4 h-10 text-gray-500">
       { text }
     </div>
   );

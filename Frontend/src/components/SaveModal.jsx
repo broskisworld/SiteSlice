@@ -28,13 +28,14 @@ const SaveModal = ({handleClose, handleSave}) => {
     <Backdrop onClick={handleClose}>
     <motion.div
       onClick={(e) => e.stopPropagation()}
-      className="w-40 h-40 bg-red-500"
+      className="max-w-lg w-full h-80 bg-white rounded-md flex items-center justify-center flex-col p-8"
       variants={slideIn}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
-      <button onClick={handleSave}>Actually Save?</button>
+      <p className="text-center my-8">Are you sure you want to save?<br/>This will permanantly update your files.</p>
+      <button className="flex justify-center items-center h-auto bg-gradient-to-r from-red-400 to-orange-300 p-4 rounded-md text-white font-bold" onClick={handleSave}>Push Changes to Live Server</button>
     </motion.div>
   </Backdrop>
   )

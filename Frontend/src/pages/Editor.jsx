@@ -52,25 +52,6 @@ export default function Editor() {
     }
 
     console.log(body)
-
-    /*
-    fetch('http://localhost:5500/save', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/json', 
-        },
-        body: '{ "url": "/Users/borkson/Code/HackUSU/SiteSlice/Frontend/Testbench/Basic-site/index.html","ftp_username": "root","ftp_password": "password","changes": [{"uuid": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d","old_inner_html": "This is a test paragraph", "new_inner_html": "hey baby"}]}'
-    })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data)
-    })
-    .catch((error) => {
-      console.log("Error:", error);
-    });*/
-
-    //'{ "url": "/Users/borkson/Code/HackUSU/SiteSlice/Frontend/Testbench/Basic-site/index.html","ftp_username": "root","ftp_password": "password","changes": [{"uuid": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d","old_inner_html": "This is a test paragraph", "new_inner_html": "hey baby"}]}'
     
     axios.post('http://localhost:5500/save', {
       headers: {
