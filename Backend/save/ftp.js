@@ -23,8 +23,11 @@ const getFile = (filePath, fileName, username, password, host, port, callback) =
 const uploadFile = async (filePath, fileName, username, password, host, port, callback) => {
     const c = new client();
     c.on('ready', function() {
-        c.put(filePath, fs.readFileSync(fileName), function(err) {
-            if (err) throw err;
+        c.put("save/tmp/" + fileName, filePath, function(err) {
+            if (err) {
+                console.log(err);
+                throw err;
+            }
             c.end();
             callback();
         });
@@ -41,7 +44,6 @@ const uploadFile = async (filePath, fileName, username, password, host, port, ca
 const listFiles = async (filePath, username, password, host, port) => {
     const c = new client();
     c.on('ready', function() {
-        console.log('Connected to FTP server');
         c.list(filePath, function(err, list) {
             if (err) throw err;
             console.dir(list);
