@@ -1,14 +1,15 @@
 const client = require('ftp');
+const fs = require('fs');
 
-const getFile = async (filePath, fileName, username, password, host, port) => {
-    const c = new client();
+const getFile = (filePath, fileName, username, password, host, port, callback) => {
+    var c = new client();
     c.on('ready', function() {
-        console.log('Connected to FTP server');
-        c.get(filePath, function(err, stream) {
-            if (err) throw err;
-            stream.once('close', function() { c.end(); });
-            stream.pipe("tmp/" + fileName);
-        });
+      c.get(filePath, function(err, stream) {
+        if (err) throw err;
+        stream.once('close', function() { c.end(); 
+            callback();});
+        stream.pipe(fs.createWriteStream('save/tmp/'+fileName));
+      });
     });
 
     c.connect({
@@ -17,17 +18,15 @@ const getFile = async (filePath, fileName, username, password, host, port) => {
         user: username,
         password: password
     });
-
-    return "tmp/" + fileName;
 };
 
-const uploadFile = async (filePath, fileName, username, password, host, port) => {
+const uploadFile = async (filePath, fileName, username, password, host, port, callback) => {
     const c = new client();
     c.on('ready', function() {
-        console.log('Connected to FTP server');
-        c.put('tmp/'+fileName, filePath, function(err) {
+        c.put(filePath, fs.readFileSync(fileName), function(err) {
             if (err) throw err;
             c.end();
+            callback();
         });
     });
 
