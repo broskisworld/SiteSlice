@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const models = require('./db/models');
+const db = require('./db/db');
 
 // Import middlewares
 const body_parser = require('body-parser');
@@ -17,6 +19,7 @@ const save_routes = require('./save/save_routes.js');
 app.use(body_parser.json());
 
 // Connect to the database
+const instance = db.connect();
 
 // Create new routes for proxy and save
 
