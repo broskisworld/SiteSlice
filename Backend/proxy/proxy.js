@@ -1,5 +1,6 @@
 const axios = require('axios');
 const xpath = require('xpath');
+const cheerio = require('cheerio');
 const client = require('../db/db').client;
 const uuid = require('uuid').v4;
 const { DOMParser, XMLSerializer} = require('xmldom');
@@ -61,13 +62,19 @@ const proxy = (async (req, res) => {
 
         console.log(`Added ${add_refs_to_db_result} elements to the DB!`)
 
-        // Proxy links
-        // let links = xpath.select("//a/@href", doc);
+        // Re-export to str and then into cheerio for better html specific parsing
+        let xml_doc_output_str = new XMLSerializer().serializeToString(doc);
+        let $ = cheerio.load(xml_doc_output_str);
 
         // Add Injectables.js
-
-        // Re-export
+        $('head').append('<script src="http://localhost:5173/injectables/injectables.js"></script>')
         
+        // Proxy links
+        // let links = xpath.select("//a/@href", doc);
+        
+        // Export cheerio doc
+        let doc_output_str = $.root().html();
+
         res.status(200).send(`<div style="background:#fdba74;">${site_slice_header}</div></br>${doc_output_str}`);
 
         // Done!
