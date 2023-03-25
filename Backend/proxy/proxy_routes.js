@@ -1,18 +1,10 @@
 // Import router
 const router = require('express').Router();
+const proxy = require('./proxy');
 
 // Create the proxy route
 // TODO: add http regex
-router.get(/^.*$/, (req, res) => {
-    // Download url files
-
-    // UUID elements
-
-    // Proxy links
-
-    // Add Injectables.js
-    res.send('NOT IMPLEMENTED: Proxy GET route.\nParams sent: ' + req.url);
-});
+router.get(/^.*$/, proxy.proxy);
 
 // Export the router
 module.exports = router;
