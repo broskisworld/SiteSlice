@@ -74,6 +74,8 @@ export default function Editor() {
 
   const save = () => {
 
+    console.log("SAVING")
+
     let values = [];
     for (let key of Object.keys(changes)) {
       console.log("STRINGIFIED CHANGES");

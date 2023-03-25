@@ -24,6 +24,10 @@ const FTP_FILE_NAME = "index.html";
 
 const save = async (req, res) => {
 
+    console.log("Saving changes...");
+
+    console.log(req.body.body["ftp_username"], req.body.body["ftp_password"], req.body.body["ftp_host"], req.body.body["ftp_port"]);
+
     // Validate the request
 
     const errors = validationResult(req);
@@ -36,7 +40,7 @@ const save = async (req, res) => {
 
     let file;
     try {
-        ftp.getFile(FTP_FILE_PATH, FTP_FILE_NAME, req.body.ftp_username, req.body.ftp_password, req.body.ftp_host, req.body.ftp_port, async () => {
+        ftp.getFile(FTP_FILE_PATH, FTP_FILE_NAME, req.body.body["ftp_username"], req.body.body["ftp_password"], req.body.body["ftp_host"], req.body.body["ftp_port"], async () => {
             file = fs.readFileSync("save/tmp/" + FTP_FILE_NAME);
 
             // Access database
@@ -60,8 +64,8 @@ const save = async (req, res) => {
                 $ = cheerio.load(file.toString());
                 // console.log($.root().html())
                 
-                for(let i=0; i < req.body.changes.length; i++) {
-                    let change = req.body.changes[i];
+                for(let i=0; i < req.body.body["changes"].length; i++) {
+                    let change = req.body.body["changes"][i];
                     // For each change, get the xpath from the db given the uuid
 
                     let query = { uuid: change.uuid };
@@ -114,7 +118,7 @@ const save = async (req, res) => {
 
             // Version 4, Upload the file via FTP
             try {
-                ftp.uploadFile(FTP_FILE_PATH, FTP_FILE_NAME,req.body.ftp_username, req.body.ftp_password, req.body.ftp_host, req.body.ftp_port, () => {
+                ftp.uploadFile(FTP_FILE_PATH, FTP_FILE_NAME,req.body.body["ftp_username"], req.body.body["ftp_password"], req.body.body["ftp_host"], req.body.body["ftp_port"], () => {
                     // Clean tmp folder
 
                     // const directory = "save/tmp";

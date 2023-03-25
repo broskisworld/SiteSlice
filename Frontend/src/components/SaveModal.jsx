@@ -29,13 +29,14 @@ const slideIn = {
 const SaveModal = ({handleClose, handleSave, parentStateSetter, formIsValid, setFormStatus, startPort}) => {
 
   const tryToSave = () => {
-    console.log(formIsValid)
-    if(formIsValid){
-      return handleSave();
-    }
-    else {
-      setFormStatus(false);
-    }
+    console.log("IS FORM VALID", formIsValid)
+    // if(formIsValid){
+    //   return handleSave();
+    // }
+    // else {
+    //   setFormStatus(false);
+    // }
+    return handleSave();
   }
 
   return (
