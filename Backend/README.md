@@ -1,1 +1,1 @@
-This is the backend.
+This is where the MongoDB database is stored.

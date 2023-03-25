@@ -1,0 +1,8 @@
+{
+  "name": "Backend",
+  "version": "1.0.0",
+  "description": "The backend hahaha",
+  "main": "app.js",
+  "author": "SiteSlice Team",
+  "license": "MIT"
+}
