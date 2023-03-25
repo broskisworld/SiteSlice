@@ -17,24 +17,40 @@ const DB_COLLECTION = "elements";
 
 const save = async (req, res) => {
 
+    console.log('save request!');
+    console.log(`${Object.keys(req)}`)
+    console.log(`params ${JSON.stringify(req.params)}`);
+    console.log(`headers ${JSON.stringify(req.headers)}`)
+    console.log(`query ${JSON.stringify(req.query)}`)
+    console.log(`statusMessage ${JSON.stringify(req.statusMessage)}`)
+    console.log(`body ${JSON.stringify(req.body) || '(no body)'}`)
+
+    // console.log(`body ${JSON.stringify(req.body)}`)
+
     // Validate the request
 
-    const errors = validationResult(req);
+    // const errors = validationResult(req);
     
-    if (!errors.isEmpty()) {
-        return res.status(422).json({ errors: errors.array() });
-    }
+    // if (!errors.isEmpty()) {
+    //     console.log(errors)
+    //     return res.status(422).json({ errors: errors.array() });
+    // }
 
     // Version 4, Login via FTP
 
     // Version 2, Look for the file locally based on the url passed in
+    console.log("REQ BODY")
+    console.log(req.body)
+    console.log("REQ BODY")
+    console.log(req.body.body["url"])
+
 
     let file;
 
     try{
-        file = fs.readFileSync(req.body.url, 'utf8');
+        file = fs.readFileSync(req.body.body["url"], 'utf8');
     } catch (err) {
-        return res.status(400).json({ message: "File " + req.body.url + " does not exist."});
+        return res.status(400).json({ message: "File " + req.body.body["url"] + " does not exist."});
     }
 
     // Access database
@@ -54,9 +70,10 @@ const save = async (req, res) => {
 
     try {
         doc = new dom().parseFromString(file);
-        
-        for(let i=0; i < req.body.changes.length; i++) {
-            let change = req.body.changes[i];
+        console.log("CHANGES")
+        console.log(req.body.body["changes"])
+        for(let i=0; i < req.body.body["changes"].length; i++) {
+            let change = req.body.body["changes"][i];
             // For each change, get the xpath from the db given the uuid
 
             let query = { uuid: change.uuid };
@@ -73,7 +90,7 @@ const save = async (req, res) => {
 
     // Save the file
     try {
-        fs.writeFileSync(req.body.url, doc.toString());
+        fs.writeFileSync(req.body.body["url"], doc.toString());
     } catch (err) {
         return res.status(500).json({ message: "Error writing file: " + err.toString()});
     }

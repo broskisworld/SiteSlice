@@ -67,7 +67,7 @@ const proxy = (async (req, res) => {
         let $ = cheerio.load(xml_doc_output_str);
 
         // Add Injectables.js
-        $('head').append('<script src="http://localhost:5173/injectables/injectables.js"></script>')
+        $('head').append('<script src="http://localhost/src/injectables/injectables.js"></script>')
         
         // Proxy links
         // let links = xpath.select("//a/@href", doc);
@@ -75,7 +75,7 @@ const proxy = (async (req, res) => {
         // Export cheerio doc
         let doc_output_str = $.root().html();
 
-        res.status(200).send(`<div style="background:#fdba74;">${site_slice_header}</div></br>${doc_output_str}`);
+        res.status(200).send(`${doc_output_str}`);
 
         // Done!
         console.log(`Done proxying ${url}!`);

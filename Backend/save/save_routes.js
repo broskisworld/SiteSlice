@@ -1,8 +1,15 @@
 // Import router
 const router = require('express').Router();
+const cors = require('cors')
 const { checkSchema } = require('express-validator');
 const save = require('./save.js');
 
+
+// CORS
+// const corsOptions = {
+//     origin: 'localhost:80', 
+//     optionsSuccessStatus: 200
+// }
 
 // Create the save route
 
@@ -48,7 +55,7 @@ const save_schema = {
     }
 };
 
-router.post('/', checkSchema(save_schema), save.save);
+router.post('/', save.save);
 
 // Export the router
 module.exports = router;

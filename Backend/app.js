@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const app = express();
 const models = require('./db/models');
 
@@ -8,6 +9,14 @@ const body_parser = require('body-parser');
 // Global constants
 
 global.port = 5500;
+
+// // CORS
+const corsOptions = {
+    origin: 'http://localhost',
+    optionsSuccessStatus: 200,
+    methods: 'GET, PUT, OPTIONS, POST'
+}
+app.use(cors(corsOptions))
 
 // Import routes
 const proxy_routes = require('./proxy/proxy_routes.js');
