@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { useState, useEffect } from 'react';
+import * as React from "react";
+import { useState, useEffect } from "react";
 
-const TextCycleInput = ({ texts }) => {
+const TextCycleInput = ({ texts, parentStateSetter, siteLink }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -13,9 +13,14 @@ const TextCycleInput = ({ texts }) => {
 
   return (
     <div className="max-w-xl w-full">
-      <input 
-      className="cycle-input rounded-md border-2 border-gray-200 h-10 max-w-2xl w-full p-4 text-gray-400 transition focus:border-orange-300"
-      type="text" placeholder={texts[index]} />
+      <input
+        className="cycle-input rounded-md border-2 border-gray-200 h-10 max-w-2xl w-full p-4 text-gray-400 transition focus:border-orange-300"
+        type="text"
+        placeholder={texts[index]}
+        onChange={(e) => {
+          parentStateSetter(e.target.value);
+        }}
+      />
       <style>{`
         .cycle-input::placeholder {
           animation: fade-in-out 3s ease-in-out infinite;
@@ -38,7 +43,6 @@ const TextCycleInput = ({ texts }) => {
         }
       `}</style>
     </div>
-    
   );
 };
 
