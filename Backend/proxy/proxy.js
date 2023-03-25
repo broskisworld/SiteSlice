@@ -128,25 +128,19 @@ const proxy = (async (req, res) => {
 
             // good_html = original_html;
 
-            // XML / XPath analysis of file
-            let doc = new DOMParser({
-                locator: {},
-                errorHandler: { warning: function (w) { }, 
-                error: function (e) { }, 
-                fatalError: function (e) { console.error(e) } }
-            }).parseFromString(good_html);
+            
+            // UUID <-> Unique CSS selector for each element
+            let $ = cheerio.load(good_html);
 
-            // UUID elements
-            let all_elements = xpath.select("//*", doc);
-            site_slice_header += ` | ${all_elements.length} elements`;
+            let all_elements = $('*');
 
             // create unique xpaths for each element
             let list_of_uuid_refs = [];
             for(let element of all_elements) {
                 let el_uuid = uuid();
-                let el_xpath = createXPathFromElement(element, all_elements);
-                element.setAttribute('uuid', el_uuid);
-                element.setAttribute('xpath', el_xpath);
+                let el_xpath = getCSSPath(element);
+                $(element).attr('uuid', el_uuid);
+                $(element).attr('xpath', el_xpath);
                 // TODO: [V4+] store old innnerHTML in the DB
 
                 const element_ref_doc = {
@@ -164,14 +158,11 @@ const proxy = (async (req, res) => {
             // add to DB
             console.log(`about to add ${list_of_uuid_refs.length} elements to the DB!`);
             const options = { ordered: true }; // this option prevents additional documents from being inserted if one fails
-            console.log(list_of_uuid_refs[0])
+            console.log(JSON.stringify(list_of_uuid_refs))
             const add_refs_to_db_result = await elements_collection.insertMany(list_of_uuid_refs);
 
-            console.log(`Added ${add_refs_to_db_result} elements to the DB!`)
-
-            // Re-export to str and then into cheerio for better html specific parsing
-            let xml_doc_output_str = new XMLSerializer().serializeToString(doc);
-            let $ = cheerio.load(xml_doc_output_str);
+            console.log(`Added ${add_refs_to_db_result} elements to the DB!`);
+            
 
             // Add Injectables.js
             $('head').append('<script src="http://localhost:8080/src/injectables/injectables.js"></script>')
@@ -268,6 +259,15 @@ function removeURLParameter(url, parameter) {
         return urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : '');
     }
     return url;
+}
+
+function getCSSPath(el) {
+    let path = [], parent;
+    while (parent = el.parentNode) {
+        path.unshift(`${el.tagName}:nth(${[].indexOf.call(parent.children, el)+1})`);
+        el = parent;
+    }
+    return `${path.join(' > ')}`.toLowerCase();
 }
 
 module.exports = {
