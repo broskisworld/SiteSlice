@@ -3,6 +3,8 @@ const fs = require('fs');
 const xpath = require('xpath');
 const dom = require('xmldom').DOMParser;
 const client = require('../db/db').client;
+const ftp = require('./ftp');
+const path = require("path");
 
 const DB_NAME = "SiteSliceDB";
 const DB_COLLECTION = "elements";
@@ -14,6 +16,9 @@ const DB_COLLECTION = "elements";
 //     "xpath": "/html/body/p",
 //     "inner_html": "This is a test paragraph"
 // }
+
+const FTP_FILE_PATH = "tmp/";
+const FTP_FILE_NAME = "page.html";
 
 const save = async (req, res) => {
 
@@ -37,7 +42,11 @@ const save = async (req, res) => {
     // }
 
     // Version 4, Login via FTP
-
+    try {
+        ftp.getFile(FTP_FILE_PATH, FTP_FILE_NAME,req.body.ftp_username, req.body.ftp_password, req.body.ftp_host, req.body.ftp_port);
+    } catch (err) {
+        return res.status(400).json({ message: "Error getting file: " + err.toString()});
+    }
     // Version 2, Look for the file locally based on the url passed in
     console.log("REQ BODY")
     console.log(req.body)
@@ -48,9 +57,9 @@ const save = async (req, res) => {
     let file;
 
     try{
-        file = fs.readFileSync(req.body.body["url"], 'utf8');
+        file = fs.readFileSync("tmp/" + FTP_FILE_NAME, 'utf8');
     } catch (err) {
-        return res.status(400).json({ message: "File " + req.body.body["url"] + " does not exist."});
+        return res.status(400).json({ message: "File tmp/" + FTP_FILE_NAME + " does not exist."});
     }
 
     // Access database
@@ -90,10 +99,32 @@ const save = async (req, res) => {
 
     // Save the file
     try {
-        fs.writeFileSync(req.body.body["url"], doc.toString());
+        fs.writeFileSync("tmp/" + FTP_FILE_NAME, doc.toString());
     } catch (err) {
         return res.status(500).json({ message: "Error writing file: " + err.toString()});
     }
+
+    // Version 4, Upload the file via FTP
+    try {
+        ftp.uploadFile(FTP_FILE_PATH, "tmp/" + FTP_FILE_NAME,req.body.ftp_username, req.body.ftp_password, req.body.ftp_host, req.body.ftp_port);
+    } catch (err) {
+        return res.status(400).json({ message: "Error uploading file: " + err.toString()});
+    }
+
+    // Clean tmp folder
+
+    // const directory = "tmp";
+
+    // fs.readdir(directory, (err, files) => {
+    // if (err) throw err;
+
+    // for (const file of files) {
+    //     fs.unlink(path.join(directory, file), (err) => {
+    //     if (err) throw err;
+    //     });
+    // }
+    // });
+
 
     return res.status(200).json({ message: "Success" });
 };

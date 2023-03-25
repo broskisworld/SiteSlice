@@ -33,6 +33,16 @@ const save_schema = {
         isString: true,
         errorMessage: 'Invalid FTP password'
     },
+    ftp_host: {
+        in: 'body',
+        isString: true,
+        errorMessage: 'Invalid FTP host'
+    },
+    ftp_port: {
+        in: 'body',
+        isInt: true,
+        errorMessage: 'Invalid FTP port'
+    },
     changes: {
         in: 'body',
         isArray: true,
