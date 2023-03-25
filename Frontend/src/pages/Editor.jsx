@@ -1,15 +1,16 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import logo from "../assets/SiteSliceLogo.png";
 import { motion } from "framer-motion";
 
 export default function Editor() {
+  const [searchParams] = useSearchParams();
   return (
     <motion.div
       className="editor-wrap h-screen"
       initial={{ x: window.innerWidth }}
       animate={{ x: 0 }}
-      exit={{ x: window.innerWidth }}
+      exit={{ x: -window.innerWidth, transition: { duration: 0.2 } }}
       transition={{
         type: "spring",
         damping: 16,
@@ -24,7 +25,7 @@ export default function Editor() {
         </a>
       </div>
       <div className="bg-white flex justify-center items-center w-full h-[calc(100vh-4rem)] p-4 pt-0">
-        <iframe className="w-full h-full" src="https://lundahlironworks.com"></iframe>
+        <iframe className="w-full h-full" src={`http://localhost:5500/proxy/${searchParams.get("url")}`}></iframe>
       </div>
     </motion.div>
   );
