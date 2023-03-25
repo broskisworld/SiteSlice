@@ -11,7 +11,9 @@ const save = require('./save.js');
 const save_schema = {
     url: {
         in: 'body',
-        isURL: true,
+        isString: true,
+        // FIXME: Add when we are not using local files
+        // isURL: true,
         errorMessage: 'Invalid URL'
     },
     ftp_username: {
