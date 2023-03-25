@@ -72,7 +72,7 @@ export default function Editor() {
     }
   }
 
-  const save = (username, password, hostname, port) => {
+  const save = () => {
 
     let values = [];
     for (let key of Object.keys(changes)) {
@@ -84,11 +84,14 @@ export default function Editor() {
       });
     }
     
+    console.log("HANDLING SAVE")
     
     const body = {
         url: 'D:/Workshop/SiteSlice/Frontend/Testbench/Basic-site/index.html',
         ftp_username: `${username}`,
         ftp_password: `${password}`,
+        ftp_host: `${hostname}`, 
+        ftp_port: Number(port),
         changes: values
     }
 
