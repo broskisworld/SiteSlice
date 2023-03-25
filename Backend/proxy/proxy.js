@@ -41,21 +41,25 @@ const proxy = (async (req, res) => {
             element.setAttribute('xpath', el_xpath);
             // TODO: [V4+] store old innnerHTML in the DB
 
-            list_of_uuid_refs.push({
+            const element_ref_doc = {
                 url: url,
                 uuid: el_uuid,
                 xpath: el_xpath,
                 inner_html: 'NOT IMPLEMENTED'
-            });
+            };
+
+            list_of_uuid_refs.push(element_ref_doc);
 
             // console.log(Object.keys(element));
         }
 
         // add to DB
+        console.log(`about to add ${list_of_uuid_refs.length} elements to the DB!`);
         const options = { ordered: true }; // this option prevents additional documents from being inserted if one fails
+        console.log(list_of_uuid_refs[0])
         const add_refs_to_db_result = await elements_collection.insertMany(list_of_uuid_refs);
 
-        console.log(`Added ${add_refs_to_db_result.insertedCount} elements to the DB!`)
+        console.log(`Added ${add_refs_to_db_result} elements to the DB!`)
 
         // Proxy links
         // let links = xpath.select("//a/@href", doc);
@@ -63,7 +67,7 @@ const proxy = (async (req, res) => {
         // Add Injectables.js
 
         // Re-export
-        let doc_output_str = new XMLSerializer().serializeToString(doc);
+        
         res.status(200).send(`<div style="background:#fdba74;">${site_slice_header}</div></br>${doc_output_str}`);
 
         // Done!
