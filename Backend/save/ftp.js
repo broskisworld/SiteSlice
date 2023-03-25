@@ -39,7 +39,27 @@ const uploadFile = async (filePath, fileName, username, password, host, port) =>
     });
 }
 
+const listFiles = async (filePath, username, password, host, port) => {
+    const c = new client();
+    c.on('ready', function() {
+        console.log('Connected to FTP server');
+        c.list(filePath, function(err, list) {
+            if (err) throw err;
+            console.dir(list);
+            c.end();
+        });
+    });
+
+    c.connect({
+        host: host,
+        port: port,
+        user: username,
+        password: password
+    });
+}
+
 module.exports = {
     getFile,
-    uploadFile
+    uploadFile,
+    listFiles
 };
