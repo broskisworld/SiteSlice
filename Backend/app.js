@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors')
-const app = express();
 const models = require('./db/models');
 
 // Import middlewares
@@ -15,11 +14,11 @@ const CONFIG = {
 
 // // CORS
 const corsOptions = {
-    origin: 'http://localhost',
+    origin: 'http://localhost:8080',
     optionsSuccessStatus: 200,
     methods: 'GET, PUT, OPTIONS, POST'
 }
-app.use(cors(corsOptions))
+
 
 // Import routes
 const proxy_routes = require('./proxy/proxy_routes.js');
@@ -28,6 +27,9 @@ const save_routes = require('./save/save_routes.js');
 // *** ANCHOR SETUP ***
 const save_api_app = express();
 const proxy_service_app = express();
+
+save_api_app.use(cors(corsOptions))
+proxy_service_app.use(cors(corsOptions))
 
 // Set json as the body parser
 save_api_app.use(body_parser.json());
