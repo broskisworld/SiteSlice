@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
 
     // Set all elements with UUIDs to contenteditable true with jQuery
 
-    $("*[uuid]").attr("contenteditable", "true");
+    $("*[uuid]:not(:has(*))").attr("contenteditable", "true");
 
     // Add a initialized class to html tag
 
@@ -76,6 +76,6 @@ window.addEventListener('load', function () {
 
         // Stop propagation so only the lowest element emits.
 
-        e.stopPropagation();
+        // e.stopPropagation();
     });
 })
