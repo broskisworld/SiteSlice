@@ -6,27 +6,19 @@ import { motion } from "framer-motion";
 import ErrorMsg from "../components/ErrorMsg";
 
 function isUrlHttp(str){
-  const pattern = new RegExp(
-    '^([a-zA-Z]+:\\/\\/)?' + // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR IP (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-      '(\\#[-a-z\\d_]*)?$', // fragment locator
-    'i'
+  const pattern = new RegExp(/()()((https?):)?(\/?\/?)([-a-zA-Z0-9@:%._\+~#=]{1,256})([-a-zA-Z0-9@:%._\+~#=\/]{1,256})(\??)([\w-]+(=[\w-]*)?(&[\w-]+(=[\w-]*)?)*)?/g
   );
   return pattern.test(str);
 }
 
 export default function Home() {
-  const [siteLink, setSitLink] = useState(null);
+  const [siteLink, setSiteLink] = useState(null);
   const [isValidUrl, setIsValidUrl] = useState(false);
 
 
   const handleInputChange = (value) => {
-    setSitLink(value);
+    setSiteLink(value);
     setIsValidUrl(isUrlHttp(value));
-    console.log(isValidHttp)
   };
 
 
