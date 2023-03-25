@@ -7,6 +7,7 @@ const { DOMParser, XMLSerializer} = require('xmldom');
 
 const MONGO_DB = 'SiteSliceDB';
 const MONGO_COLLECTION = 'elements';
+const DEBUG_MODE = false;
 
 const proxy = (async (req, res) => {
     try {
@@ -175,7 +176,8 @@ const proxy = (async (req, res) => {
                 res.setHeader(header[0], header[1]);
             }
 
-            res.status(200).send(`<div style="background:#fdba74;">${site_slice_header}</div></br>${doc_output_str}`);
+            let site_header_bar = `<div style="background:#fdba74;">${site_slice_header}</div></br>`;
+            res.status(200).send(`${DEBUG_MODE ? site_header_bar : ''}${doc_output_str}`);
 
             // Done!
             console.log(`Done proxying ${full_resource_path_sanitized}!`);
