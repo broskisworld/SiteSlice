@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>This is the outer site</title>
+        <script src="http://code.jquery.com/jquery.min.js" type="text/javascript" contenteditable="false"></script>
+        <script>
+            // window.addEventListener('load', function () {
+            //     window.document.addEventListener('testevent', function (e) {
+            //         console.log(e.detail.message);
+            //         console.log(e.detail.uuid);
+            //         console.log(e.detail.new_inner_html);
+            //     });
+            // });
+
+            window.document.addEventListener('changed', handleEvent);
+            function handleEvent(e) {
+                console.log(e.detail);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>This is the outer site</h1>
+        <iframe  id="iframe-1" src="index-proxy.html" width="100%" height="100%"></iframe>
+    </body>
+</html>

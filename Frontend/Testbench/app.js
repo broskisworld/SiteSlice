@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const path = require("path");
-
-path.join(__dirname, "Lundahl-backup/public_html/");
+const dotenv = require('dotenv').config();
 
 app.get(/^.*$/, (req, res) => {
-  res.sendFile(path.join(__dirname, `Lundahl-backup/homedir/public_html/` + req.url));
+  res.sendFile(path.join(__dirname, process.env.TESTBENCH + req.url));
 });
+
 
 app.get("/images", (req, res) => {
   res.sendFile(path.join(__dirname, "/css"));
