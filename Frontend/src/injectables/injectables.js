@@ -18,11 +18,11 @@ link.href = "/injectables/injectables.css";
 head.appendChild(link);
 
 
-const initialized = new CustomEvent("initialized", {
-    detail: {
-        message: "Initialized",
-    },
-});
+// const initialized = new CustomEvent("initialized", {
+//     detail: {
+//         message: "Initialized",
+//     },
+// });
 
 // document.addEventListener('initialized', function (e) {
 //     console.log(e.detail.message);
@@ -49,22 +49,30 @@ window.addEventListener('load', function () {
 
     // Trigger initialized event, trigger on document root
 
-    window.parent.document.dispatchEvent(initialized);
+    //window.parent.document.dispatchEvent(initialized);
+
+    window.parent.postMessage("initialized", "*");
 
     // Add event listeners any time its changed to all items that are contenteditable to emit that they are changed. 
     
     $("*[contenteditable='true']").on("input", function (e) {
-        const changed = new CustomEvent("changed", {
-            bubbles: true,
-            cancelable: true,
-            detail: {
-                message: "Changed",
-                uuid: $(this).attr("uuid"),
-                new_inner_html: $(this).html(),
-            },
-        });
+        // const changed = new CustomEvent("changed", {
+        //     bubbles: true,
+        //     cancelable: true,
+        //     detail: {
+        //         message: "Changed",
+        //         uuid: $(this).attr("uuid"),
+        //         new_inner_html: $(this).html(),
+        //     },
+        // });
 
-        window.parent.document.dispatchEvent(changed);
+        // window.parent.document.dispatchEvent(changed);
+
+        window.parent.postMessage({
+            message: "changed",
+            uuid: $(this).attr("uuid"),
+            new_inner_html: $(this).html(),
+        }, "*");
 
         // Stop propagation so only the lowest element emits.
 
