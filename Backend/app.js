@@ -21,7 +21,7 @@ app.use(body_parser.json());
 // Create new routes for proxy and save
 
 app.use('/proxy', proxy_routes);
-//app.use('/save', save_routes);
+app.use('/save', save_routes);
 
 // Add 404 error handler
 
