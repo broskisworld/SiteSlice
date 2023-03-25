@@ -22,7 +22,7 @@ const slideIn = {
   }
 }
 
-const SaveModal = ({handleClose}) => {
+const SaveModal = ({handleClose, handleSave}) => {
 
   return (
     <Backdrop onClick={handleClose}>
@@ -34,7 +34,7 @@ const SaveModal = ({handleClose}) => {
       animate="visible"
       exit="exit"
     >
-      <p>Testing 123</p>
+      <button onClick={handleSave}>Actually Save?</button>
     </motion.div>
   </Backdrop>
   )

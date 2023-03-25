@@ -4,6 +4,7 @@ import logo from "../assets/SiteSliceLogo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import SaveModal from "../components/SaveModal";
+import axios from 'axios';
 
 export default function Editor() {
 
@@ -12,19 +13,84 @@ export default function Editor() {
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
-  const save = () => {null};
+  const [changes, setChanges] = useState({})
+
+  // const save = () => {
+  //   const requestOptions = {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: changeCache
+  //   };
+  //   fetch('http://localhost:5500/save', requestOptions)
+  //       .then(response => response.json())
+  //       .then(data => console.log(data));
+  // };
+  
+
+  const save = () => {
+    
+
+    let values = [];
+    for (let key in Object.keys(changes)){
+      values.push({
+        uuid: key,
+        new_inner_html: changes[key]
+      })
+    }
+    // let values = Object.keys(changeCache).map(function(key){
+    //     return dictionary[key];
+    // });
+    console.log(values)
+    
+    const body = {
+        url: 'D:/Workshop/SiteSlice/Frontend/Testbench/Basic-site/index.html',
+        ftp_username: "",
+        ftp_password: "",
+        changes: values
+    }
+
+    console.log(body)
+
+    /*
+    fetch('http://localhost:5500/save', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json', 
+        },
+        body: '{ "url": "/Users/borkson/Code/HackUSU/SiteSlice/Frontend/Testbench/Basic-site/index.html","ftp_username": "root","ftp_password": "password","changes": [{"uuid": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d","old_inner_html": "This is a test paragraph", "new_inner_html": "hey baby"}]}'
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data)
+    })
+    .catch((error) => {
+      console.log("Error:", error);
+    });*/
+
+    //'{ "url": "/Users/borkson/Code/HackUSU/SiteSlice/Frontend/Testbench/Basic-site/index.html","ftp_username": "root","ftp_password": "password","changes": [{"uuid": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d","old_inner_html": "This is a test paragraph", "new_inner_html": "hey baby"}]}'
+    
+    axios.post('http://localhost:5500/save', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: body
+    })
+}
 
   const [searchParams] = useSearchParams();
 
-  let changeCache = {};
 
   function getMessage(message) {
     if(message.data.message == "changed"){
-      changeCache[message.data.uuid] = {
+      
+      changes[message.data.uuid] = {
         uuid: message.data.uuid,
         new_inner_html: message.data.new_inner_html
       }
-      console.log(changeCache)
+
+      setChanges(changes)
+      console.log(changes)
     }
   }
 

@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 80, 
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    }
+    // headers: {
+      // 'Access-Control-Allow-Origin': '*',
+    // }
   }
 })
