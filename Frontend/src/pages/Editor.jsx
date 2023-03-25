@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { json, Link, useSearchParams } from "react-router-dom";
 import logo from "../assets/SiteSliceLogo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -31,10 +31,12 @@ export default function Editor() {
     
 
     let values = [];
-    for (let key in Object.keys(changes)){
+    for (let key of Object.keys(changes)){
+      console.log("STRINGIFIED CHANGES")
+      console.log(JSON.stringify(changes))
       values.push({
         uuid: key,
-        new_inner_html: changes[key]
+        new_inner_html: changes[key].new_inner_html
       })
     }
     // let values = Object.keys(changeCache).map(function(key){
