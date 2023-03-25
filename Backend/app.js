@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
+const models = require('./db/models');
 
 // Import middlewares
 const body_parser = require('body-parser');
 
 // Global constants
 
-global.port = 3000;
+global.port = 5500;
 
 // Import routes
 const proxy_routes = require('./proxy/proxy_routes.js');
@@ -17,6 +18,8 @@ const save_routes = require('./save/save_routes.js');
 app.use(body_parser.json());
 
 // Connect to the database
+const db = require('./db/db');
+const instance = db.client;
 
 // Create new routes for proxy and save
 
@@ -32,7 +35,7 @@ app.all('*', (req, res) => {
 // Start the server
 
 app.listen(global.port, () => {
-    console.log('Server started on port 3000');
+    console.log(`Server started on port ${global.port}`);
 });
 
 // Set router
