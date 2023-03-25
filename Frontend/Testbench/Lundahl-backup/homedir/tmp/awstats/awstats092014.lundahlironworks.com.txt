@@ -1,0 +1,1255 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201409 will be lost/reset.
+# Last config file used to build this data file was /home/lundahl2600/tmp/awstats/awstats.lundahlironworks.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2017                
+POS_TIME 2698                
+POS_VISITOR 21370               
+POS_DAY 37036               
+POS_DOMAIN 3603                
+POS_LOGIN 4332                
+POS_ROBOT 4487                
+POS_WORMS 4987                
+POS_EMAILSENDER 5118                
+POS_EMAILRECEIVER 5261                
+POS_SESSION 37916               
+POS_SIDER 38126               
+POS_FILETYPES 5396                
+POS_DOWNLOADS 5586                
+POS_OS 5634                
+POS_BROWSER 5925                
+POS_SCREENSIZE 7703                
+POS_UNKNOWNREFERER 7777                
+POS_UNKNOWNREFERERBROWSER 9019                
+POS_ORIGIN 9657                
+POS_SEREFERRALS 9804                
+POS_PAGEREFS 10002               
+POS_SEARCHWORDS 14628               
+POS_KEYWORDS 14977               
+POS_MISC 2362                
+POS_ERRORS 15182               
+POS_CLUSTER 4188                
+POS_SIDER_404 15298               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20141001005750 338 70750 8153026626439
+FirstTime 20140901012329
+LastTime 20140930233854
+LastUpdate 20141001053202 338 0 337 0 0
+TotalVisits 669                 
+TotalUnique 360                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 399                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 66 97 2059498 67 103 379835
+1 43 140 10271403 69 90 238942
+2 21 54 2427994 67 102 233318
+3 61 231 13688830 101 137 624950
+4 68 111 2401082 67 100 286196
+5 73 188 6466243 97 130 1144063
+6 69 214 8563770 44 106 879672
+7 74 381 23333420 67 114 378408
+8 108 443 21739451 65 122 406121
+9 160 542 21900047 144 259 649366
+10 132 621 26914105 56 115 238358
+11 120 877 91976626 75 124 369036
+12 167 812 48052018 62 125 253377
+13 87 413 22673223 44 81 500866
+14 164 499 21672903 74 130 606544
+15 145 594 29853612 58 113 383682
+16 67 203 10214374 96 164 626438
+17 100 365 18074275 78 112 214455
+18 55 139 4436831 86 142 342685
+19 75 134 3593681 126 153 532170
+20 60 230 9752006 98 153 889760
+21 42 145 6828248 61 98 289239
+22 38 162 9598291 51 78 158874
+23 190 293 7739040 73 111 254379
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 32
+us 1004 4637 207235924
+ua 500 500 1760910
+ru 188 300 12287991
+in 159 256 5967397
+de 62 159 5778273
+cn 42 116 3871440
+nl 36 55 1221803
+sa 32 32 151465
+jp 30 41 581296
+fi 23 23 93176
+gb 21 26 222459
+br 20 575 58097589
+ca 15 95 4389202
+tw 8 48 1784376
+lv 7 7 0
+zz 7 45 1745764
+co 6 132 11501722
+tr 4 4 14056
+ec 3 522 76209219
+it 3 72 7749058
+ph 2 38 3430597
+es 2 23 1789279
+fr 2 4 129209
+rs 1 20 1501559
+mx 1 38 4304888
+ro 1 1 3514
+dk 1 1 3514
+hk 1 24 2121547
+cz 1 17 1077003
+lt 1 1 3514
+cl 1 12 1064844
+ve 1 64 8138383
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 10
+bot[\s_+:,\.\;\/\\-] 738 5185049 20140930123231 0
+googlebot 338 587093 20140930235145 0
+spider 104 508115 20140930183628 0
+crawl 70 484688 20140930161924 0
+robot 63 558563 20140930080744 0
+no_user_agent 17 65260 20140930190451 0
+slurp 15 65085 20140919130728 0
+msnbot\-media 13 1115034 20140930032328 0
+discovery 1 0 20140926083428 0
+netcraft 1 3514 20140911203437 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 6
+css 666 2229459 0 0
+png 1316 65274228 0 0
+html 2185 8618615 0 0
+jpg 3030 319414942 0 0
+js 467 28316879 0 0
+gif 224 376848 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 23
+linuxsuse 2
+blackberry 3
+linuxandroid 317
+winlong 66
+winxp 688
+win2000 57
+winvista 771
+win95 14
+winunknown 34
+wince 6
+win2003 54
+unix 37
+java 10
+winnt 66
+win98 15
+linuxubuntu 1
+linux 138
+win7 4687
+win16 21
+bsdfreebsd 1
+macosx 625
+winme 13
+Unknown 262
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 105
+firefox28.0 9
+chrome6.0.427.0 1
+msie6.0 307
+webcapture 3
+chrome37.0.2062.117 107
+chrome34.0.1847.137 1
+firefox26.0 2
+chrome28.0.1500.94 96
+msie4.01 15
+firefox18.0 1
+firefox4.0 25
+lynx 1
+curl 1
+firefox3.6.15 72
+firefox2.0.0.13 1
+msie8.0 152
+opera7.60 9
+netscape3.0 15
+msie7.0 92
+firefox23.0 2
+chrome37.0.2062.120 550
+chrome27.0.1453 17
+chrome14.0.811.0 1
+chrome11.0.652.0 1
+firefox2.0.0.2 2
+opera9.0 6
+w3c_validator 1
+netscape 2
+chrome15.0.864.0 1
+opera7.11 15
+chrome38.0.2125.83 19
+chrome34.0.1847.131 23
+chrome37.0.2062.102 48
+firefox21.0 1
+safari6.0 34
+firefox29.0 17
+firefox3.5.2 1
+chrome32.0.1700.107 952
+safari7.0.6 43
+chrome35.0.1916.114 8
+netscape0.6 9
+chrome36.0.1985.143 688
+mozilla 1774
+chrome11.0.678.0 1
+firefox14.0.1 58
+chrome32.0.1700.76 38
+chrome17.0.963.65 1
+netscape4.0 9
+firefox19.0 38
+firefox3.0.10 4
+firefox15.0.1 7
+safari 112
+firefox3.0.15 4
+chrome37.0.2062.124 89
+safari7.0 227
+chrome29.0.1547.57 24
+firefox4.0.1 10
+android 38
+chrome13.0.782.220 1
+opera9.00 20
+chrome36.0.1985.125 111
+chrome12.0.742.112 2
+chrome11.0.696.50 1
+firefox24.0 1
+msie3.02 6
+opera9.80 2
+safari6.1.6 20
+firefox31.0 241
+iphone 17
+chrome13.0.782.112 1
+netscape0.91 3
+chrome10.0.648.204 1
+msie2.0 24
+chrome33.0.1750.154 17
+safari8.0 45
+msie5.0 27
+chrome33.0.1750.146 80
+chrome11.0.696.3 1
+chrome37.0.2062.122 49
+msie9.0 146
+chrome37.0.2062.103 412
+Unknown 36
+chrome30.0.1599.101 24
+opera7.54 6
+chrome37.0.2062.94 1
+firefox32.0 215
+blackberry 3
+opera8.00 6
+chrome34.0.1847.114 40
+firefox3.6.16 59
+opera8.01 9
+msie5.5 33
+firefox30.0 1
+safari6.1.5 32
+chrome13.0.782.215 1
+nokia 18
+chrome36.0.1985.135 17
+firefox1.0 1
+chrome35.0.1916.153 190
+firefox22.0 3
+msie10.0 173
+firefox6.0 3
+safari5.1 2
+chrome13.0.782.43 1
+chrome27.0.1453.116 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 21
+Mozilla/5.0_(compatible;_DomainAppender_/1.0;__http://www.profound.net/domainappender) 20140911232010
+Ruby 20140912120402
+HTTPClient/1.0_(2.4.0,_ruby_1.9.3_(2013-06-27)) 20140922192941
+Mozilla/5.0_(compatible;_SiteExplorer/1.0b;__http://siteexplorer.info/) 20140930055727
+WinInet_Test 20140927095150
+www.osaicbt.com/Nutch-2.2.1 20140919043828
+Mozilla/5.0_(compatible;_Add_Catalog/2.1;) 20140929112353
+Mozilla/4.0_(compatible;_Synapse) 20140922192330
+CB/Nutch-1.7 20140922114844
+Mozilla 20140926203902
+Mozilla/5.0_(compatible;_Lipperhey_SEO_Service;_http://www.lipperhey.com/) 20140903171812
+Lynx/2.8.5rel.1_libwww-FM/2.15FC_SSL-MM/1.4.1c_OpenSSL/0.9.7e-dev 20140927103757
+Mozilla/4.0 20140915040740
+Mozilla/5.0_(compatible;_Optimizer) 20140903141351
+AppEngine-Google;_(_http://code.google.com/appengine;_appid:_s~page-d) 20140930003431
+Mozilla/5.0_(compatible;_WebMasterAid/1.0;__http://wmaid.com/explore/) 20140918212015
+VSE/1.0_(rabraham@multiview.com) 20140905151933
+Riddler_(http://riddler.io/about.html) 20140904135109
+W3C_Validator/1.3_http://validator.w3.org/services 20140902122054
+wsr-agent/1.0 20140926023155
+nutch-1.4/Nutch-1.4 20140910125502
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 13
+Ruby 20140912120402
+HTTPClient/1.0_(2.4.0,_ruby_1.9.3_(2013-06-27)) 20140922192941
+Apache-HttpClient/4.3_(java_1.5) 20140914221853
+WinInet_Test 20140927095150
+Java/1.7.0_45 20140904071830
+Microsoft_Office_Mobile/15.0 20140904192025
+AppEngine-Google;_(_http://code.google.com/appengine;_appid:_s~page-d) 20140930003431
+VSE/1.0_(rabraham@multiview.com) 20140905151933
+Riddler_(http://riddler.io/about.html) 20140904135109
+www.osaicbt.com/Nutch-2.2.1 20140919043828
+wsr-agent/1.0 20140926023155
+nutch-1.4/Nutch-1.4 20140910125502
+CB/Nutch-1.7 20140922114844
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 473 564
+From1 0 0
+From2 260 341
+From3 717 722
+From4 735 6261
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 5
+google 222 303
+baidu 24 24
+aol 1 1
+bing 8 8
+yahoo 5 5
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 153
+http://semalt.semalt.com/crawler.php 25 25
+http://chimiver.info 18 18
+http://ostrovtaxi.ru 15 15
+http://doska-vsem.ru 15 15
+http://foto-porn.com 12 12
+http://banan.tv 12 12
+http://www.artparquet.ru 12 12
+http://avtointeres.ru 12 12
+http://www.centerdolgov.ru 12 12
+http://vapsy.com 11 11
+http://creation-painting.ru 9 9
+http://ukrainian-revolution.com 9 9
+http://small-games.biz 9 9
+http://minecraftnow.ru 9 9
+http://omolojenieliza.ru 9 9
+http://perfection-pleasure.ru 9 9
+http://www.gael-s.ru 9 9
+http://smsgorod.ru 9 9
+http://covetnica.com 9 9
+http://unitygame3d.com 9 9
+http://small-game.com 9 9
+http://cookimag.com/sitemap.html 9 9
+http://fashion-mk.net 9 9
+http://subway-surfers.name 9 9
+http://stroi-minsk.by 9 9
+http://dobrahata.com.ua 6 6
+http://www.president-office.ru 3 3
+http://prezentacii-edu.ru 6 6
+http://serialoff.org 3 3
+http://pornofiljmi.com 3 3
+http://adam-eva.com.ua 3 3
+http://aviasystem.spb.ru 3 3
+http://www.mebel-rishar.ru 6 6
+http://evromigracija.ru 2 2
+http://globetrotting-culture.ru 3 3
+http://autoar.ru 3 3
+http://megasexchat.ru 3 3
+http://radiogig.ru 3 3
+http://shinikiev.com.ua 3 3
+http://3dracergames.com 6 6
+http://viktoria-center.ru 3 3
+http://fcp.intermesh.net/cgi/cat_vendor.pl 1 1
+http://serialsway.ucoz.ru 3 3
+http://stardevine.com 3 3
+http://g-dver.ru 3 3
+http://pornovkoz.ru 3 3
+http://www.dverprom.ru 3 3
+http://www.my-salad.ru 3 3
+http://avtoonline.info 3 3
+http://201.semalt.com/crawler.php 1 1
+http://mesto-x.com 6 6
+http://www.indo-export.ru 6 6
+http://da-centr.ru 6 6
+http://572.semalt.com/crawler.php 1 1
+http://xn--80aaaelklv2ahhye.xn--p1ai 3 3
+http://gamesfinity.com 1 1
+http://moelico.com 3 3
+http://profil-saiding.ru 3 3
+http://olimprealty.com 3 3
+http://pornowife.tv 3 3
+http://833.semalt.com/crawler.php 1 1
+http://family-agreement.ru 3 3
+http://gcup.ru 3 3
+http://arskat.do.am 3 3
+http://uralpipeunion.jimdo.com 3 3
+http://304.semalt.com/crawler.php 1 1
+http://domik-derevne.ru 3 3
+http://alive-ua.com 3 3
+http://pechatay-prosto.ru 6 6
+http://timeallnews.ru 3 3
+http://2ads.co.uk 4 4
+http://easytuningshop.ru 3 3
+http://www.classicakuhni.ru 6 6
+http://bashtime.ru 3 3
+http://ipad-oboi.com 5 5
+http://pornogig.com 3 3
+http://nsk-diplom.com 6 6
+http://nter.net.ua 3 3
+http://energetik.org.ua 6 6
+http://taximytishi.ru 3 3
+http://www.kiparis-2008.com.ua 6 6
+http://www.buchta-xxx.com 3 3
+http://dannyfuntoys.com 3 3
+http://www.directdetailing.net 2 2
+http://rozalli.com 6 6
+http://homesp.ru 3 3
+http://ohranaprim.ru 3 3
+http://snipergames5.com 6 6
+http://zoolandiya.org 3 3
+http://lunchyourdreams.com/forum/ 1 1
+http://pornboobsy.com 3 3
+http://vroze.ru 3 3
+http://diplom-nk.com 3 3
+http://igru-xbox.net 3 3
+http://muztune.com 5 5
+http://oneislam.ru 6 6
+http://549.semalt.com/crawler.php 1 1
+http://turist-strani.ru 3 3
+https://m.facebook.com 1 1
+http://pozvonochniky.ru 6 6
+http://sinel.info 3 3
+http://rcb101.ru 3 3
+http://cms.nufitup.com/CMS/CmsPageLoader.axd 0 5
+http://poisk-zakona.ru 3 3
+http://voronezh.assix.ru 3 3
+http://catalog.da-centr.ru 3 3
+http://twu.com.ua 3 3
+http://876.semalt.com/crawler.php 1 1
+http://bikegames9.com 6 6
+http://cookingok.ru/yasitemap/ 3 3
+http://991.semalt.com/crawler.php 1 1
+http://blogig.org 3 3
+http://www.bali-event.ru 3 3
+http://youtube-downloader.savetubevideo.com/youtube-downloader.php 1 1
+http://women-liferules.ru 6 6
+http://pornovkoz.ru 6 6
+http://www.coolflashgames.biz 8 8
+http://www.ary.kz 3 3
+http://datsun-do.com/forum 3 3
+http://pronekut.com/news.php 3 3
+http://4seasons.kz 3 3
+http://futurepathonline.com/sitemap-kid-ink-up-and-away-album-leak-3gna1 2 2
+http://lastnews82.com 6 6
+http://lenz.su 6 6
+http://golosislama.ru 3 3
+http://chinasalessite.com 1 1
+http://globetrotting-culture.ru 3 3
+http://my-software.ru 3 3
+http://flex4launch.ru 3 3
+http://www.meb4.ru 6 6
+http://unichoc.ru 1 1
+http://fightinggames5.com 3 3
+http://vzlom-pochty.biz 3 3
+http://povariwka.ru/index.php 3 3
+http://l.facebook.com/l.php 1 1
+http://zarenica.net 8 8
+http://dreamkino.net 3 3
+http://catalog.da-centr.ru 3 3
+http://shantui-xcmg.tiu.ru 3 3
+http://www.onlinepornovideo.org 6 6
+http://738.semalt.com/crawler.php 1 1
+http://flash4fun.com 6 6
+http://lavangenif.no 1 1
+http://www.world-mmo.com 3 3
+http://www.prezident-mebel.ru 3 3
+http://www.mastercash.co.il 3 3
+http://596.semalt.com/crawler.php 1 1
+http://wmaid.com/explore/lundahlironworks.com/ 5 5
+http://955.semalt.com/crawler.php 1 1
+http://www.proconcert.ru 3 3
+http://koleso24.com.ua 3 3
+http://skand-m.ru 6 6
+http://moelico.com 9 9
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 9
+lundahlironworkscompany 24
+lundahl+ironworks 8
+lundahl+steel 1
+lindahl+ironworks+boise+id 1
+lundahl+ironwork 1
+lundahl 1
+ironworks+company 1
+www.lundahlironworks.com 1
+lundahl+iron+works+company 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 12
+lundahlironworkscompany 24
+lundahl 12
+ironworks 10
+company 2
+ironwork 1
+works 1
+steel 1
+boise 1
+iron 1
+id 1
+www.lundahlironworks.com 1
+lindahl 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+206 8 337698
+301 6 1494
+404 1285 1969141
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 173
+/bitrix/ 1 http://www.bing.com/search
+/cart/include/version.php 1 -
+/ 80 http://evromigracija.ru/
+/projects/office/codale/ 5 -
+/ftp/terms 4 -
+/admin.php 3 -
+/projects/office/cam 3 -
+/cert.html 7 -
+/projects/office/feed/ 1 -
+/projects/scpbo/apple 3 -
+/projects/retail/lowso/ 9 -
+/lemergence-dactivite-ou-dentreprises/ 1 -
+/projects/scpbo/bsu-nursing/ 4 -
+/projects/office/uni 2 -
+/about-lic 6 -
+/xmlrpc.php 1 http://www.lundahlironworks.com/xmlrpc.php
+/blog 1 http://lundahlironworks.com/blog
+/projects/office.html 2 -
+/projects/retail/walgreens.html 1 -
+/fckeditor/editor/filemanager/browser/default/connectors/test.html 1 -
+/images/cert/slc2008.pdf 2 -
+/projects/retail/her/ 5 -
+/projects/recent 3 -
+/projects/office/ 7 -
+/projects/athletics/wildcat.html 4 -
+/FCKeditor/editor/filemanager/connectors/test.html 2 -
+/ftpsite/ 9 http://www.lundahlironworks.com/
+/projects/retail/lowessf/ 13 -
+/projects/retail/winroy 2 -
+/images/cert/aisc2008.pdf 7 -
+/include/version.php 1 -
+/wp-content/uploads/2011/08/IMG_1594.jpg 13 -
+/projects/retail/joann 10 -
+/1409694036.html 1 http://www.lundahlironworks.com/
+/2014/09/05/rip-joan/ 1 -
+/projects/scpbo 2 -
+/projects/scpbo/bsu-nursing 2 -
+/wp-content/uploads/2011/07/IHS-2010.jpg 11 -
+/ftpsite 6 -
+/administrator/ 3 -
+/index.php/news 1 -
+/wp-login.php 8 -
+/wp-content/uploads/2011/08/IMG00077-20110324-1549.jpg 12 -
+/wp-includes/css/admin-bar.css 2 https://www.google.com/
+/projects/retail/joann/ 7 -
+/projects/retail/hdepot.html 2 -
+/projects/retail/lowessf 2 -
+/projects/scpbo/deshu/ 5 -
+/projects/scpbo/grand-county-rec 2 -
+/ftp/clients/rooms/myuploads 4 -
+/projects/retail/home-depot/ 4 -
+/shop/ 8 -
+/certifications/ 10 -
+/ftp/clients/cpanel 4 -
+/wp-admin/admin-ajax.php 5 http://www.lundahlironworks.com/wp-admin/admin-ajax.php
+/store/include/version.php 1 -
+/projects/retail/winroy/ 7 -
+/projects/retail/frys/ 6 -
+/projects/retail.html 1 -
+/projects/retail/oldnavy.html 5 -
+/configuration.php 1 -
+/projects/office/scenter.html 1 -
+/ftp/clients/login 7 -
+/shop.html 5 -
+/admin/FCKeditor/editor/filemanager/upload/test.html 2 -
+/projects/office 2 -
+/projects/scpbo/wildcat 9 -
+/projects/retail/her 3 -
+/admin/editors/fckeditor/editor/filemanager/upload/test.html 2 -
+/%EF%BF%BD%1C%03 1 http://lundahlironworks.com/
+/projects/retail/gsports.html 3 -
+/projects/retail/frys 3 -
+/projects/retail/maceys.html 1 -
+/wp-cron.php 6 -
+/projects/wildcat 2 -
+/wp-content/uploads/2011/07/Lowes-SF-2010-A.jpg 10 -
+/about-lic/feed/ 6 -
+/ftp/clients/contact 4 -
+/fckeditor/editor/filemanager/upload/test.html 2 -
+/projects/retail/vfm 6 -
+/ftp/clients/rooms 3 -
+/current-upcoming-jobs 5 -
+/projects/retail/cvmall.html 3 -
+/projects/recent.html 2 -
+/projects/office/codale 1 -
+/ftpsite/feed/ 5 -
+/shop/include/version.php 1 -
+/wp-content/uploads/2011/07/Erection-001.jpg 12 -
+/editor/FCKeditor/editor/dialog/fck_about.html 1 http://lundahlironworks.com/editor/FCKeditor/editor/dialog/fck_about.html
+/sitemap.xml 3 http://www.lundahlironworks.com/
+/robots.txt 516 -
+/projects/office/drlowe.html 3 -
+/projects/retail/home-depot/feed/ 2 -
+/84b0f327 1 -
+/admin/FCKeditor/editor/filemanager/connectors/test.html 2 -
+/wp-content/uploads/2011/07/IMG_0137.jpg 10 -
+/st.aspx 4 -
+/user 1 -
+/forum/ 1 http://www.lundahlironworks.com/
+/projects/athletics.html 3 -
+/projects/retail/ 7 -
+/references.html 5 -
+/editors/fckeditor/editor/filemanager/upload/test.html 2 -
+/shop 4 -
+/ftpsite.html 5 -
+/wp-admin/ 1 -
+/projects/scpbo/ihs 9 -
+/books.txt 1 -
+/FCKeditor/editor/filemanager/browser/default/connectors/test.html 2 -
+/about-lic/ 9 -
+/browserconfig.xml 1 -
+/admin/editor/filemanager/upload/test.html 1 -
+/projects/retail/harmons.html 3 -
+/projects/office/uni/ 5 -
+/admin/editor/filemanager/browser/default/connectors/test.html 1 -
+/projects/recent/feed/ 2 -
+/blog/wp-admin/admin-ajax.php 1 -
+/projects/retail 2 -
+/p0%EF%BF%BD%02 1 http://lundahlironworks.com/
+/images/cert/dod2008.pdf 5 -
+/admin/fckeditor/editor/filemanager/connectors/test.html 2 -
+/projects/scpbo/ihs/ 9 -
+/wp-content/uploads/2011/07/IMG_0901.jpg 11 -
+/projects/retail/lees.html 2 -
+/projects/scpbo/deshu 2 -
+/administrator 1 -
+/certifications 6 -
+/projects/scpbo/cor 6 -
+/FCKeditor/editor/filemanager/upload/test.html 2 -
+/home 8 -
+/password_forgotten.php 1 -
+/projects/retail/vfm/ 7 -
+/projects/feed/ 2 -
+/projects/retail/winegars.html 1 -
+/projects/recent/ 16 -
+/references/ 11 -
+/projects/retail/wfb 3 -
+/current-upcoming-jobs/ 12 -
+/current-upcoming-jobs/feed/ 5 -
+/admin/FCKeditor/editor/filemanager/browser/default/connectors/test.html 1 -
+/contact-us/ 1 -
+/certifications/feed/ 8 -
+/projects/ 10 -
+/admin/FCKeditor/editor/dialog/fck_about.html 1 http://lundahlironworks.com/admin/FCKeditor/editor/dialog/fck_about.html
+/fckeditor/editor/filemanager/connectors/test.html 1 -
+/projects/retail/lowes.html 1 -
+/editor/editor/dialog/fck_about.html 1 http://lundahlironworks.com/editor/editor/dialog/fck_about.html
+/projects/office/drlowe/ 2 -
+/projects/scpbo/ 8 -
+/projects/office/fbureau.html 1 -
+/references 6 -
+/manage/FCKeditor/editor/dialog/fck_about.html 1 http://lundahlironworks.com/manage/FCKeditor/editor/dialog/fck_about.html
+/projects/apple 1 -
+/projects/retail/img/maceys.jpg 2 -
+/xcart/include/version.php 1 -
+/user/ 1 -
+/projects/scpbo/feed/ 2 -
+/projects/retail/home-depot 2 -
+/projects/scpbo/cor/ 7 -
+/images/refer.jpg 15 -
+/projects/athletics/apple.html 4 -
+/admin 1 -
+/sitemap_index.xml 1 http://www.lundahlironworks.com/
+/projects/scpbo/grand-county-rec/ 3 -
+/FCK/editor/dialog/fck_about.html 1 http://lundahlironworks.com/FCK/editor/dialog/fck_about.html
+/index.php 2 -
+/ftp/privacy 4 -
+/themes/default/ 2 -
+/projects/retail/wfb/ 7 -
+/projects/office/cam/ 8 -
+/projects/retail/lowso 3 -
+/projects/retail/img/oldnavy.jpg 1 -
+/images/cert/cop2008.pdf 10 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 399
+120.60.157.225 139 162 1618233 20140925233139
+178.137.87.105 134 134 470876 20140929044845
+46.118.117.154 134 134 470876 20140929105838
+46.119.122.233 131 131 460334 20140929081451
+193.150.120.14 111 111 390054 20140929075903
+75.149.227.122 102 463 19251377 20140930103748
+109.120.157.179 45 45 158130 20140929112353
+78.46.21.158 37 91 3659201 20140903141319
+65.121.108.182 37 104 4122745 20140923153213
+72.250.211.71 35 102 4125461 20140905091133
+5.199.175.174 32 32 151465 20140910042555
+67.137.124.134 31 93 3709953 20140916125713
+134.249.77.209 30 30 105420 20140930182713
+94.153.65.124 27 27 94878 20140930023604
+82.192.74.187 27 30 134258 20140903171813
+67.183.58.199 24 77 3168107 20140917155126
+74.50.117.180 24 24 112117 20140903183237
+71.35.193.160 24 80 3234155 20140929123506
+208.27.177.196 24 81 3322065 20140924101422
+192.99.149.88 23 23 93176 20140928150504
+69.58.178.59 22 22 93518 20140908194502
+174.27.68.29 21 72 3048414 20140906144621
+203.199.182.179 19 69 2585273 20140924031354
+63.138.181.66 19 99 4103226 20140916135829
+50.125.147.91 18 66 2705867 20140925091047
+37.139.52.23 12 12 42168 20140926192356
+23.30.82.45 2 25 1105508 20140929122103
+174.23.128.144 2 18 1080961 20140913233501
+82.193.99.33 9 9 31626 20140929211954
+74.36.211.252 4 38 1488234 20140929100626
+179.232.162.161 1 15 1073274 20140920165446
+85.17.184.42 1 1 0 20140902122108
+24.10.139.160 10 51 2047383 20140923223444
+67.60.210.74 1 17 1077003 20140910075812
+92.124.43.177 1 1 3514 20140930131410
+71.195.199.143 3 19 1084475 20140904192044
+54.164.4.186 0 1 176150 
+69.129.65.154 1 17 1077003 20140911105000
+208.81.65.248 1 1 3514 20140909104358
+148.251.11.138 1 1 3514 20140914160930
+150.70.173.56 1 1 3514 20140918102435
+186.42.54.110 1 30 2955625 20140917165247
+71.170.186.54 1 17 1077003 20140902132354
+67.2.147.144 1 6 335541 20140921165219
+182.118.55.162 1 6 135882 20140906143425
+54.183.222.219 7 7 28508 20140908144211
+98.101.33.146 1 17 1077003 20140902110343
+54.227.186.71 1 1 3514 20140908233451
+46.4.124.178 1 1 3514 20140903134559
+208.43.252.203 17 17 77660 20140904112524
+148.251.11.146 2 2 7028 20140908100310
+220.181.108.146 0 1 6275 
+85.204.235.52 1 1 3514 20140921054504
+208.80.194.127 1 1 3958 20140926131007
+8.28.150.70 2 18 1080961 20140930102005
+66.87.127.247 1 17 1077003 20140903123123
+207.183.167.229 2 20 1143399 20140904172430
+107.23.182.84 0 1 124574 
+188.226.189.197 1 1 3514 20140901102041
+95.211.134.37 1 1 3514 20140927000107
+162.209.9.234 0 5 226537 
+177.157.93.153 1 62 7847300 20140906035149
+23.20.68.196 1 17 1077003 20140924094349
+207.46.13.31 0 1 93068 
+162.209.9.102 0 1 5007 
+64.235.154.193 1 1 3514 20140925101500
+177.47.50.136 1 43 5184154 20140929073025
+162.209.9.111 0 2 94714 
+54.165.103.117 1 1 3514 20140927002411
+69.120.161.159 9 49 2018878 20140922072501
+72.46.228.156 7 19 413274 20140904061147
+54.166.130.209 1 1 3514 20140914104021
+46.165.231.151 1 1 3514 20140925233740
+61.135.190.223 2 5 158322 20140908042859
+54.84.58.249 1 1 3958 20140930153022
+65.130.220.149 1 1 0 20140905193500
+182.248.150.2 1 1 3514 20140912120402
+54.165.250.85 0 1 176150 
+54.166.198.190 3 3 10542 20140922192941
+61.135.190.100 2 6 251390 20140920024657
+198.211.104.25 6 11 157395 20140915085000
+24.10.253.167 3 20 1109466 20140910141439
+122.177.85.169 1 17 1077003 20140920055705
+108.226.100.169 5 50 2956436 20140929153703
+193.201.224.76 6 6 24994 20140903163550
+54.165.245.110 1 2 7553 20140918073710
+162.209.10.32 0 1 2083 
+148.251.11.131 1 1 3514 20140908214444
+208.80.194.122 1 1 3514 20140930233854
+61.135.190.220 2 6 251390 20140930031918
+54.164.71.254 0 1 1944 
+63.248.24.246 1 17 1077003 20140921223822
+61.135.190.219 4 12 502780 20140928093815
+174.52.248.47 3 20 1109466 20140926110127
+69.20.166.236 9 49 1864474 20140922122509
+216.190.218.98 4 38 2211016 20140926114455
+207.46.13.84 0 1 29113 
+186.212.74.248 1 24 2156605 20140923065650
+150.70.75.206 1 1 3514 20140905112144
+24.21.218.47 4 35 1486109 20140904081003
+186.42.200.71 2 492 73253594 20140917110453
+54.84.157.67 0 1 33880 
+193.150.120.164 1 1 3514 20140911131617
+101.226.14.37 1 1 3514 20140917210850
+107.181.94.10 1 1 3514 20140919043828
+63.225.63.106 15 77 3352181 20140918115152
+150.70.173.39 2 2 7028 20140924075202
+174.52.249.86 2 18 1080961 20140928201438
+97.126.246.128 1 17 1077003 20140905203109
+24.104.68.122 1 17 1077003 20140918101648
+50.199.167.153 1 9 366363 20140926083422
+187.120.132.90 1 45 5295092 20140924120348
+166.70.236.245 2 20 1143399 20140915171313
+174.253.162.3 2 31 1865542 20140923201907
+190.25.79.208 1 14 1068267 20140919235535
+64.235.151.197 5 5 17570 20140926122607
+187.213.158.161 1 38 4304888 20140918150112
+148.251.11.134 1 1 3514 20140901075406
+192.34.59.53 6 11 157395 20140906112111
+210.199.227.18 1 1 3514 20140916004549
+50.76.141.118 2 8 325660 20140903143239
+199.30.24.23 0 16 1073489 
+150.70.97.98 1 1 3514 20140929100518
+61.135.190.224 2 6 251390 20140916022142
+93.92.217.228 2 4 74788 20140904071829
+98.242.194.222 2 20 1143399 20140930151509
+150.70.97.88 1 1 3514 20140929101316
+54.167.74.52 14 25 32022 20140924101123
+54.165.115.64 1 1 3514 20140919090356
+182.118.44.211 1 6 135882 20140917210852
+64.235.154.195 5 5 17570 20140924080259
+179.197.229.186 1 22 1811924 20140920131911
+67.142.165.23 5 59 2999775 20140921172119
+150.70.75.213 4 4 14056 20140929121748
+24.10.202.37 3 32 1419713 20140903113830
+69.28.149.129 1 1 3514 20140923200210
+63.228.179.85 5 42 2272475 20140916110718
+209.210.200.68 4 38 2211016 20140909125243
+162.209.10.30 1 2 5251 20140930174442
+54.164.67.13 0 1 176150 
+198.154.104.37 0 9 10187 
+162.243.170.64 6 11 157229 20140902011258
+74.207.254.114 1 1 3514 20140905214422
+54.165.185.54 0 2 326141 
+173.165.129.197 1 17 1077003 20140924112548
+173.167.72.181 4 35 1486109 20140926041747
+150.70.173.38 2 2 7028 20140911120920
+70.208.2.166 2 18 1080961 20140924155132
+67.2.5.30 1 18 1140003 20140902122907
+187.18.127.193 1 26 2405753 20140915123948
+202.124.138.148 2 38 3430597 20140924150203
+198.199.66.108 6 11 157395 20140924153128
+82.146.47.239 9 9 38051 20140908001722
+198.178.124.47 1 1 3514 20140916170940
+63.141.250.66 1 1 3514 20140918101759
+64.235.152.53 4 4 14056 20140930120717
+177.114.208.201 1 13 1066530 20140922214954
+65.130.85.68 3 31 1395166 20140904184649
+103.18.170.99 3 14 485016 20140903233349
+70.98.72.114 10 51 1907962 20140911083215
+182.118.44.72 1 1 3514 20140908033107
+178.137.94.81 6 6 21084 20140930170714
+174.129.6.222 4 4 15334 20140902104414
+66.249.85.52 1 1 3514 20140902122047
+117.78.13.29 1 1 3514 20140910125502
+199.30.24.51 0 1 1646 
+202.46.50.33 1 1 3514 20140903175812
+188.65.117.146 6 6 29528 20140922114844
+112.64.235.254 1 3 125695 20140915035911
+174.25.59.5 4 33 1482380 20140924104020
+63.248.7.48 6 38 1509514 20140922204731
+78.158.11.226 1 1 3514 20140927103757
+54.224.27.110 1 1 3514 20140904135109
+67.42.78.170 3 20 1109466 20140923083558
+188.65.117.139 2 2 7168 20140922062223
+64.235.151.196 8 8 28112 20140926145300
+64.235.154.68 6 6 21084 20140929140017
+157.55.39.216 0 1 29113 
+70.208.11.80 0 1 93149 
+119.63.193.132 1 1 3514 20140930034126
+79.148.126.221 1 1 3514 20140910013940
+204.113.58.145 1 17 1077003 20140924075421
+208.93.7.118 1 1 3514 20140922010631
+96.53.66.234 4 35 1486109 20140918093626
+63.248.191.63 10 51 2047383 20140912143747
+70.208.11.12 1 4 13701 20140904080823
+112.64.235.86 1 3 125695 20140905040248
+157.55.39.81 0 1 93068 
+58.177.11.60 1 24 2121547 20140915232141
+66.249.84.100 1 1 3514 20140926114214
+198.154.104.41 1 1 3514 20140909130243
+150.70.97.69 1 1 3514 20140903153249
+98.202.150.223 2 18 1080961 20140926113129
+179.133.98.67 1 1 3514 20140917155135
+150.70.173.59 1 1 3514 20140921171913
+202.46.49.128 1 1 0 20140902145933
+209.63.122.28 1 17 1077003 20140918134943
+74.202.110.125 3 34 1463879 20140905063728
+76.27.106.91 8 47 1814310 20140904162323
+107.178.200.200 1 1 3514 20140930003431
+202.46.51.43 1 1 3514 20140930034115
+69.144.203.43 2 19 1105508 20140912140508
+107.21.132.0 4 9 147852 20140915013740
+174.19.44.165 4 34 1461562 20140903174505
+146.48.97.23 1 1 3514 20140926115136
+220.181.108.103 0 1 6275 
+70.208.5.9 3 22 1171904 20140907172253
+69.55.98.32 1 11 780109 20140905192213
+24.10.160.95 4 34 1461562 20140929050857
+66.243.23.37 8 46 2276601 20140917082138
+165.239.240.31 1 17 1077003 20140922085001
+54.165.231.60 0 1 149991 
+63.248.27.30 1 17 1077003 20140921182156
+191.208.93.3 1 21 1832334 20140920105906
+66.249.82.100 1 17 1077003 20140926114215
+50.11.211.52 1 17 1077003 20140912222202
+162.244.13.104 2 2 9538 20140918071605
+134.249.49.191 6 6 21084 20140930211543
+199.30.24.112 0 2 289742 
+61.135.190.103 2 7 344458 20140919094247
+67.137.12.226 1 17 1077003 20140902124657
+93.78.87.197 1 1 3514 20140930051756
+192.170.156.101 1 1 3514 20140920055703
+88.198.208.67 2 2 8283 20140914145352
+202.46.53.68 1 1 3514 20140930154100
+162.209.9.220 0 2 156266 
+65.129.27.89 1 1 3958 20140906172930
+54.90.148.110 1 1 3514 20140928101152
+69.144.249.250 2 20 1143399 20140926084401
+201.17.235.22 1 20 1501559 20140911134428
+108.255.242.101 1 5 138275 20140906162030
+174.47.44.30 4 40 1550672 20140902072647
+162.209.9.247 0 1 124574 
+172.56.39.210 7 45 1745764 20140926155733
+95.211.168.82 7 23 1084031 20140902122120
+193.201.224.102 1 1 3514 20140926172344
+54.88.7.3 0 1 93068 
+97.126.237.59 2 18 1080961 20140910163730
+95.9.129.33 4 4 14056 20140906222419
+54.210.42.110 1 1 3514 20140927002015
+89.145.108.205 1 1 3514 20140917144750
+198.211.117.220 6 11 157395 20140919204226
+54.221.38.145 1 1 3514 20140922064200
+64.235.150.221 3 3 10542 20140929125114
+202.46.55.191 1 1 3514 20140907214510
+177.138.208.240 1 20 1501559 20140902174237
+54.165.243.142 1 1 3514 20140918234941
+98.255.33.110 3 3 11970 20140908225058
+54.165.244.28 1 1 3687 20140917032935
+174.52.247.248 4 32 1398680 20140902154044
+150.70.97.126 1 1 4916 20140929100815
+70.208.4.20 2 20 1143399 20140924150819
+187.36.155.2 1 29 2908044 20140912070544
+84.59.186.171 13 56 2075649 20140903131016
+119.63.193.195 2 2 7028 20140910195403
+54.165.159.186 1 1 3958 20140918022705
+187.107.109.214 1 22 1785765 20140923174056
+64.233.172.16 1 1 3514 20140926201937
+204.113.202.80 2 18 1080961 20140910133616
+188.65.117.144 1 1 3514 20140922042335
+191.185.182.186 1 29 2908044 20140930075432
+98.202.27.186 2 18 1080961 20140926130404
+148.251.11.139 1 1 3514 20140914221853
+178.222.41.18 1 20 1501559 20140901025641
+64.235.152.54 1 1 3514 20140903102813
+150.70.75.167 1 1 3514 20140910125149
+97.114.105.54 1 17 1077003 20140917085818
+66.214.207.89 3 22 1171904 20140919163752
+181.55.230.179 1 24 2069971 20140919160020
+70.208.6.15 2 20 1143399 20140930110325
+73.52.146.121 8 47 1784904 20140925201901
+177.134.41.210 1 58 7175736 20140904120718
+198.100.148.142 3 3 13057 20140922033023
+199.30.25.75 0 5 295208 
+98.202.31.149 3 35 2157964 20140905151826
+207.172.209.16 2 2 3514 20140902090455
+54.191.68.82 1 1 3514 20140926203902
+202.46.63.45 1 1 3514 20140913174805
+27.105.104.155 8 48 1784376 20140917035817
+173.231.104.195 1 17 1077003 20140917153432
+54.198.210.250 1 1 3514 20140907114552
+190.6.0.167 1 64 8138383 20140907125930
+63.248.28.120 4 34 1461562 20140920074956
+38.100.21.64 8 11 43650 20140913064143
+70.199.129.17 1 17 1077003 20140917152331
+166.137.209.24 5 36 1481009 20140911103720
+54.165.48.225 1 1 4769 20140917132510
+64.235.154.194 6 6 21084 20140929142451
+31.129.138.227 1 1 3514 20140927095150
+54.165.224.141 0 1 1944 
+71.33.25.36 7 57 2591617 20140909110620
+119.63.193.194 1 1 3514 20140918054524
+50.39.212.122 4 36 1503143 20140918102631
+188.92.76.167 7 7 0 20140918212015
+72.250.211.77 3 21 1147357 20140911095403
+107.23.175.79 0 1 1944 
+220.181.108.92 0 1 6275 
+188.65.117.169 4 4 17826 20140922050845
+61.135.190.104 4 12 502780 20140929093718
+75.168.36.212 1 17 1077003 20140907072410
+107.23.213.124 1 3 329828 20140929141922
+75.162.190.35 3 21 1147357 20140924103017
+62.210.75.243 1 3 125695 20140923005227
+202.46.58.32 1 1 3514 20140918054503
+209.34.134.2 2 34 2154006 20140924133844
+61.135.190.102 3 9 377085 20140926095040
+198.199.75.123 6 11 157395 20140911002522
+54.172.7.150 1 1 5585 20140930213409
+76.27.107.241 3 6 248703 20140924153244
+66.87.127.232 9 50 1907204 20140909215819
+54.165.231.84 0 1 33880 
+187.114.211.170 1 42 4847141 20140927085253
+59.165.46.196 0 8 686888 
+82.104.80.116 1 27 2581903 20140923014255
+50.193.9.161 3 17 575962 20140904150532
+182.118.55.128 1 6 135882 20140911173802
+71.4.81.62 1 17 1077003 20140930101028
+208.90.57.196 10 10 41786 20140903094551
+23.30.48.1 10 65 3448174 20140930131953
+186.113.139.119 1 24 2121547 20140929083401
+177.182.79.118 1 26 2405753 20140929210903
+112.64.235.248 1 3 125695 20140903040641
+161.168.251.103 6 38 1509514 20140930102812
+148.251.11.135 1 1 3514 20140901195234
+184.168.200.194 1 1 3514 20140924051145
+189.106.76.173 1 21 1661191 20140918072720
+208.43.245.104 17 17 82233 20140930055727
+77.236.192.239 1 17 1077003 20140905175803
+74.52.245.146 1 1 3514 20140904215835
+64.235.154.71 7 7 24598 20140929081527
+54.183.216.23 7 7 28508 20140908210852
+208.87.233.180 8 51 1910166 20140924090546
+54.88.177.216 0 1 1686 
+192.185.4.23 1 1 3514 20140924051412
+130.185.139.213 1 1 3514 20140911232936
+208.53.159.58 2 27 1855069 20140917145441
+82.85.235.60 1 44 5163641 20140925221651
+64.235.154.69 2 2 7028 20140926062229
+177.132.40.43 1 27 2572262 20140921115630
+75.99.110.106 2 18 1080517 20140903125243
+179.156.186.20 1 57 7180473 20140902015644
+198.154.104.39 1 1 3514 20140927025925
+199.185.0.215 2 2 3514 20140905151933
+89.145.108.207 1 1 3514 20140917112424
+75.169.4.236 2 18 1080961 20140903203714
+72.14.177.159 1 1 3514 20140926023155
+204.113.196.173 2 18 1080961 20140916105443
+129.123.116.147 16 62 2571097 20140904090113
+162.209.9.224 0 2 177836 
+177.182.220.225 1 29 2908044 20140917170339
+206.116.12.107 7 40 1813033 20140918120159
+98.202.248.233 2 18 1080961 20140925003153
+190.160.220.106 1 12 1064844 20140905113631
+65.129.82.142 1 17 1077003 20140903141839
+184.99.94.159 2 18 1080961 20140911062539
+70.208.2.88 1 17 1077003 20140903213718
+54.68.150.188 7 7 28508 20140911232010
+70.208.0.33 6 43 1597494 20140923184541
+174.239.97.81 8 47 1934024 20140922091001
+80.103.220.68 1 22 1785765 20140903132528
+64.235.151.198 2 2 7028 20140923131452
+150.70.173.60 3 3 10542 20140930151147
+61.135.190.222 1 3 125695 20140922002535
+76.27.24.94 4 35 1477051 20140906191454
+199.116.169.254 1 1 3514 20140921182156
+54.84.91.205 1 2 11044 20140929234936
+61.135.190.101 2 6 251390 20140918114418
+54.165.201.99 2 2 7028 20140912133913
+64.235.150.223 1 1 3514 20140924075943
+54.165.164.253 0 1 29113 
+119.63.193.196 1 1 3514 20140907114516
+216.128.239.52 1 17 1077003 20140904123937
+195.242.218.133 15 15 52710 20140929235456
+54.165.254.12 0 1 159632 
+54.83.6.7 1 1 3514 20140906160353
+148.251.11.144 1 1 3514 20140906035811
+54.208.185.20 1 3 102824 20140917115810
+191.173.31.78 1 20 1501559 20140906104617
+220.181.108.183 0 1 6275 
+202.46.52.30 1 1 3514 20140910195323
+63.248.60.21 8 48 1898623 20140902105954
+198.154.104.43 4 4 14056 20140925011748
+220.181.108.95 0 1 6275 
+54.166.144.84 4 9 147852 20140929225138
+50.242.74.101 1 1 3514 20140922192330
+177.223.3.165 1 18 1226994 20140925151907
+187.14.185.0 1 20 1501559 20140904091131
+162.209.9.251 0 1 284735 
+189.73.75.172 1 15 1073274 20140914150923
+208.12.64.199 2 2 7028 20140905112354
+189.44.210.29 1 15 1073274 20140922123852
+64.187.233.132 2 34 2154006 20140908202718
+119.63.193.130 1 1 3514 20140930154110
+50.205.179.8 1 17 1077003 20140904150624
+128.30.52.70 1 1 3514 20140902122054
+179.110.25.132 1 20 1501559 20140928104729
+202.46.60.61 1 1 3514 20140907114459
+37.59.4.151 1 1 3514 20140913095410
+50.247.51.185 1 17 1077003 20140929145814
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 30
+20140901 20 41 1690506 10
+20140902 80 403 21972811 28
+20140903 180 519 20861912 33
+20140904 97 446 23714209 29
+20140905 99 367 16963180 28
+20140906 54 230 14373086 14
+20140907 33 136 10618050 16
+20140908 64 115 3611544 18
+20140909 56 156 5570660 21
+20140910 93 250 9977537 15
+20140911 88 302 12084125 26
+20140912 40 160 8424972 17
+20140913 43 67 1355726 17
+20140914 28 44 1291588 13
+20140915 45 123 6207061 18
+20140916 57 197 8331403 12
+20140917 95 872 92975545 37
+20140918 55 263 14477628 28
+20140919 42 157 7262719 17
+20140920 37 147 7783313 15
+20140921 28 148 8256806 14
+20140922 84 283 11298740 29
+20140923 98 377 18592591 27
+20140924 169 671 32043900 39
+20140925 191 383 13956239 18
+20140926 83 246 9464350 36
+20140927 29 70 4945533 17
+20140928 28 65 2792551 13
+20140929 95 376 20250496 35
+20140930 74 274 13082190 29
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 1
+5mn-15mn 15
+0s-30s 587
+15mn-30mn 3
+30s-2mn 41
+2mn-5mn 17
+30mn-1h 5
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 37
+/ 1287 4459266 630 515
+/join.html 99 363140 9 52
+/about.html 91 331830 8 20
+/projects.html 87 480310 4 9
+/contact.html 81 381520 7 36
+/ftp.html 34 114873 4 6
+/projects/education-1.html 30 147660 0 3
+/projects/auto-1.html 28 137172 0 2
+/projects/commercial-1.html 25 122900 3 4
+/projects/education-2.html 22 107976 0 1
+/projects/industrial-1.html 22 108262 1 1
+/projects/healthcare-1.html 21 104055 0 2
+/projects/education-5.html 21 103887 0 1
+/projects/auto-2.html 20 97960 0 0
+/projects/education-3.html 19 93746 0 0
+/projects/education-4.html 19 93727 0 0
+/projects/auto-5.html 18 88164 0 1
+/projects/auto-3.html 18 88128 0 1
+/projects/industrial-2.html 17 83538 0 0
+/projects/auto-4.html 17 83283 0 2
+/projects/commercial-2.html 16 78848 0 0
+/projects/municipal-1.html 16 78640 1 2
+/projects/healthcare-2.html 16 78736 0 0
+/projects/industrial-5.html 15 73680 0 1
+/projects/commercial-4.html 14 68894 0 0
+/projects/municipal-5.html 11 54175 1 1
+/projects/industrial-4.html 13 64051 0 0
+/projects/municipal-2.html 10 49260 0 0
+/projects/municipal-3.html 8 39464 0 0
+/projects/healthcare-5.html 14 68768 0 5
+/projects/../ftp.html 1 3481 0 0
+/projects/healthcare-3.html 13 64545 0 1
+/projects/commercial-5.html 13 63934 0 0
+/projects/industrial-3.html 14 68698 0 0
+/projects/healthcare-4.html 12 59028 0 1
+/projects/municipal-4.html 9 44136 1 1
+/projects/commercial-3.html 14 68880 0 1
+END_SIDER

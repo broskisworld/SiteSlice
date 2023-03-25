@@ -1,0 +1,18 @@
+--- 
+documentroot: /home/lundahl2600/public_html
+group: lundahl2600
+hascgi: 0
+homedir: /home/lundahl2600
+ip: 173.201.189.110
+ipv6: ~
+owner: gdresell
+phpopenbasedirprotect: ~
+port: 443
+secruleengineoff: ~
+serveradmin: webmaster@lundahlironworks.com
+serveralias: mail.lundahlironworks.com www.lundahlironworks.com
+servername: lundahlironworks.com
+ssl: 1
+usecanonicalname: 'Off'
+user: lundahl2600
+userdirprotect: ''

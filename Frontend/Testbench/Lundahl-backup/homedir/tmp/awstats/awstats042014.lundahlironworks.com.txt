@@ -1,0 +1,725 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201404 will be lost/reset.
+# Last config file used to build this data file was /home/lundahl2600/tmp/awstats/awstats.lundahlironworks.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2017                
+POS_TIME 2685                
+POS_VISITOR 13162               
+POS_DAY 18821               
+POS_DOMAIN 3469                
+POS_LOGIN 3959                
+POS_ROBOT 4114                
+POS_WORMS 4616                
+POS_EMAILSENDER 4747                
+POS_EMAILRECEIVER 4890                
+POS_SESSION 19232               
+POS_SIDER 19439               
+POS_FILETYPES 5025                
+POS_DOWNLOADS 5295                
+POS_OS 5362                
+POS_BROWSER 5521                
+POS_SCREENSIZE 6251                
+POS_UNKNOWNREFERER 6325                
+POS_UNKNOWNREFERERBROWSER 6841                
+POS_ORIGIN 7143                
+POS_SEREFERRALS 7285                
+POS_PAGEREFS 7473                
+POS_SEARCHWORDS 7889                
+POS_KEYWORDS 8284                
+POS_MISC 2349                
+POS_ERRORS 8548                
+POS_CLUSTER 3815                
+POS_SIDER_404 8671                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20140501000611 142 29363 8979422466213
+FirstTime 0
+LastTime 20140430234615
+LastUpdate 20140501051821 142 0 141 0 0
+TotalVisits 236                 
+TotalUnique 139                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 145                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 6 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 1 1 1888 36 44 82323
+1 0 0 0 38 45 91778
+2 2 8 486197 39 54 93105
+3 3 3 3926 39 54 92313
+4 5 11 491861 38 51 86498
+5 6 6 11778 42 52 83893
+6 11 38 1976286 38 45 70112
+7 27 52 1593765 48 68 102393
+8 27 83 4168045 42 68 97729
+9 19 38 1481397 37 47 68149
+10 171 281 8440809 79 115 216379
+11 31 94 4424847 54 78 109114
+12 15 49 2497123 40 60 104186
+13 17 54 2456541 54 76 109000
+14 30 88 3981828 57 82 123517
+15 29 93 4539892 47 60 86194
+16 19 62 2555062 41 64 108111
+17 17 61 2496018 52 64 102758
+18 9 19 692216 35 52 267738
+19 8 20 980021 48 63 110862
+20 5 23 1456478 37 54 94605
+21 4 4 7552 44 56 103542
+22 2 2 3776 34 45 78429
+23 9 27 1464105 44 54 85910
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 21
+us 401 1003 42233937
+cn 18 18 34584
+jp 12 12 23106
+fi 6 6 7627
+ua 4 4 7552
+ru 3 3 5889
+gb 3 15 970356
+lu 3 3 5814
+fr 2 2 0
+in 2 14 968468
+br 2 8 486197
+ca 2 8 486122
+il 1 1 1888
+rs 1 7 484234
+es 1 1 1888
+eu 1 1 1888
+sa 1 1 1888
+pl 1 1 1888
+zz 1 1 1963
+ng 1 7 484234
+lt 1 1 1888
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 10
+bot[\s_+:,\.\;\/\\-] 44 102826 20140430195625 0
+googlebot 30 262955 20140430170520 0
+spider 11 14067 20140429100459 0
+robot 10 13500 20140430080903 1
+no_user_agent 8 15404 20140429040730 0
+crawl 6 25781 20140426021141 0
+ia_archiver 1 1963 20140421083120 0
+[\s_+:,\.\;\/\\-]bot 1 1888 20140422031604 0
+slurp 1 1888 20140423214826 0
+msnbot\-media 1 1888 20140426192721 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 11
+eot 2 45963 0 0
+css 126 1028231 0 0
+png 379 25742792 0 0
+ttf 1 18060 0 0
+php 126 3726538 0 0
+html 319 897885 0 0
+jpg 111 12684704 0 0
+js 24 1845904 0 0
+Unknown 19 171038 0 0
+svg 3 4563 0 0
+gif 7 45733 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 1
+/robots.txt 1 0 59
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 12
+linuxandroid 47
+winlong 19
+winxp 79
+winnt 1
+java 3
+linux 23
+winvista 32
+win7 677
+winme 1
+macosx 201
+win95 3
+Unknown 31
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 43
+safari7.0.3 98
+firefox28.0 31
+msie6.0 7
+safari7.0 31
+chrome21.0.1180.90 2
+chrome18.0.1025.162 7
+firefox26.0 7
+android 3
+lynx 1
+chrome31.0.1650.63 7
+firefox24.0 2
+safari5.0.2 1
+firefox3.6.15 6
+msie8.0 97
+msie7.0 41
+chrome34.0.1847.116 91
+firefox23.0 1
+chrome27.0.1453 1
+opera9.64 2
+chrome33.0.1750.154 205
+msie5.0 1
+msie9.0 22
+firefox27.0 7
+Unknown 24
+safari5.0.5 64
+chrome21.0.1180.75 1
+firefox17.0 5
+chrome17.0.963.56 1
+chrome22.0.1207.1 1
+chrome34.0.1847.131 29
+chrome34.0.1847.114 44
+chrome27.0.1453.110 3
+firefox7.0.1 1
+chrome32.0.1700.107 22
+safari6.0.5 7
+mozilla 176
+firefox14.0.1 2
+msie10.0 45
+netscape4.0 2
+chrome27.0.1453.116 2
+firefox3.0.10 2
+safari 14
+firefox15.0.1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 8
+Ruby 20140421172815
+Lynx/2.8.5rel.1_libwww-FM/2.15FC_SSL-MM/1.4.1c_OpenSSL/0.9.7e-dev 20140425141039
+Mozilla/5.0_AppleWebKit/536.30.1_(KHTML,_like_Gecko)_Version/6.0.5_Safari/536.30.1_Installatron_(Mimicking_WebKit) 20140421100833
+WordPress/3.9;_http://www.lundahlironworks.com 20140421101956
+Mozilla/4.0 20140428043429
+Python-urllib/2.6 20140419190002
+nutch-1.4/Nutch-1.4 20140425200154
+Installatron_Plugin/9.1.0 20140421103326
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 6
+Python-urllib/2.6 20140419190002
+Ruby 20140421172815
+Java/1.6.0_26 20140430153233
+nutch-1.4/Nutch-1.4 20140425200154
+Installatron_Plugin/9.1.0 20140421103326
+WordPress/3.9;_http://www.lundahlironworks.com 20140421101956
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 227 229
+From1 0 0
+From2 48 49
+From3 13 13
+From4 179 826
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 4
+google 30 31
+baidu 6 6
+bing 10 10
+yahoo 2 2
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 6
+http://semalt.semalt.com/crawler.php 4 4
+http://chimiver.info 3 3
+http://beamfall.info/info/gretydafidonemapu 2 2
+http://start.cortera.com/company/research/k2j6jwq0m/lundahl-ironworks-co/ 2 2
+http://www.prestonrodeo.com 1 1
+http://www.yellowbook.com/yellow-pages/ 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 8
+lundahl+ironworks 7
+lundahlironworkscompany%7cstructural%26miscellaneoussteelfabrication 6
+http+//www.lundahlironworks.com/ 2
+lundahl+ironworks+company 2
+lundahl+iron+works 1
+%3flundahl+ironworks 1
+franklin+iron+works 1
+lundahlironworks.com 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 11
+lundahl 10
+ironworks 10
+lundahlironworkscompany%7cstructural%26miscellaneoussteelfabrication 6
+works 2
+http 2
+iron 2
+company 2
+//www.lundahlironworks.com/ 2
+%3flundahl 1
+lundahlironworks.com 1
+franklin 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+302 8 0
+206 5 16779
+301 9 1709
+404 1206 2107990
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 150
+/images/midbg.jpg 1 -
+/projects/office/codale/ 4 -
+/admin.php 3 -
+/ftp/terms 3 -
+/projects/office/cam 1 -
+/cert.html 2 -
+/projects/scpbo/apple 2 -
+/projects/retail/lowso/ 2 -
+/projects/scpbo/bsu-nursing/ 1 -
+/projects/office/uni 3 -
+/wp-content/themes/twentyten/ddsmoothmenu-v.css 1 -
+/images/headerbg1.jpg 1 -
+/about-lic 3 -
+/ftp/css/validation.css 1 -
+/xmlrpc.php 1 -
+/projects/retail/walgreens.html 2 -
+/projects/retail/img/cvmall.jpg 2 -
+/images/cert/slc2008.pdf 1 -
+/ftp/images/logos/LI_logo.png 1 -
+/images/liclogo2.jpg 1 -
+/projects/retail/her/ 3 -
+/wp-content/themes/twentyten/style.css 1 -
+/splash.html 3 -
+/projects/recent 4 -
+/projects/office/ 2 -
+/directory 3 -
+/projects/retail/lowessf/ 6 -
+/ftpsite/ 8 -
+/projects/retail/winroy 2 -
+/deleteme.wpckdh.php 2 -
+/images/cert/aisc2008.pdf 2 -
+/shop/feed/ 1 -
+/wp-content/uploads/2011/08/IMG_1594.jpg 4 -
+/projects/retail/joann 1 -
+/wp-content/uploads/2011/07/IHS-2010.jpg 3 -
+/projects/scpbo 1 -
+/projects/scpbo/bsu-nursing 3 -
+/ftpsite 2 -
+/dir 2 -
+/cpanel 1 -
+/administrator/ 3 -
+/login 1 -
+/wp-login.php 7 -
+/wp/wp-admin/ 2 -
+/wp-content/uploads/2011/08/IMG00077-20110324-1549.jpg 3 -
+/projects/retail/joann/ 5 -
+/projects/retail/lowessf 2 -
+/projects/scpbo/deshu/ 6 -
+/projects/scpbo/grand-county-rec 1 -
+/wp-login/ 3 -
+/projects/retail/home-depot/ 3 -
+/paull/style.css 1 http://lundahlironworks.com/paull/splash.html
+/shop/ 8 -
+/wp-content/themes/twentyten/ddsmoothmenu.css 1 -
+/certifications/ 6 -
+/ftp/clients/cpanel 1 -
+/wp-includes/wlwmanifest.xml 2 -
+/index.html 1 -
+/projects/retail/winroy/ 5 http://www.google.com/search
+/wp-admin 1 -
+/projects/retail/frys/ 5 -
+/projects/retail.html 1 -
+/projects/retail/oldnavy.html 3 -
+/ftp/clients/login 3 -
+/shop.html 1 -
+/projects/scpbo/wildcat 4 -
+/projects/retail/her 2 -
+/administrator/index.php 1 -
+/projects 3 -
+/projects/retail/gsports.html 1 -
+/projects.html 1 -
+/projects/retail/frys 3 -
+/wordpress/wp-admin/ 3 -
+/wp-cron.php 106 -
+/wp-content/uploads/2011/07/Lowes-SF-2010-A.jpg 4 -
+/about-lic/feed/ 1 -
+/images/pagebg.gif 1 -
+/ftp/clients/contact 1 -
+/projects/retail/vfm 2 -
+/current-upcoming-jobs 1 -
+/admin-login 1 -
+/projects/recent.html 1 -
+/projects/office/codale 2 -
+/ftpsite/feed/ 3 -
+/wp-content/uploads/2011/07/Erection-001.jpg 4 -
+/robots.txt 204 -
+/projects/office/drlowe.html 7 -
+/projects/retail/home-depot/feed/ 1 -
+/wp-content/uploads/2011/07/IMG_0137.jpg 4 -
+/user 1 -
+/uncategorized/hello-world/ 2 http://www.lundahlironworks.com/
+/lundahl2600/splash.html 2 -
+/projects/athletics.html 1 -
+/forum/ 1 http://lundahlironworks.com/forum/
+/projects/retail/ 2 -
+/images/home.jpg 1 -
+/shop 1 -
+/wp-admin/ 3 -
+/comments/feed/ 464 -
+/projects/scpbo/ihs 3 -
+/about-lic/ 39 http://www.google.com/
+/projects/retail/harmons.html 1 -
+/projects/office/uni/ 5 -
+/projects/recent/feed/ 1 -
+/projects/retail/img/harmons.jpg 2 -
+/projects/retail 4 -
+/images/cert/dod2008.pdf 5 -
+/projects/scpbo/ihs/ 14 -
+/wp-content/uploads/2011/07/IMG_0901.jpg 3 -
+/projects/retail/lees.html 2 -
+/projects/scpbo/deshu 3 -
+/lic.css 1 -
+/blog/wp-admin/ 2 -
+/administrator 1 -
+/ftp/css/site.css 1 -
+/projects/scpbo/cor 2 -
+/home 3 -
+/certifications 1 -
+/projects/feed/ 1 -
+/projects/retail/vfm/ 6 https://www.google.com/
+/projects/recent/ 4 -
+/references/ 12 http://www.google.com/url
+/projects/retail/wfb 1 -
+/apple-touch-icon.png 1 -
+/current-upcoming-jobs/ 3 -
+/current-upcoming-jobs/feed/ 2 -
+/certifications/feed/ 1 -
+/projects/ 7 -
+/projects/retail/lowes.html 1 -
+/wp-content/themes/twentyten/images/liclogo2.jpg 4 http://enterprise.us.dell.com/en-US/tam/gpms/contacts.aspx
+/projects/scpbo/ 5 -
+/about.html 2 -
+/references 3 -
+/home/lundahl2600/splash.html 1 -
+/apple-touch-icon-precomposed.png 1 -
+/projects/retail/home-depot 1 -
+/projects/scpbo/cor/ 8 -
+/images/refer.jpg 3 -
+/admin 2 -
+/projects/athletics/apple.html 1 -
+/projects/scpbo/grand-county-rec/ 4 -
+/https://www.facebook.com/pages/Lundahl-Ironworks/163103217040835 1 -
+/index.php 1 -
+/ftp/privacy 4 -
+/projects/retail/wfb/ 8 -
+/projects/office/cam/ 6 -
+/wp-login 11 -
+/projects/retail/lowso 1 -
+/projects/retail/img/oldnavy.jpg 2 http://picsbox.biz/key/old%20navy%20store%20locator
+/images/cert/cop2008.pdf 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 145
+75.149.227.122 174 327 12491280 20140430124218
+50.76.141.118 27 84 2813405 20140423151403
+23.30.48.1 21 75 3101859 20140428121248
+23.229.142.161 15 15 20423 20140421103326
+63.248.29.70 15 64 1957704 20140427094059
+63.248.29.140 10 36 1516222 20140422174704
+64.235.151.199 9 9 17067 20140429091129
+184.168.224.190 8 8 15629 20140421172815
+64.235.154.71 8 8 15254 20140429065541
+64.235.154.193 5 5 9665 20140425155748
+64.235.151.198 5 5 9665 20140429105201
+64.235.150.221 4 4 7627 20140430143555
+94.242.222.29 3 3 5814 20140423041940
+37.139.52.23 3 3 5889 20140419072401
+64.235.152.53 3 3 5739 20140429085954
+64.202.160.161 3 10 97437 20140421101035
+192.99.3.226 3 3 1888 20140429093612
+54.193.101.192 3 3 5664 20140425215057
+64.235.152.54 3 3 5739 20140429070915
+192.99.9.164 3 3 5739 20140430103136
+50.200.218.102 3 9 488160 20140425095036
+64.235.154.192 2 2 3776 20140430143327
+50.63.85.70 2 7 228959 20140421100833
+95.133.238.197 2 2 3776 20140422085522
+61.135.190.100 2 2 3851 20140430092748
+185.25.48.17 1 1 1888 20140427114024
+64.233.172.31 1 1 1963 20140420103006
+87.68.63.215 1 1 1888 20140428000656
+54.213.12.172 1 1 1963 20140419190002
+91.217.90.241 1 1 1888 20140421234135
+217.127.192.135 1 1 1888 20140423170351
+101.226.66.173 1 1 1888 20140428043429
+216.190.36.10 1 1 1963 20140418145510
+128.177.10.252 1 1 1888 20140426170220
+89.145.108.205 1 1 1888 20140429145841
+12.237.136.126 1 7 484234 20140421121701
+74.8.175.242 1 7 484234 20140423150113
+117.247.145.102 1 7 484234 20140428235015
+173.135.5.39 0 1 33880 
+150.70.97.117 1 1 1888 20140430092238
+70.89.245.137 1 1 1963 20140418133413
+162.200.246.186 1 7 484234 20140422071502
+150.70.75.167 1 1 1888 20140429091217
+182.118.44.104 1 1 1963 20140419160023
+71.217.117.125 1 7 484234 20140424105738
+74.95.39.195 1 7 484234 20140422151039
+209.253.66.42 1 7 484234 20140424152106
+61.135.190.219 1 1 1888 20140423231826
+69.20.166.236 1 1 1963 20140418100649
+23.21.24.219 1 1 1963 20140418233720
+72.60.31.225 1 7 484234 20140422043546
+184.173.227.138 1 1 1963 20140418060933
+148.126.100.82 1 7 484234 20140428145919
+119.147.146.189 2 2 3776 20140428115357
+67.41.16.130 1 1 1963 20140421084742
+24.10.138.241 1 7 484234 20140425234645
+180.153.201.214 1 1 1888 20140424040259
+71.239.75.185 1 7 484234 20140427171736
+63.248.45.115 1 7 484234 20140423113243
+54.234.92.118 1 1 1888 20140427095438
+64.235.154.194 2 2 3926 20140418111804
+199.30.228.146 0 3 291428 
+67.90.120.18 1 7 484234 20140423135619
+46.105.59.74 2 2 0 20140424115322
+119.63.193.194 1 1 1963 20140421075507
+150.70.173.39 2 2 3926 20140418054143
+199.30.228.149 1 3 38988 20140429062209
+199.30.24.109 0 6 482346 
+107.20.113.166 1 1 1963 20140420081535
+119.63.193.131 2 2 3926 20140421035236
+202.46.57.85 1 1 1963 20140420155056
+117.78.13.18 2 2 3851 20140425200154
+91.236.74.121 1 1 1888 20140424132712
+64.235.151.197 2 2 3776 20140429123702
+61.135.190.102 1 1 1888 20140427222127
+153.2.247.31 1 1 1963 20140421052529
+68.118.6.143 1 7 484234 20140423161620
+153.121.33.231 1 1 1888 20140429185810
+63.248.29.127 2 2 3926 20140421080403
+24.117.143.70 1 1 1963 20140421054740
+72.52.96.15 1 7 484234 20140428124912
+70.187.136.69 1 7 484234 20140422170532
+209.133.77.167 2 2 3776 20140429145737
+150.70.172.202 1 1 1888 20140423140134
+63.248.21.53 1 7 484234 20140422192838
+64.235.154.195 1 1 1888 20140425183041
+66.87.126.30 1 1 1963 20140418163838
+209.133.77.165 1 1 1888 20140429124734
+77.243.20.81 1 7 484234 20140422082106
+188.65.117.166 1 7 484234 20140428020421
+189.26.69.231 1 7 484234 20140424150724
+50.57.190.113 1 1 1888 20140429153725
+199.30.24.32 0 4 194391 
+199.30.25.139 0 6 482346 
+208.87.233.180 1 7 484234 20140424114934
+74.14.237.15 1 1 1888 20140423120906
+209.252.31.97 1 7 484234 20140430092113
+66.165.46.101 1 7 484234 20140423084741
+202.46.56.51 1 1 1963 20140421035206
+75.205.131.18 1 11 676838 20140429082934
+184.101.175.46 1 7 484234 20140425113658
+206.207.108.216 1 7 484234 20140430102859
+199.30.228.152 0 1 153818 
+80.192.245.158 1 7 484234 20140427072943
+70.208.3.127 1 7 484234 20140430085027
+5.199.142.250 1 1 1888 20140421224358
+8.28.150.79 1 7 484234 20140423113722
+173.163.91.81 1 3 37454 20140430153233
+166.137.209.49 1 7 484234 20140425130810
+67.186.195.213 2 2 3851 20140421232722
+71.15.96.70 1 7 484234 20140425132044
+67.51.94.245 1 1 1963 20140418093906
+78.158.11.226 1 1 1888 20140425141039
+202.46.50.15 1 1 1963 20140421075431
+150.70.75.212 1 1 1888 20140430093135
+129.123.118.75 1 7 484234 20140430115321
+209.133.77.163 1 1 1963 20140418132437
+198.0.183.185 1 7 484234 20140425083629
+64.235.151.196 2 2 3851 20140429072133
+64.235.154.68 2 2 3776 20140429110117
+97.74.104.6 2 2 3926 20140421071804
+172.245.21.71 1 7 484234 20140430234615
+208.98.182.101 1 7 484234 20140427060750
+65.129.80.210 1 7 484234 20140429205041
+195.54.166.10 1 1 1888 20140421170516
+172.56.38.127 1 1 1963 20140418113431
+199.116.169.254 1 1 1888 20140428145919
+64.235.150.223 2 2 3776 20140429091248
+150.70.173.47 1 1 1888 20140423135719
+96.18.218.174 1 7 484234 20140430063425
+202.46.49.75 1 1 1963 20140420195453
+50.57.68.14 1 1 1888 20140429153726
+71.43.71.45 1 7 484234 20140430182855
+23.30.58.238 1 7 484234 20140429093023
+204.144.104.65 2 8 486197 20140430134744
+199.217.116.214 2 2 3776 20140422190439
+182.118.45.64 1 1 1963 20140419160022
+119.63.193.130 1 1 1963 20140420195530
+63.226.94.14 1 7 484234 20140422161959
+186.251.8.3 1 1 1963 20140419172732
+98.202.24.42 1 7 484234 20140424203747
+64.60.145.122 1 7 484234 20140424080359
+61.135.190.103 2 2 3776 20140425231804
+122.178.206.127 1 7 484234 20140422105043
+75.150.40.181 1 1 1963 20140418072746
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 14
+20140417 9 9 17667 9
+20140418 30 36 124486 27
+20140419 11 11 19630 9
+20140420 10 10 19630 10
+20140421 220 410 14025322 35
+20140422 23 109 5884702 17
+20140423 18 60 2928060 18
+20140424 25 80 3936072 24
+20140425 34 108 5001908 19
+20140426 2 14 486122 2
+20140427 8 31 1654645 8
+20140428 26 66 3000162 18
+20140429 34 100 4704229 24
+20140430 17 73 4408776 16
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 2
+5mn-15mn 4
+30s-2mn 3
+15mn-30mn 2
+2mn-5mn 2
+0s-30s 221
+30mn-1h 2
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 47
+/ 260 521687 227 219
+/wp-admin/admin-ajax.php 27 5529 0 0
+/wp-admin/load-scripts.php 21 1141149 0 0
+/cpanel 19 171038 3 7
+/liw/ 14 52308 4 3
+/liw/contact.html 8 42160 0 1
+/wp-admin/users.php 8 237191 0 0
+/liw/join.html 8 30976 0 1
+/liw/projects.html 7 20692 0 2
+/wp-admin/options-general.php 7 263020 0 0
+/liw/about.html 7 28042 0 0
+/liw/ftp.html 6 17896 0 1
+/wp-admin/profile.php 6 191428 0 0
+/wp-login.php 6 16689 0 0
+/wp-admin/load-styles.php 5 581803 0 0
+/wp-admin/tools.php 5 115286 0 0
+/wp-admin/edit.php 5 189455 0 0
+/wp-cron.php 4 0 0 0
+/wp-admin/ 4 157833 0 0
+/about/ 3 22515 1 0
+/wp-admin/user-new.php 3 71679 0 0
+/wp-admin/options-permalink.php 2 49812 0 0
+/wp-admin/options-media.php 2 44928 0 0
+/wp-admin/options-reading.php 2 47434 0 0
+/wp-admin/post.php 2 234786 0 0
+/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.eot 1 9317 0 0
+/wp-admin/post-new.php 1 113331 0 0
+/wp-admin/index.php 1 45181 0 0
+/wp-includes/fonts/dashicons.eot 1 36646 0 0
+/deleteme.wtabsnz8.php 1 1275 0 0
+/deleteme.xatgouez.php 1 1275 0 1
+/wp-admin/link-manager.php 1 34157 0 0
+/wp-admin/plugins.php 1 33199 0 0
+/deleteme.3tjrhki4.php 1 1275 0 0
+/wp-admin/options-writing.php 2 54458 0 0
+/deleteme.wpckdh.php 1 3576 0 0
+/wp-admin/upgrade.php 1 1299 0 0
+/deleteme.9bbce2a251df4d5caafec2cc00bfc43e.php 1 0 0 0
+/wp-includes/js/tinymce/wp-tinymce.php 1 122903 0 0
+/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.ttf 1 18060 0 1
+/deleteme.tmbfqyo1.php 1 1275 0 0
+/deleteme.wppc4f7e5153f62446cbb138b9377b59656.php 1 76 0 0
+/wp-admin/upload.php 2 59316 0 0
+/wp-admin/options-discussion.php 2 58902 0 0
+/deleteme.zzcswmth.php 1 1275 1 0
+/deleteme.wpoje7.php 1 3576 0 0
+/paull/splash.html 2 3776 0 0
+END_SIDER
