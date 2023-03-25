@@ -14,7 +14,6 @@ export default function Editor() {
 
   const [changes, setChanges] = useState({});
 
-<<<<<<< HEAD
   
   // Form Data
   const [username, setUsername] = useState("");
@@ -76,20 +75,6 @@ export default function Editor() {
   const save = (username, password, hostname, port) => {
     
 
-=======
-  // const save = () => {
-  //   const requestOptions = {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: changeCache
-  //   };
-  //   fetch('http://localhost:5500/save', requestOptions)
-  //       .then(response => response.json())
-  //       .then(data => console.log(data));
-  // };
-
-  const save = () => {
->>>>>>> e6556e5161f976d20ac3ed6b72377d79fe3e40d4
     let values = [];
     for (let key of Object.keys(changes)) {
       console.log("STRINGIFIED CHANGES");
@@ -99,7 +84,6 @@ export default function Editor() {
         new_inner_html: changes[key].new_inner_html,
       });
     }
-<<<<<<< HEAD
     
     
     const body = {
@@ -108,27 +92,11 @@ export default function Editor() {
         ftp_password: `${password}`,
         changes: values
     }
-=======
-    // let values = Object.keys(changeCache).map(function(key){
-    //     return dictionary[key];
-    // });
-    console.log(values);
->>>>>>> e6556e5161f976d20ac3ed6b72377d79fe3e40d4
-
-    const body = {
-      url: "D:/Workshop/SiteSlice/Frontend/Testbench/Basic-site/index.html",
-      ftp_username: "",
-      ftp_password: "",
-      changes: values,
-    };
-
-    console.log(body);
 
     axios.post("http://localhost:5500/save", {
       headers: {
         "Content-Type": "application/json",
       },
-<<<<<<< HEAD
       body: body
     })
     .then((response) => {
@@ -156,11 +124,6 @@ export default function Editor() {
 
     close();
 }
-=======
-      body: body,
-    });
-  };
->>>>>>> e6556e5161f976d20ac3ed6b72377d79fe3e40d4
 
   const [searchParams] = useSearchParams();
 
@@ -199,16 +162,11 @@ export default function Editor() {
           Save Changes
         </motion.button>
 
-<<<<<<< HEAD
         <AnimatePresence
           initial={false}
           mode={"wait"}
         >
           {modalOpen && <SaveModal modalOpen={modalOpen} handleClose={close} handleSave={save} parentStateSetter={handleInputChange} formIsValid={isValidForm}/>}
-=======
-        <AnimatePresence initial={false} mode={"wait"}>
-          {modalOpen && <SaveModal modalOpen={modalOpen} handleClose={close} handleSave={save} />}
->>>>>>> e6556e5161f976d20ac3ed6b72377d79fe3e40d4
         </AnimatePresence>
       </div>
       <div className="bg-white flex justify-center items-center w-full h-[calc(100vh-4rem)] p-4 pt-0">
