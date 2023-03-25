@@ -1,0 +1,1915 @@
+AWSTATS DATA FILE 7.6 (build 20161204)
+# If you remove this file, all statistics for date 201807 will be lost/reset.
+# Last config file used to build this data file was /home/lundahl2600/tmp/awstats/awstats.lundahlironworks.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2020                
+POS_TIME 2702                
+POS_VISITOR 39317               
+POS_DAY 61080               
+POS_DOMAIN 3636                
+POS_LOGIN 4255                
+POS_ROBOT 4410                
+POS_WORMS 6249                
+POS_EMAILSENDER 6380                
+POS_EMAILRECEIVER 6523                
+POS_SESSION 61978               
+POS_SIDER 62190               
+POS_FILETYPES 6658                
+POS_DOWNLOADS 6846                
+POS_OS 6894                
+POS_BROWSER 7404                
+POS_SCREENSIZE 10508               
+POS_UNKNOWNREFERER 10582               
+POS_UNKNOWNREFERERBROWSER 11538               
+POS_ORIGIN 12137               
+POS_SEREFERRALS 12287               
+POS_PAGEREFS 12653               
+POS_SEARCHWORDS 14994               
+POS_KEYWORDS 15205               
+POS_MISC 2366                
+POS_ERRORS 15327               
+POS_CLUSTER 4111                
+POS_SIDER_404 15444               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20180801000149 338 78136 11550777082213
+FirstTime 20180701001730
+LastTime 20180731225545
+LastUpdate 20180801051825 338 0 337 0 0
+TotalVisits 836                 
+TotalUnique 508                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 573                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+DirectorSupport 0 0 0
+JavaEnabled 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+QuickTimeSupport 0 0 0
+TotalMisc 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 46 82 2781464 161 218 1764836
+1 97 164 3698551 71 157 1203285
+2 41 119 4104883 57 126 2069913
+3 73 190 6274956 59 130 1720699
+4 38 78 2524188 92 176 3194367
+5 43 206 8966178 164 600 4404265
+6 54 214 8164922 92 192 2067156
+7 122 560 19834300 109 169 969192
+8 96 313 12474946 79 188 2500951
+9 112 433 16751668 150 271 2042695
+10 161 688 25386153 68 180 2188145
+11 75 317 12476615 85 190 2141666
+12 161 499 17389372 127 184 789268
+13 111 495 21161228 89 185 1518742
+14 135 512 20712525 103 195 1286689
+15 134 453 15269023 143 230 2187744
+16 84 297 13238934 105 173 1818807
+17 56 153 6067531 114 240 4464949
+18 49 108 4123618 118 187 1300193
+19 43 133 4969857 101 159 1118006
+20 73 225 8177962 208 285 1527904
+21 80 208 6944307 133 197 2077383
+22 56 96 2370805 56 127 2107874
+23 49 93 2780835 186 265 1465759
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 27
+us 1437 5463 212061545
+ua 281 293 1761046
+in 51 331 15592203
+ru 38 54 1110262
+cn 31 143 4114534
+ro 24 30 266645
+gb 23 72 2590593
+bg 18 18 23328
+ca 17 38 1655644
+fr 11 11 21773
+ie 11 12 143443
+zz 7 7 11119
+de 7 42 1852053
+il 6 6 7776
+nl 5 5 14190
+kr 3 23 1129635
+co 3 36 1991159
+ng 2 20 1047196
+au 2 3 78497
+no 2 2 2865
+sa 2 2 7188
+jp 2 19 1146153
+cl 2 2 2592
+bz 1 1 4898
+gr 1 1 1296
+hk 1 1 3594
+by 1 1 3594
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 43
+crawl 578 1160105 20180731221650 0
+bingbot/ 408 9425027 20180731232515 0
+bot[\s_+:,\.\;\/\\-] 366 2207580 20180726124056 0
+Googlebot/ 290 469838 20180731210111 0
+bingpreview 231 20240336 20180731093718 0
+googlebot 140 286889 20180710035439 0
+YandexBot/ 111 169433 20180731175925 0
+java 84 792159 20180727095326 0
+PhantomJS 81 3685454 20180720174818 0
+MJ12bot/ 80 177549 20180731191607 0
+spider 63 1169148 20180710010641 0
+AhrefsBot/ 61 284561 20180731191806 0
+Baiduspider/ 59 87528 20180731022338 0
+SeznamBot/ 47 3430 20180731220936 0
+CCBot/ 43 48993 20180721213011 0
+spbot/ 37 68854 20180716152250 0
+(firefox/)([0-9]\.|[0-1][0]\.) 27 70839 20180730194837 0
+SemrushBot/ 24 45663 20180730233742 0
+Firefox/1\.5 23 107640 20180730201724 0
+360Spider 21 27216 20180731010649 0
+baidu 18 1359910 20180727025821 0
+robot 18 32808 20180710044037 0
+msie8 18 26729 20180727125034 0
+google[_+\s]web[_+\s]preview 17 982927 20180702143351 0
+DotBot/ 16 72992 20180731212158 0
+DuckDuckGo\-Favicons\-Bot/ 5 6480 20180731084530 0
+netEstate[\x20]NE[\x20]Crawler 1 1296 20180716184954 0
+facebookexternalhit/ 11 372680 20180729221301 0
+Applebot/ 7 11119 20180722115711 0
+Python\-urllib/ 12 43022 20180716113931 0
+Sogou[\x20]web[\x20]spider/ 12 2592 20180730103622 0
+BLEXBot/ 2 2592 20180726035911 0
+googlebot\-image 3 5432 20180708235855 0
+YisouSpider 3 3888 20180730021636 0
+Mail\.RU_Bot/ 10 567711 20180729231610 0
+Googlebot\-Image/ 9 253487 20180723050331 0
+curl 4 10782 20180720210307 0
+no_user_agent 8 509078 20180727043545 0
+Deepnet[\x20]Explorer 2 7188 20180731031748 0
+netcraft 1 3594 20180703171615 0
+ruby\/ 1 3594 20180709123717 0
+[\s_+:,\.\;\/\\-]bot 7 354781 20180710004510 0
+YandexImages/ 6 163808 20180730082726 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 6
+gif 199 331686 0 0
+js 400 8253744 0 0
+css 705 705170 0 0
+png 1293 65407109 0 0
+html 1989 4496543 0 0
+jpg 2050 167450569 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 33
+ios_ipad 143 33
+win16 6 6
+win95 5 5
+bsdopenbsd 1 1
+winme 4 4
+win98 2 2
+macosx 189 90
+Unknown 136 125
+macosx11 4 4
+win8.1 183 45
+java 28 22
+winxp 279 226
+win8 5 5
+winunknown 25 9
+macosx8 1 1
+macosx10 11 11
+macosx5 4 4
+linuxubuntu 8 3
+win10 1802 405
+unix 72 20
+macosx9 48 14
+win7 1593 443
+ios_iphone 534 53
+macosx7 6 6
+win2000 44 44
+wince 7 7
+macosx12 164 70
+linux 267 109
+linuxandroid 563 77
+win2003 35 32
+macosx6 1 1
+winnt 453 99
+winlong 13 13
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 158
+safari11.0.3 5 5
+msie11.0 336 81
+chrome50.0.2661.102 1 1
+chrome55.0.2893.62 1 1
+opera45.0.2552.812 1 1
+chrome38.0.2125.111 36 6
+chrome55.0.2883.87 2 2
+chrome66.0.3359.139 2 0
+firefox52.0 36 34
+chrome42.0.2311.90 18 3
+chrome46.0.2490.71 1 1
+safari10.0 46 3
+chrome34.0.1847.137 1 1
+firefox33.0 5 5
+safari5.0.4 2 2
+firefox53.0 10 10
+firefox27.3 3 3
+chrome68.0.3440.70 36 4
+firefox56.0 1 1
+msie2.0 4 4
+chrome67.0.3364.0 17 1
+msie9.0 32 13
+msie8.0 120 83
+firefox58.0 3 3
+chrome63.0.3239.84 7 7
+iphone 9 2
+safari11.1.1 28 1
+msie7.0 66 30
+chrome60.0.3112.116 18 2
+chrome5.0.375.99 2 2
+firefox57.0 6 6
+opera7.54 8 8
+chrome65.0.3325.162 11 11
+firefox43.0 37 3
+chrome48.0.2564.97 1 1
+netscape3.0 3 3
+chrome67.0.3396.99 2373 440
+firefox17.0 34 2
+chrome36.0.1985.143 2 2
+chrome59.0.3071.115 21 21
+opera8.00 10 10
+firefox3.5.6 1 1
+chrome44.0.2403.89 2 2
+webcapture 3 3
+chrome11.0.696.0 1 1
+chrome63.0.3239.132 16 5
+firefox54.0 2 2
+mozilla 46 39
+opera8.01 11 11
+firefox51.0 1 1
+chrome52.0.2743.116 2 2
+netscape5.0 6 6
+opera6.01 2 2
+edge16 24 8
+chrome32.0.1667.0 1 1
+chrome67.0.3396.87 467 73
+wap 6 4
+chrome61.0.3163.100 14 14
+chrome57.0.2987.133 48 16
+chrome59.0.3071.125 106 21
+chrome55.0.2911.69 1 1
+chrome28.0.1468.0 1 1
+chrome62.0.3202.89 18 2
+chrome36.0.1985.125 9 3
+chrome6.0.481.0 2 2
+safari4.0.4 6 1
+safari11.0 409 38
+lynx 1 1
+firefox30.0 7 7
+chrome19.0.1055.1 1 1
+firefox3.0.10 4 4
+opera7.11 5 5
+firefox27.0 10 10
+chrome41.0.2272.118 17 1
+firefox50.0 1 1
+chrome37.0.2049.0 25 3
+netscape0.91 2 2
+opera9.0 6 6
+firefox 8 8
+chrome24.0.1312.60 1 1
+firefox47.0 2 2
+firefox40.1 2 2
+safari 65 9
+firefox1.5.0.5 1 1
+chrome34.0.1847.131 1 1
+firefox26.0 1 1
+msie4.01 3 3
+chrome49.0.2623.75 8 8
+safari11.0.2 4 4
+chrome58.0.3029.110 29 29
+chrome65.0.3312.0 95 8
+chrome10.0.611.0 1 1
+netscape4.79 2 2
+netscape0.6 3 3
+safari11.1.2 66 17
+opera54.0.2952.60 13 1
+chrome67.0.3396.101 4 1
+safari11.0.1 1 1
+chrome62.0.3202.94 7 7
+chrome64.0.3282.186 9 9
+edge17 308 59
+chrome34.0.1847.116 3 3
+firefox40.0 17 1
+opera9.00 5 5
+firefox1.5 11 11
+chrome60.0.3112.90 10 10
+chrome66.0.3359.181 55 9
+msie6.0 145 145
+chrome45.0.2454.101 6 6
+chrome52.0.2743.46 1 1
+libwww 1 1
+opera6.0 6 6
+safari7.0 6 1
+chrome33.0.1750.154 1 1
+Unknown 107 92
+chrome28.0.1467.0 1 1
+chrome64.0.3282.140 21 2
+firefox21.0 8 8
+chrome49.0.2623.110 17 1
+chrome65.0.3325.181 163 96
+msie5.5 16 16
+safari5.0 2 2
+firefox37.0 1 1
+chrome60.0.3112.101 97 34
+chrome7.0.540.0 1 1
+chrome41.0.2228.0 19 19
+chrome26.0.1410.64 1 1
+firefox59.0 33 33
+safari11.1 5 5
+chrome56.0.2924.76 3 1
+chrome68.0.3440.75 150 23
+opera8.50 2 2
+chrome49.0.2623.87 6 6
+safari5.1.3 1 1
+chrome63.0.3239.108 2 2
+opera7.0 2 2
+chrome1.0.154.36 1 1
+chrome37.0.2062.124 1 1
+firefox38.0 17 1
+netscape4.76 6 6
+msie3.02 7 7
+netscape4.61 1 1
+chrome12.0.742.112 1 1
+chrome23.0.1271.95 5 5
+firefox29.0 7 7
+chrome45.0.2454.94 1 1
+netscape 25 25
+chrome41.0.2272.96 3 3
+msie5.0 16 6
+firefox61.0 165 30
+chrome66.0.3359.30 34 2
+chrome2.0.173.1 1 1
+firefox36.0 4 4
+opera7.60 2 2
+chrome37.0.2062.120 1 1
+chrome66.0.3359.117 4 4
+safari9.0 135 32
+opera49.0.2725.47 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 23
+null 20180718002917
+panscient.com 20180701214648
+Mozilla/5.0_(compatible;_ips-agent) 20180702044636
+Mozilla/5.0_(compatible;_Wappalyzer) 20180705125311
+Mozilla 20180723012733
+python-requests/2.19.1 20180705081928
+Mozilla/5.0_(compatible;_Dataprovider.com;) 20180726224918
+The_Knowledge_AI 20180731124104
+Mozilla/5.0 20180720000447
+python-requests/2.18.4 20180726201850
+newspaper/0.2.2 20180711031847
+Foo 20180725014743
+AHC/2.1 20180724040855
+Lynx/2.8.6rel.5_libwww-FM/2.14_SSL-MM/1.4.1_OpenSSL/1.0.0-fips 20180709053056
+Symfony_BrowserKit 20180705125318
+python-requests/2.9.0 20180714012050
+Python/3.6_aiohttp/2.3.2 20180703205416
+LWP::Simple/5.827_libwww-perl/5.833 20180702015154
+python-requests/2.18.3 20180709091335
+lua-resty-http/0.10_(Lua)_ngx_lua/10000 20180726141519
+Mozilla/4.0_(compatible;) 20180731094102
+A6-Indexer 20180718112011
+Photon/1.0 20180726204852
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 16
+AHC/2.1 20180724040855
+Foo 20180725014743
+Symfony_BrowserKit 20180705125318
+Python/3.6_aiohttp/2.3.2 20180703205416
+python-requests/2.9.0 20180714012050
+lua-resty-http/0.10_(Lua)_ngx_lua/10000 20180726141519
+python-requests/2.18.3 20180709091335
+A6-Indexer 20180718112011
+Photon/1.0 20180726204852
+Java/1.8.0_141 20180706210353
+null 20180718002917
+python-requests/2.19.1 20180705081928
+panscient.com 20180701214648
+The_Knowledge_AI 20180731124104
+newspaper/0.2.2 20180711031847
+python-requests/2.18.4 20180726201850
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 825 1022
+From1 16 16
+From2 165 186
+From3 287 292
+From4 696 5120
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 13
+www_google_co_kr 0 1
+google 32 35
+r_search_yahoo_com 1 1
+www_google_co_in 5 5
+yandex 3 3
+duckduckgo 1 1
+bing 5 6
+www_google_com_ua 1 2
+www_google_com 111 123
+live 0 3
+www_google_com_co 2 2
+baidu 3 3
+www_google_com_mx 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 72
+https://ww2awards.info 14 14
+http://xn----ctbigni3aj4h.xn--p1ai 13 13
+http://metallosajding.ru 12 12
+http://xn--d1abj0abs9d.in.ua 9 9
+http://modnie-futbolki.net 8 8
+http://jjbabskoe.ru 8 8
+https://www.souvenirua.com/uk/ 7 7
+http://xn----8sblgmbj1a1bk8l.xn----161-4vemb6cjl7anbaea3afninj.xn--p1ai 7 7
+http://pc-services.ru 7 7
+http://xn-----6kcamwewcd9bayelq.xn--p1ai 6 6
+http://shnyagi.net 6 6
+https://sportwizard.ru 6 6
+https://modforwot.ru 6 6
+https://russian-translator.com/transcreation-services 6 6
+http://finder.cool 6 6
+https://luckybull.io 6 6
+https://dawlenie.com 6 6
+http://pornoelita.info 6 6
+https://officedocuments.net 5 5
+https://bezprostatita.com 5 5
+https://tl.rulate.ru 5 5
+http://www.tsatu.edu.ua 5 5
+https://infektsii.com 5 5
+http://porno-chaman.info 5 5
+http://prostitutki-spb.spb.ru 5 5
+https://impotentik.com 3 3
+http://flowertherapy.ru 2 2
+http://pornoplen.com 2 2
+http://moneyzzz.ru 2 2
+https://ask-yug.com 4 4
+https://rent2spb.ru 2 2
+http://acor.designtrail.co/lundahl-iron-works/ 0 5
+http://rusochineniya.ru 1 1
+http://viagra-soft.ru 3 3
+http://computer-remont.ru 2 2
+http://prostitutki-rostova.ru.com 1 1
+http://dosugrostov.site 4 4
+https://balkanfarma.org 3 3
+http://m.facebook.com 2 2
+http://udav.net 2 2
+http://www.stavimdveri.ru/sitemap.html 2 2
+https://www.cjb.net 3 3
+http://pizza-tycoon.com 1 1
+https://eduserver.net 2 2
+https://xn----8sbarihbihxpxqgaf0g1e.xn--80adxhks 4 4
+https://ogorodnic.com 1 1
+https://na32.salesforce.com 1 1
+http://medicineseasybuy.com 2 2
+http://skinali.photo-clip.ru 2 2
+https://allergija.com 3 3
+https://sinhronperevod.ru 2 2
+http://shops-ru.ru 1 1
+http://mobile.regionshop.biz 1 1
+http://www.lundahl-building.com/services/ 3 3
+http://www.prestonrodeo.com/sponsors.html 2 2
+http://elementspluss.ru 2 2
+https://russian-postindex.ru 3 3
+http://ruspoety.ru 3 3
+https://bezprostatita.com 3 3
+https://moinozhki.com 4 4
+https://allergija.com 3 3
+http://sladkoevideo.com 2 2
+http://www.rospromtest.ru 2 2
+https://manimpotence.com 1 1
+http://lerporn.info 5 5
+https://mybuh.kz 4 4
+https://ww2awards.info 1 1
+https://vzubkah.com 2 2
+http://kino2018.cc 2 2
+https://tattoo-stickers.ru 4 4
+https://odiabetikah.com 4 4
+http://hard-porn.mobi 5 5
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 4
+franklin+iron+works 2
+startc4v 1
+grownnzn 1
+beginning41c 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 6
+franklin 2
+iron 2
+works 2
+startc4v 1
+grownnzn 1
+beginning41c 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+206 120 1125190
+302 2 0
+404 1721 1478566
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 642
+/wordpress//wp-login.php 1 -
+/plugins/jqueryui/themes/classic/jquery-ui-1.9.1.custom.css 1 -
+/concrete/css/ccm.dashboard.css 1 -
+/misc/vertical-tabs.js 1 -
+/wp-content/plugins/zen-mobile-app-native/server/images.php 1 -
+/zenphoto/themes/zpmobile/style.css 1 -
+/page/video/upload.php 1 -
+/wp-includes/css/dashicons.min.css 1 -
+/core/misc/tableselect.js 1 -
+/sitecore/shell/themes/standard/default/Default.css 1 -
+/random_file_name_14123432099.old 1 -
+/sitecore/shell/Themes/Standard/Images/WebEdit/bullets.png 1 -
+/phpmyadmin/README 1 -
+/language/en-GB/en-GB.ini 1 -
+/includes/templates/classic/css/stylesheet.css 1 -
+/sitecore/shell/controls/lib/prototype/prototype.js 1 -
+/f7e10.php 1 -
+/umbraco_client/passwordStrength/passwordstrength.js 1 -
+/_layouts/none.aspx 1 -
+/wp-content/plugins/asset-manager/upload.php 1 -
+/skins/larry/ui.js 1 -
+/vid/watch/upload.php 1 -
+/owa/8.3.342.1/themes/base/lgntopl.gif 1 -
+/wp-content/themes/twentythirteen/style.css 1 -
+/wp/wp-admin/ 4 -
+/themes/cappuccino/global.css 1 -
+/ftpsite/feed/ 2 -
+/phpmyadmin/setup/scripts.js 1 -
+/modules/file/file.js 1 -
+/Chat/upload.php 1 -
+/core/misc/druplicon.png 1 -
+/styles/prosilver/template/editor.js 1 -
+/skin/frontend/rwd/default/js/app.js 1 -
+/core/misc/collapse.js 1 -
+/js/varien/js.js 1 -
+/icons/apache_pb2.gif 1 -
+/iNotes/Forms6.nsf/iNotes/Proxy/ 1 -
+/radiodalmatino/upload.php 1 -
+/tag/flashchat-v6-0-8/temp/098a5.php 1 -
+/http://fonts.googleapis.com/css 1 -
+/admin/login.php 4 http://lundahlironworks.com/admin/login.php
+/references 4 -
+/articles/add/1 1 -
+/concrete/js/ccm.app.js 1 -
+/tutaf/temp/098a5.php 1 -
+/themes/default/css/global.css 1 -
+/static/admin/js/admin/RelatedObjectLookups.js 1 -
+/lib/styles/style.css 1 -
+/tinybrowser/tree/tinybrowser/upload.php 1 -
+/core/misc/ajax.js 1 -
+/theme/assets/global/plugins/jquery-file-upload/server/php/ 1 http://www.lundahlironworks.com/theme/assets/global/plugins/jquery-file-upload/server/php/
+/editor/editor/filemanager/upload/test.html 1 -
+/src/login.php 1 -
+/sitemap.html 1 -
+/temp/098a5.php 1 -
+/editor/editor/filemanager/connectors/uploadtest.html 1 -
+/concrete/js/ccm_app/filemanager.js 1 -
+/umbraco_client/CodeMirror/js/lib/codemirror.js 1 -
+/public/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/admui/javascript/edit.js 1 -
+/robots.txt 903 -
+/wp-includes/js/plupload/changelog.txt 1 -
+/projects/feed/ 2 -
+/mail/src/login.php 1 -
+/static/admin/js/actions.js 1 -
+/public_html/explorer/scripts/menus.js 1 -
+/plugins/zipdownload/skins/larry/zipdownload.css 1 -
+/umbraco/channels/wlwmanifest.aspx 1 -
+/projects/retail/home-depot/ 1 -
+/Tchate/flashchat/temp/098a5.php 2 -
+/sitecore/shell/~/icon/Applications/24x24/document_edit.png.aspx 1 -
+/misc/throbber-inactive.png 1 -
+/~http://www.lundahlironworks.com/join.html 1 -
+/js/mage/adminhtml/form.js 1 -
+/references/ 2 -
+/random_file_name_14123432099.php 1 -
+/cms/editor/filemanager/connectors/uploadtest404.html 1 -
+/umbraco/css/permissionsEditor.css 1 -
+/shbt/upload.php 1 -
+/public/chat/upload.php 1 -
+/lib/scripts/toolbar.js 1 -
+/chat-sem-registo/upload.php 1 -
+/mscms/ 2 http://lundahlironworks.com/mscms/
+/js/mage/adminhtml/product.js 1 -
+/_layouts/MyInfo.aspx 1 -
+/random_file_name_14123432099 1 -
+/HTMLEditor/editor/filemanager/connectors/uploadtest.html 1 -
+/misc/jquery.js 1 -
+/random/dir/name/123123/ 1 -
+/Chat/temp/098a5.php 1 -
+/wp-admin/css/install.css 1 -
+/fckeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/xfchat/upload.php 1 -
+/FlashChat_v608/chat/upload.php 1 -
+/login/index_form.html 1 -
+/templates/beez3/css/red.css 1 -
+/apple-touch-icon-76x76.png 1 -
+/tinybrowser/upload.php 1 -
+/jingyan/temp/098a5.php 1 -
+/random_file_name_14123432099.aspx 1 -
+/sitecore/login/default.js 1 -
+/skins/vector/vector.js 1 -
+/phpmyadmin/Documentation.txt 1 -
+/update.php 1 -
+/js/tinymce/plugins/tinybrowser/upload.php 1 -
+/projects/retail/lowso/ 2 -
+/styles/subsilver2/theme/stylesheet.css 1 -
+/wp-admin/admin-ajax.php 2 -
+/umbraco/channels/rsd.aspx 1 -
+/admui/report/default.aspx 1 -
+/random_file_name_14123432099.htm 1 -
+/tag/flashchat-v6-0-8/upload.php 1 -
+/blog-chat/upload.php 1 -
+/core/modules/contextual/js/contextual.js 1 -
+/FlashChat_v6.0.8_/chat/temp/098a5.php 2 -
+/util/images/episerver-artwork.png 1 -
+/CHANGELOG.txt 1 -
+/util/styles/login.css 1 -
+/FlashChat/upload.php 1 -
+/projects/retail/her/ 2 -
+/projects/retail/img/maceys.jpg 1 -
+/media/system/js/calendar-setup.js 1 lundahlironworks.com
+/administrator/fckeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/mod/quiz/mod.html 1 -
+/admui/help/en/ChangedPages.htm 1 -
+/projects/scpbo/ 1 -
+/admin/lib/tiny_mce/plugins/tinybrowser/upload.php 2 -
+/language/en/email/user_resend_inactive.txt 1 -
+/add.php 1 -
+/pt/admin/Logon.aspx 1 -
+/administrator/templates/hathor/css/colour_brown.css 1 -
+/skins/classic/functions.js 1 -
+/chatroom/temp/098a5.php 1 -
+/ftp/privacy 3 -
+/flashchat-2/upload.php 1 -
+/static/admin/css/login.css 1 -
+/radiodalmatino/temp/098a5.php 1 -
+/sq52zr.php 1 -
+/sitecore/admin/cache.aspx 1 -
+/plugins/password/password.js 1 -
+/ckeditor/filemanager/connectors/uploadtest.html 1 -
+/phpmyadmin/js/error_report.js 1 -
+/exploits/28709/temp/098a5.php 1 -
+/plugins/p_fckeditor/fckeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/sitecore/client/login/go.gif 1 -
+/license.php 5 -
+/sitecore/shell/controls/Sitecore.js 1 -
+/misc/tableselect.js 1 -
+/cms/chat/temp/098a5.php 1 -
+/phpmyadmin/pmd/scripts/ajax.js 1 -
+/phpmyadmin/translators.html 1 -
+/jingyan/upload.php 1 -
+/umbraco/Search/quickSearch.js 1 -
+/_layouts/images/titlegraphic.gif 1 -
+/okolice-ilawa/chat/temp/098a5.php 1 -
+/uploadify/uploadify.php 1 http://lundahlironworks.com/wp-admin/
+/libraries/adodb/readme.txt 1 -
+/ChangeLog 1 -
+/Association/wp-content/plugins/simple-forum/editors/tinymce/plugins/tinybrowser/upload.php 1 -
+/program/js/tiny_mce/tiny_mce.js 1 -
+/core/modules/statistics/statistics.js 1 -
+/exploits/28709/upload.php 1 -
+/wp-admin/js/theme.min.js 1 -
+/phpmyadmin/js/server_privileges.js 1 -
+/DotNetNuke.ico 1 -
+/static/admin/js/related-widget-wrapper.js 1 -
+/wp-includes/wlwmanifest.xml 1 -
+/upload.php 1 -
+/js/mage/adminhtml/grid.js 1 -
+/chat55/upload.php 1 -
+/typo3/sysext/version/ChangeLog 1 -
+/modules/node/node.css 1 -
+/live/chat/temp/098a5.php 2 -
+/flashchat-2/temp/098a5.php 1 -
+/user/message.html 1 -
+/skins/classic/common.css 1 -
+/zenphoto/themes/effervescence_plus/styles/effervescence.txt 1 -
+/sitecore/shell/Themes/Standard/Images/WebEdit/Tooltip.png 1 -
+/wp-admin/js/dashboard.min.js 1 -
+/phpmyadmin/js/pmd/iecanvas.js 1 -
+/umbraco_client/Editors/EditView.js 1 -
+/phpmyadmin/js/columndelete.js 1 -
+/wp-includes/js/tinymce/tiny_mce.js 1 -
+/lib/ajax/ajaxcourse.js 1 -
+/phpmyadmin/libraries/advisory_rules.txt 1 -
+/owa/8.3.342.1/themes/base/lgnexlogo.gif 1 -
+/static/admin/js/SelectFilter2.js 1 -
+/FlashChat_v6.0.8_/chat/upload.php 1 -
+/umbraco_client/Application/UmbracoClientManager.js 1 -
+/cat-bin/tools/login/lib/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/chat55/temp/098a5.php 1 -
+/chat/temp/098a5.php 1 -
+/chat/FlashChat_v608/chat/temp/098a5.php 1 -
+/wp-includes/css/media-views-rtl.css 1 -
+/blog//wp-login.php 1 -
+/umbraco_client/Installer/js/jquery.main.js 1 -
+/mt-static/mt.js 1 -
+/foro/chat/upload.php 1 -
+/wp-login.php 3 -
+/util/login.aspx 2 -
+/zenphoto/themes/zenpage/slideshow.css 1 -
+http://lundahlironworks.com/wp-login.php 1 -
+/themes/rainier/static/css/editor.css 1 -
+/misc/tabledrag.js 1 -
+/radio/radiochat/temp/098a5.php 1 -
+/modules/overlay/overlay-parent.js 1 -
+/phpmyadmin/js/db_structure.js 1 -
+/apple-touch-icon.png 4 -
+/modules/simpletest/files/css_test_files/css_subfolder/css_input_with_import.css 1 -
+/RELEASE_NOTES.txt 1 -
+/wp-content/themes/default/style.css 1 -
+/zenphoto/zp-core/locale/de_DE/LC_MESSAGES/zenphoto.po 1 -
+/sitecore/shell/Themes/Standard/Images/RibbonNavigatorButtonActive.png 1 -
+/news/html 1 http://www.lundahlironworks.com/news/html
+/skins/common/upload.js 1 -
+/jscripts/editor.js 1 -
+/adm/style/editor.js 1 -
+/sitecore/login/logo.png 1 -
+/aciur.js 1 -
+/xloadtree/xtree2.js 1 -
+/wp-content/plugins/formcraft/file-upload/server/content/upload.php 1 -
+/user/register/ 4 -
+/umbraco_client/tinymce3/tiny_mce_popup.js 1 -
+/cchat/chat/upload.php 1 -
+/home 3 -
+/foro/chat/temp/098a5.php 1 -
+/mod/upgrade.txt 1 -
+/blog/wp-admin/ 4 -
+/sitecore/shell/Themes/Standard/Images/RibbonSmallButtonHover.png 1 -
+/jscripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/zenphoto/themes/default/slideshow.css 1 -
+/how-to-install-flashchat-free/upload.php 1 -
+/haces/temp/098a5.php 1 -
+/templates/subSilver/formIE.css 1 -
+/feed/atom/ 1 -
+/mobile 1 -
+/cms/fckeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/sitecore/shell/themes/Standard/Applications/32x32/Document.png 1 -
+/misc/textarea.js 1 -
+/static/admin/js/jquery.js 1 -
+/projects/bilardII/resources/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/haces/upload.php 1 -
+/umbraco_client/GenericProperty/genericProperty.js 1 -
+/plug/comment/commentList.asp 1 http://www.lundahlironworks.com/plug/comment/commentList.asp
+/phpmyadmin/pmd/scripts/move.js 1 -
+/public/javascripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/mod/hotpot/README.TXT 1 -
+/lib/tpl/default/media.css 1 -
+/tiny_mce/plugins/tinybrowser/upload.php 2 -
+/live/chat/upload.php 1 -
+/lib/scripts/linkwiz.js 1 -
+/styles/prosilver/template/forum_fn.js 1 -
+/Tchate/flashchat/upload.php 1 -
+/images/themes/default/Introduction.png 1 -
+/static/common.css 2 http://lundahlironworks.com/static/common.css
+/modules/statistics/statistics.js 1 -
+/test.php 1 -
+/themes/seven/reset.css 1 -
+/concrete/css/ccm.app.css 1 -
+/_layouts/images/errorIcon.png 1 -
+/phpmyadmin/setup/styles.css 1 -
+/lib/scripts/edit.js 1 -
+/random_file_name_14123432099.zip 1 -
+/mt-static/jquery/jquery.mt.js 1 -
+/test/wp-admin/ 4 -
+/util/javascript/common.js 1 -
+/administrator//admin/login.php 2 -
+/skins/default/common.css 1 -
+/umbraco_client/Application/HistoryManager.js 1 -
+/administrator/templates/hathor/css/template.css 1 -
+/phpmyadmin/docs.css 1 -
+/wp-includes/css/dashicons.css 1 -
+/search/upload.php 1 -
+/wwwroot/addons/tinymce/plugins/tinybrowser/upload.php 1 -
+/functions.js 1 -
+/phpmyadmin/js/tbl_chart.js 1 -
+/js/ac_insert_row.js 1 -
+/js/mage/cookies.js 1 lundahlironworks.com
+/umbraco_client/Panel/style.css 1 -
+/baixar/upload.php 1 -
+/themes/pico/static/style_library/base.css 1 -
+/lib/scripts/jquery/jquery-ui.js 1 -
+/phpmyadmin/js/sql.js 1 -
+/forum/chat/temp/098a5.php 2 -
+/language/en/email/topic_notify.txt 1 -
+/modules/field/modules/text/text.js 1 -
+/bd/search 1 -
+/js/admin.js 1 -
+/NEWS.txt 1 -
+/templates/beez3/css/general.css 1 -
+/wp-includes/css/buttons-rtl.css 1 -
+/wp-admin/css/wp-admin.min.css 1 -
+/projects/recent/ 1 -
+/links/add.php 1 -
+/adminzone 2 http://lundahlironworks.com/adminzone
+/wp-content/plugins/simple-forum/editors/tinymce/plugins/tinybrowser/upload.php 1 -
+/images/smiles/icon_razz.gif 1 -
+/sitecore/shell/controls/Lib/Flexie/flex.css 1 -
+/core/misc/machine-name.js 1 -
+/~duchen/chat/upload.php 1 -
+/dbs.php 4 -
+/concrete/js/ccm_app/toolbar.js 1 -
+/admin/editor/filemanager/connectors/uploadtest.html 1 -
+/projects/retail/walgreens.html 1 -
+/phpmyadmin/js/mootools.js 1 -
+/umbraco_client/Application/UmbracoApplicationActions.js 1 -
+/static/admin/js/jquery.min.js 1 -
+/administrator.php 2 http://lundahlironworks.com/administrator.php
+/README.txt 1 -
+/js/mage/adminhtml/sales.js 1 -
+/old/wp-admin/ 2 -
+/scripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/islamski-chat/temp/098a5.php 1 -
+/sitecore/shell/Themes/Backgrounds/working.jpg 1 -
+/misc/druplicon.png 1 -
+/sitemap.xml 8 -
+/Admin/access/default.aspx 1 -
+/blog-chat/chat/temp/098a5.php 1 -
+/|~.aspx 1 -
+/music-search/temp/098a5.php 1 -
+/administrator//admin/images/cal_date_over.gif 2 -
+/wp-admin/js/post.js 1 -
+/Admin/Public/Module/Ipaper/swfobject.js 1 -
+/radiopoljubac/posts/upload.php 1 -
+/sitecore/login/logo.gif 1 -
+/chat/FlashChat_v608/chat/upload.php 1 -
+/chatroom/upload.php 1 -
+/forum/chat/upload.php 1 -
+/umbraco_client/ui/jquery.dd.js 1 -
+/js/varien/product.js 1 -
+/dotCMS/docs/examples/osgi/com.dotcms.actionlet/README.txt 1 -
+/program/js/tiny_mce/tiny_mce_src.js 1 -
+/admin/editor/editor/filemanager/connectors/uploadtest.html 1 -
+/umbraco_client/tinymce3/plugins/umbracoembed/langs/en.js 1 -
+/media/cms/css/debug.css 1 -
+/js/fckeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/wp-includes/js/wpdialog.js 1 lundahlironworks.com
+/core/modules/user/css/user.module.css 1 -
+/umbraco_client/tinymce3/themes/umbraco/langs/it.js 1 -
+/phpmyadmin/js/rte.js 1 -
+/https://www.facebook.com/pages/Lundahl-Ironworks/163103217040835 1 -
+/admin/images/cal_date_over.gif 2 -
+/chat-sem-registo/temp/098a5.php 1 -
+/blog-chat/temp/098a5.php 1 -
+/lib/javascript-static.js 1 -
+/program/js/list.js 1 -
+/apple-touch-icon-precomposed.png 2 -
+/connectors/system/phpthumb.php 6 lundahlironworks.com
+/zenphoto/zp-core/locale/fr_FR/LC_MESSAGES/zenphoto.po 1 -
+/templates/system/css/toolbar.css 1 -
+/lib/scripts/script.js 1 -
+/sitecore/login/default.aspx 1 -
+/chat/chat/temp/098a5.php 1 -
+/wp-admin/wp-admin.css 1 -
+/sitecore/login/banner.png 1 -
+/templates/system/css/system.css 2 -
+/modules/aggregator/aggregator-rtl.css 1 -
+/static/admin/css/changelists.css 1 -
+/_layouts/help.aspx 1 -
+/random_file_name_14123432099.html 1 -
+/skin/adminhtml/default/default/boxes.css 1 -
+/random/dir/name/123123 1 -
+/themes/rainier/static/css/base.css 1 -
+/admin/FCKeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/random_file_name_14123432099.asp 1 -
+/cms/ 2 http://lundahlironworks.com/cms/
+/flikQ/rocketeercms/blob/master/themes/admin/assets/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/m/temp/098a5.php 1 -
+//wp-login.php 1 -
+/zenphoto/themes/effervescence_plus/common.css 1 -
+/adm/style/admin.css 1 -
+/smf/chat/upload.php 1 -
+/templates/beez3/javascript/template.js 1 -
+/projects/office/uni/ 1 -
+/program/js/jstz.min.js 1 -
+/language/en-GB/en-GB.lib_joomla.ini 1 -
+/wordpress/wp-admin/ 4 -
+/mt-static/js/tc/mixer/display.js 1 -
+/shop 4 -
+/App_Themes/Default/Styles/system.css 1 -
+/admin/ 1 -
+/administrator 3 http://lundahlironworks.com/administrator
+/core/modules/forum/css/forum.module.css 1 -
+/modules/dashboard/dashboard.js 1 -
+/phpmyadmin/themes/original/img/logo_left.png 1 -
+/plugins/jqueryui/js/jquery-ui-1.9.1.custom.min.js 1 -
+/themes/bartik/css/style.css 1 -
+/how-to-install-flashchat-free/temp/098a5.php 1 -
+/exploit/description/upload.php 1 -
+/pt/themes/default/images/link.gif 1 -
+/wp-admin/js/common.min.js 1 -
+/plugins/jqueryui/themes/redmond/jquery-ui-1.9.1.custom.css 1 -
+/phpmyadmin/js/export.js 1 -
+/Admin/Images/cms-Logo.png 1 -
+/~duchen/chat/temp/098a5.php 2 -
+/images/spinner.gif 1 -
+/modules/system/system.css 1 -
+/styles/prosilver/theme/tweaks.css 1 -
+/img/logo.jpg 1 -
+/misc/throbber-active.gif 1 -
+/projects/retail/winroy/ 2 -
+/topic/page/temp/098a5.php 1 -
+/m/video/temp/098a5.php 1 -
+/ 1 -
+/phpmyadmin/js/common.js 1 -
+/wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin.js 1 -
+/umbraco/ping.aspx 1 -
+/wp-includes/css/admin-bar-rtl.min.css 1 -
+/okolice-ilawa/chat/upload.php 1 -
+/core/modules/contextual/css/contextual.module.css 1 -
+/admin/styles/sharepoint/main.css 1 -
+/website-sitemap.xml 2 -
+/flashchat/chat/temp/098a5.php 1 -
+/umbraco/login.aspx 1 -
+/cms/editor/filemanager/connectors/uploadtest.html 1 -
+/phpmyadmin/js/navigation.js 1 -
+/misc/tableheader.js 1 -
+/projects/retail/img/cvmall.jpg 1 -
+/ads.txt 40 -
+/typo3conf/ext/phpmyadmin/ChangeLog.txt 1 -
+/sitecore/login/login.css 1 -
+/shop/ 3 -
+/o/BhGCe/forums.e-mpire.com/chat/temp/098a5.php 1 -
+/wp-content/plugins/wpstorecart/readme.txt 1 http://www.lundahlironworks.com/wp-content/plugins/wpstorecart/readme.txt
+/sitecore/login/passwordrecovery.aspx 1 -
+/phpmyadmin/setup/index.php 1 -
+/default.css 1 -
+/blog-chat/chat/upload.php 1 -
+/sitecore/shell/~/icon/People/24x24/cube_blue.png.aspx 1 -
+/chat/upload.php 1 -
+/docs/CHANGELOG.html 1 -
+/images/sm_logo.png 1 -
+/concrete/js/jquery.cookie.js 1 -
+/wp-includes/js/quicktags.js 1 -
+/plugins/jqueryui/themes/larry/jquery-ui-1.9.1.custom.css 1 -
+/concrete/js/ccm_app/legacy_dialog.js 1 -
+/sitecore/admin/unlock_admin.aspx 1 -
+/tutaf/upload.php 1 -
+/concrete/themes/default/description.txt 1 -
+/themes/garland/style.css 1 -
+/static/admin/css/widgets.css 1 -
+/lib/plugins/plugin/style.css 1 -
+/jscripts/post.js 1 -
+/sitecore/shell/Themes/Standard/People/24x24/monitor.png 1 -
+/deface_flashchat/temp/098a5.php 1 -
+/m/video/upload.php 1 -
+/shop.html 3 -
+/core/misc/tabledrag.js 1 -
+/core/misc/drupal.js 1 -
+/umbraco/images/umbracoSplash.gif 1 -
+/templates/system/css/editor.css 1 -
+/wp-admin/css/install-rtl.css 1 -
+/projects/retail/hdepot.html 1 -
+/static/admin/js/inlines.min.js 1 -
+/index.php 7 http://lundahlironworks.com/index.php
+/skins/classic/mail.css 1 -
+/editor/filemanager/connectors/uploadtest.html 1 -
+/websci/radio/radiochat/upload.php 1 -
+/add/1 1 -
+/wp-content/uploads/61eb7.php 1 -
+/Admin/Embed.js 1 -
+/skins/common/commonElements.css 1 -
+/umbraco/dashboard/images/logo32x32.png 1 -
+/concrete/js/ccm_app/ui.js 1 -
+/libraries/adodb/license.txt 1 -
+/shbt/temp/098a5.php 2 -
+/cchat/chat/temp/098a5.php 1 -
+/wp//wp-login.php 1 -
+/sitecore/admin/showconfig.aspx 1 -
+/wp-content/uploads/assets/temp/7ab4a.php 1 -
+/sitecore/shell/themes/standard/Applications/24x24/document_edit.png 1 -
+/umbraco_client/tinymce3/plugins/umbracolink/langs/en_us_dlg.js 1 -
+/cms/chat/upload.php 1 -
+/ftpsite 3 -
+/phpmyadmin/js/functions.js 1 -
+/cert.html 3 -
+/lib/ufo.js 1 -
+/php/tinybrowser/upload.php 1 -
+/lib/overlib.js 1 -
+/language/en/email/newtopic_notify.txt 1 -
+/modules/user/user.js 1 -
+/apple-touch-icon-76x76-precomposed.png 1 -
+/js/,data:n}).done(function(e){a=arguments,s.html(i 4 -
+/plugins/archive/archive.js 1 -
+/projects/recent.html 2 -
+/exploit/description/temp/098a5.php 1 -
+/pt/admin/images/adminlogo.gif 1 -
+/mobi/ 1 -
+/en/upload.php 1 -
+/wysiwyg/fckeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/m/ 1 -
+/program/js/common.js 1 -
+/util/javascript/datebrowser.js 1 -
+/concrete/js/ccm_app/sitemap.js 1 -
+/skins/common/wikibits.js 1 -
+/mt-static/css/structure.css 1 -
+/plone_powered.gif 1 -
+/topic/page/upload.php 1 -
+/umbraco/dialogs/empty.htm 1 -
+/App_Themes/Default/Styles/ToolButton.css 1 -
+/program/js/tiny_mce/plugins/media/js/media.js 1 -
+/util/javascript/episerverscriptmanager.js 1 -
+/xfchat/temp/098a5.php 1 -
+/references.html 1 -
+/wp-content/uploads/settingsimages/91c17.php 1 -
+/icons/pie4.png 1 -
+/modules/book/book.js 1 -
+/sites/all/modules/fckeditor/fckeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/smf/chat/temp/098a5.php 2 -
+/baixar/temp/098a5.php 1 -
+/assets/components/gallery/connector.php 1 lundahlironworks.com
+/public/chat/temp/098a5.php 1 -
+/users/sign_in 2 http://lundahlironworks.com/users/sign_in
+/umbraco_client/Dialogs/AssignDomain2.js 1 -
+/FlashChat/temp/098a5.php 1 -
+/core/misc/vertical-tabs.js 1 -
+/websci/radio/radiochat/temp/098a5.php 1 -
+/sitecore/shell/Themes/Standard/Applications/32x32/arrow_right_blue.png 1 -
+/theme/standardlogo/header.html 1 -
+/wp-admin/ 4 -
+/zenphoto/zp-core/watermarks/copyright.png 1 -
+/Admin/Public/Module/Ipaper/popup.js 1 -
+/radio/radiochat/upload.php 1 -
+/util/images/episerver-logo.png 1 -
+/wp-content/plugins/wp-easycart/inc/amfphp/administration/banneruploaderscript.php 1 -
+/phpmyadmin/js/mooRainbow/mooRainbow.css 1 -
+/ftpsite/ 3 -
+/static/cartreminder.js 2 http://lundahlironworks.com/static/cartreminder.js
+/lib/form/filemanager.js 1 -
+/administrator/ 2 -
+/m/upload.php 1 -
+/sitecore/shell/webservice/service.asmx 1 -
+/themes/default/ 7 -
+http://lundahlironworks.com/wp-admin/ 1 -
+/mp3/list/upload.php 1 -
+/exchweb/img/logon_Nav.gif 1 -
+/lib/scripts/media.js 1 -
+/modules/contextual/contextual.css 1 -
+/download/filesets/l_SEARCH.inf 1 -
+/wp-content/themes/twentyten/style.css 1 -
+/static/js/tiny_mce/plugins/tinybrowser/upload.php 2 -
+/language/en/email/user_welcome_inactive.txt 1 -
+/radiopoljubac/posts/temp/098a5.php 1 -
+/static/admin/js/admin/DateTimeShortcuts.js 1 -
+/en/temp/098a5.php 1 -
+/js/mage/adminhtml/tools.js 1 -
+/VERSION 1 -
+/phpmyadmin/js/keyhandler.js 1 -
+/admin/login/ 1 -
+/Chat/Chat/temp/098a5.php 3 -
+/sitecore/shell/Themes/Standard/Images/Tree/TreeNodeActiveBackground.png 1 -
+/umbraco_client/modal/modal.js 1 -
+/vid/watch/temp/098a5.php 1 -
+/manager 2 http://lundahlironworks.com/manager
+/modules/contextual/contextual.js 1 -
+/wp-admin/js/comment.js 1 -
+/phpmyadmin/js/server_status_monitor.js 1 -
+/tinymce_pt/jscripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/js/admin-dnd.js 1 -
+/admin.php 2 http://lundahlironworks.com/admin.php
+/projects/retail/img/oldnavy.jpg 4 -
+/flashchat/chat/upload.php 1 -
+/media/system/js/core-uncompressed.js 1 -
+/lib/editor/tinymce/module.js 1 -
+/templates/beez3/css/nature.css 1 -
+/wp-admin/js/about.js 1 -
+/sitecore/shell/controls/Browser.js 1 -
+/Chat/Chat/upload.php 1 -
+/js/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/pma/ 1 -
+/administrator//templates/system/css/system.css 2 -
+/public_html/class.tree/ua.js 1 -
+/search/temp/098a5.php 1 -
+/skins/monobook/main.css 1 -
+/mp3/list/temp/098a5.php 1 -
+/manager/index.php 2 http://lundahlironworks.com/manager/index.php
+/phpmyadmin/js/import.js 1 -
+/modules/system/system.base-rtl.css 1 -
+/umbraco/images/loginBg.png 1 -
+/templates/protostar/css/template.css 1 -
+/sitecore/shell/Themes/Standard/People/24x24/cube_blue.png 1 -
+/islamski-chat/upload.php 1 -
+/phpmyadmin/Documentation.html 1 -
+/assets/modules/evogallery/js/uploadify/uploadify.php 1 -
+/static/admin/css/ie.css 1 -
+/chat/chat/upload.php 1 -
+/install.php 1 -
+/plugins/editors/tinymce/tinymce.xml 1 -
+/misc/collapse.js 1 -
+/painel/scripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/lib/images/fileicons/zip.png 1 -
+/core/misc/autocomplete.js 1 -
+/projects/retail/lowessf/ 1 -
+/zenphoto/zp-core/locale/da_DK/LC_MESSAGES/zenphoto.po 1 -
+/plugins/managesieve/managesieve.js 1 -
+/netcat/ 2 http://lundahlironworks.com/netcat/
+/program/js/app.js 1 -
+/wp-admin/js/theme.js 1 -
+/sitemap_index.xml 2 -
+/content-post.php 1 -
+/wp-content/plugins/wp-easycart/products/banners/58741_1.php 1 -
+/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/wp-includes/js/tinymce/plugins/spellchecker/changelog.txt 1 -
+/misc/states.js 1 -
+/themes/default/global.css 1 -
+/phpmyadmin/js/makegrid.js 1 -
+/plugins/acl/acl.js 1 -
+/umbraco_client/Editors/EditTemplate.js 1 -
+/admin 2 http://lundahlironworks.com/admin
+/ftpsite.html 2 -
+/cms/admin/ 2 http://lundahlironworks.com/cms/admin/
+/zenphoto/themes/default/styles/dark.css 1 -
+/test.htm 1 -
+/admui/help/en/Start.htm 1 -
+/themes/bluemarine/style.css 1 -
+/FlashChat_v608/chat/temp/098a5.php 1 -
+/sitecore/shell/themes/standard/People/48x48/users4.png 1 -
+/xloadtree/xloadtree2.js 1 -
+/owa/auth/logon.aspx 1 -
+/feed/rdf/ 1 -
+/pt/blog/default.aspx 1 -
+/sitecore/login/background.png 1 -
+/modules/fckeditor/fckeditor/editor/filemanager/connectors/uploadtest.html 1 -
+/wp-content/themes/RightNow/includes/uploadify/upload_settings_image.php 1 -
+/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/upload.php 2 -
+/deface_flashchat/upload.php 1 -
+/random_file_name_14123432099.txt 1 -
+/music-search/upload.php 1 -
+/js/],_default:st.support.htmlSerialize 4 -
+/pt/themes/default/Style.css 1 -
+/modules/book/book.css 1 -
+/lib/editor/tinymce/readme_moodle.txt 1 -
+/st.aspx 3 -
+/App_themes/default/styles/system.css 1 -
+/images/smiles/icon_frown.gif 1 -
+/sitecore/shell/controls/lib/jQuery/jquery.watermark.js 1 -
+/sitecore/shell/~/icon/People/24x24/monitor.png.aspx 1 -
+/projects/ 3 -
+/page/video/temp/098a5.php 1 -
+/static/admin/js/core.js 1 -
+/feed/rss.html 1 -
+/o/BhGCe/forums.e-mpire.com/chat/upload.php 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 573
+75.149.227.122 89 339 12724662 20180726114608
+52.165.150.117 57 57 73872 20180729032533
+104.192.74.39 50 50 91416 20180723012733
+24.22.12.54 42 141 5454724 20180726140702
+24.10.175.134 41 143 5762576 20180710144535
+178.137.83.231 37 37 132978 20180709031421
+52.165.166.139 36 36 46656 20180726114701
+176.8.89.165 35 35 125790 20180708101738
+170.72.37.114 32 135 4212878 20180701104213
+68.177.216.68 32 95 3943220 20180706110038
+46.119.115.156 31 31 111414 20180709032224
+46.185.119.21 30 30 107820 20180709173941
+24.21.152.22 29 90 3627464 20180723084822
+46.119.121.187 26 26 93444 20180706091947
+35.233.64.161 25 27 83509 20180703034451
+109.102.111.92 22 28 264053 20180706210353
+37.229.254.170 21 21 75474 20180717200239
+208.98.186.46 21 89 3474286 20180727120406
+174.52.46.206 20 71 2881107 20180717204414
+76.27.108.9 18 67 2853284 20180729160422
+98.196.134.8 17 65 2468285 20180710215526
+180.87.245.1 16 16 64032 20180725014743
+50.243.5.161 16 53 1892336 20180702140117
+52.53.201.78 14 14 18144 20180731205135
+52.206.137.6 14 14 29634 20180719161310
+50.125.118.166 1 17 982927 20180710091627
+91.134.109.0 1 1 1296 20180703083617
+101.91.60.108 1 1 1296 20180729131139
+134.3.153.220 0 1 159632 
+181.48.21.131 2 19 1008232 20180712095006
+35.196.121.106 2 2 1296 20180702175841
+158.69.117.141 12 12 50904 20180726224920
+50.255.118.137 5 36 1384336 20180711063247
+165.225.0.85 1 17 982927 20180718063122
+35.237.131.108 2 2 1296 20180707220712
+199.190.170.24 6 38 1402485 20180726084515
+40.107.195.38 0 1 159632 
+162.213.39.252 1 1 1296 20180703004638
+147.135.137.81 7 7 11119 20180703082250
+66.249.84.210 0 11 659945 
+54.36.38.117 1 1 1296 20180727100831
+14.215.176.134 0 1 4863 
+192.0.113.52 0 1 69426 
+174.52.251.146 2 18 984916 20180703101651
+217.23.14.81 1 1 4410 20180703123438
+166.137.246.61 2 18 984916 20180717213227
+178.128.221.181 1 1 1296 20180724165510
+212.129.61.154 1 1 3594 20180724093120
+104.129.192.79 6 6 0 20180726173009
+116.22.52.204 1 1 1296 20180730141149
+4.53.111.79 1 1 3594 20180718103240
+54.234.91.108 1 1 1296 20180718101055
+52.165.148.51 11 11 14256 20180728110106
+104.40.93.105 1 1 1296 20180711090307
+91.134.17.246 1 1 1296 20180727120407
+207.225.69.43 9 48 1918538 20180703094038
+104.251.86.15 1 1 1569 20180711165118
+192.198.98.61 1 1 1569 20180708103312
+91.134.17.251 2 2 2592 20180709121012
+23.92.53.211 1 17 982927 20180717162116
+76.27.76.112 3 22 1072501 20180714200439
+209.210.227.114 1 4 4005 20180719105839
+77.67.54.13 1 1 3594 20180731150115
+174.27.210.135 4 32 1840102 20180729103322
+104.144.226.249 1 1 1569 20180720085249
+65.124.149.2 1 4 4005 20180718083903
+34.205.73.46 8 8 28752 20180731190148
+95.45.65.186 0 1 103909 
+113.92.94.44 8 8 12415 20180718140705
+174.208.20.248 1 17 982927 20180726100536
+46.101.80.192 1 1 1296 20180709172346
+93.179.68.150 1 1 1296 20180722163802
+174.208.5.173 1 18 637040 20180727201923
+101.199.110.112 1 6 41806 20180713083614
+54.36.38.115 1 1 1296 20180719152358
+108.171.132.164 3 22 1072501 20180710094453
+107.170.96.6 1 1 1296 20180723054221
+42.236.10.104 0 1 4863 
+54.221.105.244 2 2 7173 20180709094045
+134.249.50.185 1 1 3594 20180726124114
+40.107.195.72 0 5 248524 
+54.36.121.9 1 1 3594 20180730105424
+103.251.217.115 2 18 984916 20180710221659
+172.58.37.102 8 46 1635023 20180722073240
+66.160.140.182 1 1 1296 20180731124104
+42.236.10.79 0 2 65876 
+180.87.230.29 1 15 979198 20180704071754
+104.222.43.151 1 1 3594 20180716082611
+122.228.10.51 1 1 3594 20180720193459
+183.83.194.51 3 20 1010221 20180731081555
+138.197.69.244 6 11 141997 20180728001444
+73.228.101.153 9 50 1915868 20180710150937
+54.89.78.233 1 1 1296 20180720105221
+54.242.119.68 1 1 3594 20180717153806
+66.249.93.14 1 8 474722 20180721052030
+66.160.140.180 6 6 9823 20180718221643
+54.242.17.207 1 1 1296 20180723080736
+173.205.33.28 1 1 3594 20180724160721
+46.119.125.180 2 2 7188 20180709054724
+159.203.69.239 6 11 141997 20180722061435
+63.248.53.160 6 43 1604881 20180730192304
+138.197.202.197 1 1 1569 20180703042308
+34.211.144.4 1 6 328490 20180713002908
+61.204.166.154 0 1 159632 
+51.15.98.227 1 1 3594 20180705124820
+35.185.126.173 2 2 1296 20180717221102
+65.154.17.214 2 30 1293466 20180702104640
+149.100.190.153 1 1 3594 20180723125216
+35.229.37.231 2 2 1296 20180708005712
+52.205.75.45 1 1 3594 20180726141519
+14.215.176.136 0 1 32938 
+198.143.158.181 1 1 1296 20180720202310
+172.58.46.188 3 20 1009528 20180713120946
+34.217.41.209 1 1 1296 20180718112011
+64.62.252.169 6 6 11539 20180716124257
+14.215.176.138 0 1 693 
+138.197.13.208 7 12 143293 20180726111456
+208.98.186.40 1 17 982927 20180719163732
+198.140.4.130 2 19 1008232 20180702091813
+51.15.224.24 1 1 3481 20180705125200
+64.233.172.134 1 1 1296 20180716093206
+145.239.227.193 1 1 1296 20180711164740
+78.24.216.109 1 1 0 20180729162133
+134.249.50.5 1 1 3594 20180727034144
+173.205.33.26 3 3 10782 20180727140250
+174.255.3.225 1 17 982927 20180717053301
+23.105.151.98 1 1 1569 20180729101723
+91.134.17.249 3 3 3888 20180731055528
+34.236.219.245 1 1 3594 20180708222607
+185.85.162.242 1 1 1296 20180723174536
+66.222.127.222 2 20 1047196 20180720140707
+168.245.228.80 2 19 1008232 20180709151811
+91.134.17.250 2 2 2592 20180725071906
+63.227.129.105 1 5 37885 20180730114517
+51.15.123.0 1 1 4410 20180705125222
+42.236.10.71 1 6 37636 20180705051522
+209.117.121.2 1 1 4680 20180709174059
+49.44.140.75 1 17 982927 20180701011737
+66.102.6.138 2 5 416908 20180713110335
+75.169.167.33 2 9 331302 20180709200834
+111.206.36.10 1 3 3312 20180719051727
+138.197.111.116 2 4 40393 20180719060614
+40.107.195.31 0 2 3383 
+54.84.225.170 3 3 10782 20180718085845
+148.251.177.36 1 1 3594 20180713174406
+35.178.59.10 1 1 3594 20180724040855
+174.208.21.168 1 6 328490 20180715140630
+64.235.153.7 4 4 14376 20180727104947
+69.167.57.58 1 17 982927 20180719153816
+66.102.6.136 0 8 234295 
+173.205.33.18 3 3 10782 20180720131657
+13.77.166.147 2 2 2592 20180725171707
+98.180.227.58 13 57 2268994 20180713151440
+24.111.52.102 1 17 982927 20180712213514
+91.134.17.243 2 2 2592 20180724164746
+34.229.183.182 1 1 1296 20180720082152
+174.208.14.85 1 17 982927 20180714183929
+195.123.224.112 4 4 5184 20180729025943
+54.36.38.121 1 1 1296 20180710083048
+173.252.84.87 0 4 321084 
+52.90.29.252 1 1 1296 20180709141751
+70.63.17.138 2 20 1047196 20180716105736
+46.182.106.190 1 1 1296 20180730041440
+4.53.111.65 3 3 10782 20180723133427
+54.166.184.127 2 2 7188 20180718175910
+24.11.122.35 0 1 62380 
+51.235.148.140 1 1 3594 20180726145916
+174.211.2.11 0 1 93149 
+50.76.107.161 2 8 8010 20180719094623
+64.146.129.141 8 48 1763833 20180731145407
+67.161.217.70 0 2 319264 
+64.44.59.52 7 7 11119 20180721144525
+64.246.161.42 1 1 1296 20180724025641
+52.87.177.62 10 10 35940 20180724151954
+18.206.87.39 1 1 3594 20180712210638
+35.164.189.117 1 1 1296 20180711074812
+182.76.226.170 1 17 982927 20180723054220
+98.194.89.30 13 122 2888567 20180730073925
+4.14.168.250 5 48 2349466 20180713110047
+45.58.113.210 1 17 982927 20180710082937
+5.188.211.10 7 7 28923 20180731174631
+166.137.246.24 1 17 982927 20180717142625
+1.186.79.186 1 15 979198 20180729053314
+129.123.68.165 4 35 1383040 20180716131822
+101.199.121.223 1 12 970768 20180713083601
+154.120.112.205 2 20 1047196 20180718085929
+208.186.26.36 2 30 1293466 20180707070935
+180.153.236.165 1 1 1296 20180726003432
+54.196.138.168 3 3 10782 20180724141731
+137.74.114.163 1 1 3594 20180715061547
+66.102.6.134 4 9 338897 20180713110350
+47.75.26.1 1 1 1296 20180720174531
+8.28.16.254 6 6 9179 20180731094102
+166.170.14.91 1 1 1989 20180723061153
+63.248.23.16 1 17 982927 20180727132420
+97.65.99.198 10 51 1927351 20180721075026
+95.213.224.203 2 2 7173 20180720162012
+91.134.17.247 1 1 1296 20180723143029
+174.255.7.150 1 17 982927 20180711171145
+66.160.140.183 6 6 9823 20180705183928
+96.86.202.9 0 1 190574 
+68.169.217.100 5 39 1387045 20180726103049
+46.105.35.73 1 1 1296 20180720142210
+35.233.93.54 7 7 28923 20180724031633
+185.47.44.233 4 33 1312218 20180718012550
+61.197.155.252 1 17 982927 20180709221432
+111.231.227.67 2 18 984223 20180715022227
+123.125.143.13 0 5 344518 
+64.235.154.195 2 2 7188 20180731150526
+95.213.224.199 2 2 10265 20180720162012
+195.201.90.99 1 17 982927 20180705133458
+208.98.186.69 2 19 1008232 20180718120706
+76.8.208.90 1 4 4005 20180730104241
+122.15.155.69 2 14 703612 20180714040311
+95.213.224.215 1 1 3481 20180705002659
+95.213.224.208 1 1 3594 20180715070837
+5.39.34.40 1 1 1296 20180705131343
+69.175.97.171 1 1 1296 20180702135814
+166.170.15.92 3 20 1010221 20180708051101
+50.255.118.245 2 19 1008232 20180725100400
+23.27.236.161 1 1 1296 20180712064142
+208.98.186.36 1 4 4005 20180703103507
+5.62.57.26 3 20 1068772 20180730045140
+95.213.224.195 5 5 18928 20180720162012
+174.208.21.20 1 17 982927 20180724193419
+173.252.84.89 1 4 154217 20180706231444
+18.209.160.40 8 81 4021511 20180710030314
+66.87.126.187 2 19 1008232 20180731123256
+14.215.176.133 1 2 2489 20180713223318
+71.6.165.200 1 1 3594 20180709104007
+71.127.222.133 8 8 14039 20180701214648
+49.198.218.38 0 1 78497 
+50.247.56.69 2 2 7188 20180725085609
+172.58.108.71 2 14 513368 20180707071026
+111.93.6.42 1 17 982927 20180718023416
+178.137.16.67 2 2 7188 20180709231849
+173.205.33.25 1 1 3594 20180717143633
+165.225.39.63 0 1 57134 
+178.137.161.193 9 9 32346 20180730135048
+23.30.50.113 1 4 4005 20180710111751
+77.67.54.3 1 1 3594 20180731132653
+50.76.99.30 1 4 4005 20180710111002
+72.173.137.49 2 5 38748 20180711113408
+34.240.198.215 1 1 1296 20180719191621
+35.195.240.104 11 11 48597 20180730163045
+50.202.38.5 6 6 21564 20180731171030
+54.36.38.119 1 1 1296 20180725121332
+178.33.41.206 1 1 1296 20180713132707
+97.82.20.211 3 21 1048492 20180712160040
+174.254.135.85 1 17 982927 20180725053814
+174.255.8.73 1 12 791763 20180717102836
+108.77.18.129 1 17 982927 20180720160818
+96.18.235.113 2 19 1045510 20180730123141
+174.208.9.238 2 18 984916 20180728175654
+45.79.2.87 6 6 29528 20180720000447
+42.236.10.81 0 2 33761 
+18.130.179.188 1 1 3594 20180715073821
+149.100.185.233 1 1 3594 20180724093756
+69.58.178.57 3 3 13859 20180702044636
+172.58.39.161 1 17 982927 20180712070112
+38.100.21.63 8 11 44009 20180717210533
+144.202.59.78 1 1 1296 20180731225545
+173.205.33.21 1 1 3594 20180702102606
+123.125.143.146 0 5 594917 
+172.58.45.238 2 16 1127869 20180730164702
+51.15.123.221 2 2 7158 20180705125057
+174.208.17.92 1 17 982927 20180717194157
+66.160.134.5 3 29 1066539 20180730103800
+180.153.236.51 1 1 1296 20180718103205
+139.170.66.104 1 1 1296 20180703215435
+18.209.30.240 1 1 1296 20180725101516
+42.236.10.76 1 3 6982 20180707030259
+42.236.10.109 0 2 5556 
+42.236.10.98 1 8 139927 20180701152042
+64.74.215.150 1 3 39097 20180720155013
+108.218.250.195 3 11 418064 20180727121642
+216.201.70.98 2 19 1008232 20180731163705
+178.137.160.220 5 5 17970 20180710055333
+216.190.44.196 1 17 982927 20180715202221
+64.209.132.6 2 2 2592 20180726192845
+72.219.175.151 0 1 62380 
+78.24.222.112 1 1 0 20180731162615
+63.234.181.18 2 20 1047196 20180731121726
+109.162.66.73 4 4 14376 20180710230904
+46.118.229.130 8 8 28752 20180731213633
+42.236.10.72 0 4 7942 
+73.65.152.118 7 36 1172680 20180715124622
+54.146.67.110 1 1 1296 20180725223717
+42.236.10.83 1 3 6852 20180705051511
+173.245.75.92 1 1 1296 20180714115707
+37.1.201.71 1 1 1296 20180703171018
+64.209.132.7 6 6 7776 20180719174632
+4.53.111.71 1 1 3594 20180723081151
+52.2.28.246 1 1 1296 20180705023547
+38.122.5.58 0 1 57134 
+183.82.143.205 1 17 982927 20180713114921
+4.53.111.66 1 1 3594 20180720131511
+35.193.39.80 3 51 2948781 20180720174845
+64.235.154.141 3 3 10782 20180731133723
+173.252.84.90 0 4 12249 
+178.137.95.1 9 9 32346 20180729232525
+73.20.50.105 2 18 984916 20180726210033
+163.172.4.153 1 1 1296 20180728122022
+207.188.92.226 1 17 982927 20180725114736
+69.27.8.34 1 17 982927 20180726094054
+45.33.72.115 1 1 1296 20180704164322
+45.77.166.28 1 1 1296 20180710040606
+145.239.227.217 1 1 1296 20180706033320
+166.170.14.87 3 24 1313406 20180716194945
+174.254.128.204 3 21 1049185 20180727161750
+167.114.232.244 1 1 3594 20180702134142
+178.137.89.148 10 10 35940 20180709040929
+181.177.80.12 1 1 4898 20180705103910
+91.134.17.254 5 5 6480 20180730080810
+40.107.222.1 0 1 159632 
+45.57.163.254 1 1 1569 20180728065223
+107.0.33.130 10 67 2772065 20180731190521
+70.90.212.141 1 4 4005 20180709124730
+14.215.176.132 0 1 823 
+50.116.63.129 6 6 9823 20180724073423
+54.146.192.0 2 2 7173 20180702081644
+23.106.253.43 1 1 1989 20180706125422
+45.55.252.30 12 22 283994 20180716102415
+35.231.236.202 2 2 1296 20180722223833
+173.205.33.27 1 1 3594 20180711073908
+66.87.126.71 2 25 1208604 20180717153127
+143.191.113.102 1 1 1296 20180704174212
+52.87.176.190 1 15 979198 20180714052427
+51.15.198.135 1 3 125775 20180705124936
+52.14.189.52 1 1 3594 20180717153814
+138.197.111.89 1 3 39097 20180712133512
+207.89.49.198 1 4 4005 20180705204515
+183.82.97.233 3 17 444689 20180706024229
+184.190.14.130 8 46 1828283 20180706130327
+47.91.164.185 1 6 613329 20180706005507
+123.125.143.28 0 9 651379 
+67.2.52.210 1 4 4005 20180722204053
+66.249.93.16 0 5 216909 
+65.181.54.42 1 4 4005 20180713123038
+35.239.61.16 1 1 0 20180712073817
+70.42.131.106 3 18 125418 20180720152948
+66.160.140.181 1 1 1296 20180703175807
+66.249.84.214 1 9 164165 20180703074416
+14.215.176.5 1 3 7352 20180724211457
+66.249.85.17 1 8 646767 20180726151851
+192.0.112.212 0 2 222068 
+51.254.47.48 1 1 3594 20180702015154
+14.215.176.11 0 2 33761 
+40.107.222.66 0 3 183240 
+34.230.61.210 1 1 3594 20180713184912
+23.82.85.107 1 1 1989 20180723231613
+174.209.2.199 0 1 149991 
+192.241.65.93 1 1 1569 20180713094621
+94.97.25.69 1 1 3594 20180723155125
+73.93.143.143 8 37 1595821 20180719131329
+64.246.178.34 1 1 1296 20180706043502
+70.42.131.170 1 17 982927 20180722000701
+172.58.37.255 2 18 984916 20180711111443
+211.48.5.111 3 22 1072501 20180703015048
+50.116.26.188 7 7 28923 20180728230253
+91.134.17.241 1 1 1296 20180719110955
+104.151.51.109 2 19 1008232 20180713083317
+18.237.105.169 1 1 1296 20180707002036
+104.36.17.169 1 1 1296 20180717164156
+66.249.84.212 1 10 469356 20180703074409
+173.205.33.19 2 2 7188 20180727104033
+185.220.101.8 1 1 3594 20180721041517
+145.239.227.215 1 1 1296 20180705160446
+95.213.224.202 5 5 19474 20180720162012
+145.239.227.216 1 1 1296 20180705090711
+64.235.154.106 2 2 7188 20180713151038
+199.185.0.103 3 3 12773 20180716102205
+172.58.37.222 1 17 982927 20180713145900
+173.205.33.20 2 2 7188 20180731144641
+77.67.54.5 1 1 3594 20180718141522
+162.107.240.253 1 7 647209 20180711031845
+45.55.188.135 6 11 141997 20180710143451
+54.198.189.123 1 1 3594 20180717153821
+174.27.135.47 4 29 1112741 20180719025546
+77.67.54.14 2 2 7188 20180718131550
+64.235.153.8 2 2 7188 20180713132231
+174.52.0.151 1 17 982927 20180720141249
+111.206.36.13 0 1 4863 
+163.172.32.18 2 2 2592 20180721091041
+173.205.33.31 3 3 10782 20180723163638
+51.15.98.241 1 1 4410 20180705125048
+23.105.150.13 1 1 1296 20180724060242
+40.107.195.58 1 4 153303 20180731120727
+203.248.117.241 0 1 57134 
+216.103.145.130 0 1 93149 
+40.107.195.64 0 2 6693 
+98.246.24.7 2 19 1008232 20180723150045
+174.208.18.166 5 36 1377180 20180731123257
+67.207.153.25 1 1 3594 20180724032951
+104.222.33.62 1 1 3594 20180711123605
+174.27.219.187 6 6 11512 20180724204040
+66.249.85.19 0 11 373221 
+52.20.87.24 1 1 3594 20180726063833
+74.11.70.193 13 60 2046756 20180712124622
+166.62.126.3 3 3 3888 20180728132324
+51.254.21.96 1 1 1296 20180709061204
+73.20.108.137 3 22 1072501 20180715165101
+98.172.87.109 9 48 1746772 20180726103922
+172.58.37.94 2 18 984916 20180701232150
+128.199.179.113 1 1 1296 20180711080734
+174.255.2.30 2 18 984916 20180712092034
+13.58.201.28 3 3 10782 20180717153822
+88.99.93.202 1 1 3594 20180710193150
+159.203.42.143 1 1 1916 20180710152447
+198.143.133.155 1 1 1296 20180723131218
+80.82.70.116 2 2 7188 20180730202203
+50.233.3.22 3 33 1357735 20180709092237
+64.233.172.156 1 1 1296 20180717132900
+23.30.48.1 7 45 1835788 20180702142814
+77.67.54.15 1 1 3594 20180717083241
+181.214.175.9 1 1 1296 20180719184514
+54.162.17.118 1 1 4680 20180726202007
+168.179.171.253 2 19 1008232 20180723100625
+174.208.28.236 1 6 328490 20180727080318
+52.90.71.207 1 1 1296 20180711101307
+42.236.10.103 1 6 9561 20180701151508
+64.233.172.136 1 1 1296 20180719081735
+174.208.10.222 2 30 1293466 20180727133506
+54.196.168.178 1 1 1296 20180723012804
+198.190.234.6 2 30 1293466 20180724061501
+52.173.241.248 8 8 10368 20180729064621
+66.249.85.18 2 12 275467 20180726152057
+50.251.225.182 0 3 159632 
+35.231.152.130 2 2 1296 20180727221813
+104.251.86.76 1 1 1560 20180718015950
+206.189.225.118 1 1 3481 20180705125311
+101.199.110.111 1 2 2762 20180713101223
+69.84.207.250 0 14 999578 
+145.239.227.219 1 1 1296 20180731161923
+173.252.84.86 0 2 284206 
+139.59.12.226 2 2 0 20180701020455
+67.163.77.209 1 4 4005 20180724083425
+64.233.172.132 1 1 1296 20180702143351
+64.235.151.194 5 5 17970 20180731154534
+47.52.37.121 1 6 613329 20180706003822
+91.218.96.112 1 13 766216 20180730132050
+77.67.54.11 2 2 7188 20180717063628
+34.229.121.106 1 1 3594 20180717153814
+108.171.135.188 3 31 1295455 20180711063141
+5.248.253.117 6 6 21564 20180731220203
+75.169.161.193 3 35 1967843 20180730130743
+178.137.86.234 5 5 17970 20180710041421
+35.231.81.29 2 2 1296 20180727221132
+111.206.36.137 0 1 693 
+98.217.134.170 2 2 3978 20180726201850
+54.165.212.229 1 1 3594 20180711063118
+173.205.33.16 1 1 3594 20180724152828
+198.84.76.234 1 1 3594 20180717185048
+216.27.76.200 2 19 1008232 20180727145929
+95.213.224.218 4 4 18269 20180720162012
+188.240.208.26 2 2 2592 20180730205338
+185.58.206.80 2 2 2865 20180731054713
+40.107.222.53 0 2 286381 
+77.67.54.9 1 1 3594 20180711153706
+193.28.154.5 3 33 1357735 20180718034220
+178.137.94.200 11 11 39534 20180731105336
+174.208.24.210 2 13 972757 20180703134841
+35.239.147.108 1 1 0 20180705130735
+40.107.222.39 1 6 40615 20180706062943
+185.245.87.196 1 1 1296 20180727215516
+46.105.37.67 1 1 1296 20180709061139
+4.53.111.64 2 2 7188 20180731154542
+49.44.140.68 1 3 64269 20180701012232
+77.67.54.6 1 1 3594 20180709103155
+73.228.84.123 0 4 619246 
+66.219.244.42 1 4 4005 20180709133734
+103.57.134.20 2 19 1008232 20180703042306
+169.50.211.194 1 1 1296 20180720174843
+34.229.252.235 1 1 1296 20180720113415
+212.47.235.10 1 1 3594 20180705125318
+35.225.54.50 1 1 0 20180706195314
+14.215.176.8 0 1 693 
+64.235.154.194 6 6 21564 20180730141502
+212.83.177.250 1 1 1296 20180716234248
+208.98.182.230 3 32 1318771 20180711092400
+35.231.241.168 2 2 1296 20180712201404
+97.43.192.137 2 19 1008232 20180723035213
+52.209.219.254 1 1 1296 20180703205416
+64.235.154.104 8 8 28752 20180731152807
+104.144.225.139 1 1 1569 20180723061922
+76.25.73.45 0 2 193512 
+40.107.195.26 0 3 411392 
+64.235.153.11 4 4 14376 20180731144750
+4.14.168.252 1 7 351806 20180720110242
+174.208.4.27 0 6 327724 
+138.197.111.174 1 3 39097 20180705221750
+107.1.108.114 11 58 3327982 20180717141333
+42.236.10.110 0 2 1516 
+173.205.33.30 2 2 7188 20180724072339
+174.27.145.145 1 4 6762 20180723094259
+178.159.37.70 6 6 21564 20180731170042
+206.246.102.52 0 1 1193 
+18.218.47.142 3 3 4152 20180705081928
+172.58.40.52 1 4 4005 20180702182538
+8.22.14.64 1 17 982927 20180719144535
+173.252.84.88 0 3 211171 
+75.169.166.194 13 56 2159234 20180715071610
+70.89.136.53 1 7 351806 20180726091037
+66.249.93.15 0 4 291296 
+38.122.52.10 10 10 46800 20180709032538
+50.252.129.197 1 4 4005 20180725115239
+46.118.155.165 1 1 3594 20180728122735
+111.206.36.11 0 1 32938 
+23.101.190.86 3 25 785469 20180717053615
+64.235.151.197 2 2 7188 20180727073407
+91.121.83.160 1 1 1919 20180702201549
+204.113.19.47 1 4 4005 20180720143807
+209.222.83.71 11 11 39534 20180731154322
+149.100.185.117 1 1 3594 20180710141136
+47.21.156.74 1 4 4005 20180723090125
+46.118.117.97 2 2 7188 20180701001733
+206.172.86.49 1 1 3594 20180706170009
+208.98.185.164 1 28 1926681 20180702074641
+173.200.241.30 0 2 319264 
+5.188.136.151 2 2 2592 20180714012050
+54.211.28.26 1 1 3594 20180724193147
+104.222.43.191 1 1 3594 20180730124655
+71.83.143.214 4 49 2301698 20180723161800
+42.236.10.74 1 7 42629 20180708153442
+198.143.158.84 1 1 1296 20180705103623
+174.52.219.4 0 1 124574 
+46.118.125.157 13 13 46722 20180731044219
+40.107.222.37 0 1 149991 
+24.104.77.42 11 53 1944807 20180723112400
+172.110.240.162 2 30 1293466 20180726112039
+93.125.99.36 1 1 3594 20180705233915
+45.57.236.202 1 1 1569 20180703110401
+51.254.21.114 1 1 1296 20180719072210
+42.236.10.113 2 5 5801 20180708152853
+95.213.224.209 1 1 5585 20180705002659
+54.91.16.247 5 5 0 20180729031001
+184.94.240.92 10 10 42201 20180719120235
+76.27.107.96 0 1 190574 
+98.202.170.107 0 1 190574 
+201.233.200.115 1 17 982927 20180722211740
+174.208.13.83 1 12 970768 20180720143023
+52.14.76.71 1 1 3594 20180726141519
+71.12.95.228 7 45 1719478 20180718104138
+198.185.10.2 4 35 1383040 20180711090007
+107.23.71.193 1 1 3594 20180717153818
+54.146.70.207 2 2 7188 20180718144657
+42.236.10.82 1 3 7352 20180704135030
+208.98.186.55 2 18 984916 20180724062148
+73.65.253.76 1 6 328490 20180729230018
+61.119.59.36 1 1 3594 20180705092618
+149.100.190.35 1 1 3594 20180727130941
+138.197.96.215 1 3 39097 20180726130139
+73.98.194.250 1 17 982927 20180718111331
+149.100.185.4 1 1 3594 20180709121015
+52.165.129.203 2 2 2592 20180728013721
+104.247.209.109 7 7 11119 20180711104025
+77.67.54.12 1 1 3594 20180702135518
+40.107.222.48 0 4 163068 
+87.106.4.183 1 1 3594 20180731105929
+181.215.87.143 1 1 1296 20180725234033
+84.111.37.207 6 6 7776 20180718002917
+172.58.39.234 1 1 0 20180711141741
+18.217.197.10 6 11 46231 20180709091336
+47.90.33.168 1 1 1296 20180720175428
+202.65.148.110 13 104 4349627 20180727133434
+165.225.50.71 2 18 984916 20180706173026
+208.98.186.110 1 7 172235 20180725233025
+66.87.126.53 2 18 984916 20180719160839
+91.3.92.144 0 5 371719 
+172.91.13.127 0 1 69603 
+166.137.246.122 2 18 984916 20180702132147
+59.89.176.94 3 22 1072501 20180719205730
+134.119.187.211 2 2 2865 20180719192937
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 31
+20180701 89 236 6471485 28
+20180702 111 367 14630331 39
+20180703 88 229 8095127 31
+20180704 36 70 1663160 22
+20180705 69 128 2934587 48
+20180706 116 359 14390792 31
+20180707 22 67 1902634 11
+20180708 39 66 1205604 18
+20180709 56 137 3861970 33
+20180710 80 383 15116418 29
+20180711 67 247 9107958 39
+20180712 61 196 7170288 33
+20180713 49 276 12313788 29
+20180714 16 96 5349908 12
+20180715 38 166 6743354 13
+20180716 77 264 10669345 23
+20180717 80 317 14044700 35
+20180718 53 237 9534585 28
+20180719 50 183 6876688 26
+20180720 42 197 8708942 33
+20180721 21 78 2926287 6
+20180722 22 102 4021134 9
+20180723 165 429 14956624 35
+20180724 47 117 3575934 27
+20180725 92 261 9570331 26
+20180726 88 374 13402329 34
+20180727 57 223 8609058 31
+20180728 42 79 2480045 22
+20180729 70 152 5038142 18
+20180730 75 356 11885709 30
+20180731 71 244 9387564 37
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+0s-30s 711
+30mn-1h 26
+15mn-30mn 6
+5mn-15mn 12
+2mn-5mn 19
+1h+ 15
+30s-2mn 47
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 41
+/ 1064 2469090 760 626
+/contact.html 113 234117 22 57
+/join.html 96 251550 27 57
+/projects.html 91 225953 8 21
+/about.html 79 149487 4 22
+/ftp.html 38 78521 2 16
+/projects/commercial-1.html 25 59963 0 2
+/projects/education-1.html 25 59966 0 0
+/projects/auto-1.html 24 57936 2 1
+/projects/auto-2.html 24 51948 1 3
+/projects/education-2.html 21 43248 0 0
+/projects/education-5.html 21 43747 0 2
+/projects/industrial-1.html 20 47437 0 1
+/projects/commercial-2.html 19 39650 0 0
+/projects/commercial-5.html 19 39478 0 2
+/projects/industrial-2.html 18 37503 0 1
+/projects/auto-5.html 18 40468 1 3
+/projects/education-3.html 17 32895 0 0
+/projects/municipal-1.html 17 41541 1 1
+/projects/education-4.html 17 32980 0 0
+/projects/healthcare-1.html 17 42151 0 2
+/projects/auto-4.html 17 32572 1 2
+/projects/commercial-4.html 16 31248 0 1
+/projects/industrial-5.html 16 30608 0 1
+/projects/auto-3.html 16 30656 0 0
+/projects/industrial-4.html 13 25025 1 0
+/projects/industrial-3.html 13 24908 0 0
+/projects/municipal-4.html 10 19120 0 0
+/projects/municipal-3.html 11 21274 0 0
+/projects/healthcare-5.html 13 27868 0 1
+/projects/../ftp.html 1 3481 0 1
+/projects/municipal-5.html 14 26992 0 6
+//about.html 2 7158 1 1
+//ftp.html 2 6962 2 2
+/projects/municipal-2.html 13 24908 0 1
+//contact.html 2 8820 2 2
+/projects/healthcare-3.html 9 17604 0 0
+/projects/healthcare-2.html 13 28009 0 0
+/projects/healthcare-4.html 9 17307 0 0
+/projects/commercial-3.html 15 28800 0 0
+// 1 3594 1 1
+END_SIDER
