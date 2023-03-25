@@ -5,8 +5,12 @@ const path = require("path");
 
 path.join(__dirname, "Lundahl-backup/public_html/");
 
-app.get("/home", (req, res) => {
-  res.sendFile(path.join(__dirname, "Lundahl-backup/homedir/public_html/index.html"));
+app.get(/^.*$/, (req, res) => {
+  res.sendFile(path.join(__dirname, `Lundahl-backup/homedir/public_html/` + req.url));
+});
+
+app.get("/images", (req, res) => {
+  res.sendFile(path.join(__dirname, "/css"));
 });
 
 app.get("/", (req, res) => {
