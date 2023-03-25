@@ -15,19 +15,65 @@ export default function Editor() {
 
   const [changes, setChanges] = useState({})
 
-  // const save = () => {
-  //   const requestOptions = {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: changeCache
-  //   };
-  //   fetch('http://localhost:5500/save', requestOptions)
-  //       .then(response => response.json())
-  //       .then(data => console.log(data));
-  // };
   
+  // Form Data
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [hostname, setHostname] = useState("");
+  const [port, setPort] = useState("22");
+  const [isValidForm, setIsValidForm] = useState(false);
+  const [formStatus, setformStatus] = useState(false);
 
-  const save = () => {
+
+  const isFormValid = () => {
+    if(username == ""){
+      return false
+    }
+
+    if(password == ""){
+      return false
+    }
+
+    if(hostname == ""){
+      return false
+    }
+
+    if(port == ""){
+      return false
+    }
+
+    return true
+  }
+
+  
+  console.log(username)
+  console.log(password)
+  console.log(hostname)
+  console.log(port)
+
+  const handleInputChange = (label, value) => {
+    if (label == "username"){
+      setUsername(value);
+      setIsValidForm(isFormValid())
+    }
+
+    if (label == "password"){
+      setUsername(value);
+      setIsValidForm(isFormValid())
+    }
+
+    if (label == "hostname"){
+      setUsername(value);
+      setIsValidForm(isFormValid())
+    }
+
+    if (label == "port"){
+      setUsername(value);
+      setIsValidForm(isFormValid())
+    }
+  }
+
+  const save = (username, password, hostname, port) => {
     
 
     let values = [];
@@ -39,15 +85,12 @@ export default function Editor() {
         new_inner_html: changes[key].new_inner_html
       })
     }
-    // let values = Object.keys(changeCache).map(function(key){
-    //     return dictionary[key];
-    // });
-    console.log(values)
+    
     
     const body = {
         url: 'D:/Workshop/SiteSlice/Frontend/Testbench/Basic-site/index.html',
-        ftp_username: "",
-        ftp_password: "",
+        ftp_username: `${username}`,
+        ftp_password: `${password}`,
         changes: values
     }
 
@@ -59,6 +102,30 @@ export default function Editor() {
       },
       body: body
     })
+    .then((response) => {
+      setformStatus("Success")
+    })
+    .catch(function(error){
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+      } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+        // http.ClientRequest in node.js
+        console.log(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log('Error', error.message);
+      }
+      setformStatus(error.message)
+
+    });
+
+    close();
 }
 
   const [searchParams] = useSearchParams();
@@ -105,7 +172,7 @@ export default function Editor() {
           initial={false}
           mode={"wait"}
         >
-          {modalOpen && <SaveModal modalOpen={modalOpen} handleClose={close} handleSave={save} />}
+          {modalOpen && <SaveModal modalOpen={modalOpen} handleClose={close} handleSave={save} parentStateSetter={handleInputChange} formIsValid={isValidForm}/>}
         </AnimatePresence>
       </div>
       <div className="bg-white flex justify-center items-center w-full h-[calc(100vh-4rem)] p-4 pt-0">

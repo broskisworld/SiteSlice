@@ -22,20 +22,42 @@ const slideIn = {
   }
 }
 
-const SaveModal = ({handleClose, handleSave}) => {
+
+
+
+
+const SaveModal = ({handleClose, handleSave, parentStateSetter, formIsValid}) => {
+
+  const tryToSave = () => {
+    if(formIsValid){
+      return handleSave;
+    }
+  }
 
   return (
     <Backdrop onClick={handleClose}>
     <motion.div
       onClick={(e) => e.stopPropagation()}
-      className="max-w-lg w-full h-80 bg-white rounded-md flex items-center justify-center flex-col p-8"
+      className="max-w-lg w-full bg-white rounded-md flex items-center justify-center flex-col p-8"
       variants={slideIn}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
-      <p className="text-center my-8">Are you sure you want to save?<br/>This will permanantly update your files.</p>
-      <button className="flex justify-center items-center h-auto bg-gradient-to-r from-red-400 to-orange-300 p-4 rounded-md text-white font-bold" onClick={handleSave}>Push Changes to Live Server</button>
+      <h2 className="text-2xl font-bold">Save to your server</h2>
+      <p className="text-center mt-6 max-w-sm">Enter your website's FTP credentials and we will update the code for you!</p>
+      <a href="https://blogvault.net/working-with-ftp/#Finding_your_FTP_credentials" target="_blank" className="text-red-400 text-sm py-4 hover:underline cursor-pointer">What are FTP credentials?</a>
+      <form action="" className="w-full flex items-center justify-center flex-col">
+        <div className="flex flex-col w-full">
+          <input required={true} onChange={(e) => { parentStateSetter("username", e.target.value); }} className="mb-4 rounded-md border-2 border-gray-200 h-10 w-full p-4 text-gray-500 transition focus:border-orange-300" type="text" placeholder="Username"></input>
+          <input required={true} onChange={(e) => { parentStateSetter("password", e.target.value); }} className="mb-4 rounded-md border-2 border-gray-200 h-10 w-full p-4 text-gray-500 transition focus:border-orange-300" type="password" placeholder="Password"></input>
+        </div>
+        <div className="flex flex-row">
+          <input onChange={(e) => { parentStateSetter("hostname", e.target.value); }} className="rounded-md border-2 border-gray-200 h-10 max-w-xl w-full p-4 text-gray-500 transition focus:border-orange-300"type="text" placeholder="Hostname"></input>
+          <input onChange={(e) => { parentStateSetter("port", e.target.value); }} className="ml-4 rounded-md border-2 border-gray-200 h-10 max-w-xl w-1/3 p-4 text-gray-500 transition focus:border-orange-300"type="number" placeholder="Port" ></input>
+        </div>
+      <button action="submit" className="mt-4 flex justify-center items-center h-auto bg-gradient-to-r from-red-400 to-orange-300 p-4 rounded-md text-white font-bold" onClick={ tryToSave }>Push Changes to Live Server</button>
+      </form>
     </motion.div>
   </Backdrop>
   )
