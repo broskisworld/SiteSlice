@@ -26,11 +26,15 @@ const slideIn = {
 
 
 
-const SaveModal = ({handleClose, handleSave, parentStateSetter, formIsValid}) => {
+const SaveModal = ({handleClose, handleSave, parentStateSetter, formIsValid, setFormStatus, startPort}) => {
 
   const tryToSave = () => {
+    console.log(formIsValid)
     if(formIsValid){
-      return handleSave;
+      return handleSave();
+    }
+    else {
+      setFormStatus(false);
     }
   }
 
@@ -54,10 +58,10 @@ const SaveModal = ({handleClose, handleSave, parentStateSetter, formIsValid}) =>
         </div>
         <div className="flex flex-row">
           <input onChange={(e) => { parentStateSetter("hostname", e.target.value); }} className="rounded-md border-2 border-gray-200 h-10 max-w-xl w-full p-4 text-gray-500 transition focus:border-orange-300"type="text" placeholder="Hostname"></input>
-          <input onChange={(e) => { parentStateSetter("port", e.target.value); }} className="ml-4 rounded-md border-2 border-gray-200 h-10 max-w-xl w-1/3 p-4 text-gray-500 transition focus:border-orange-300"type="number" placeholder="Port" ></input>
+          <input onChange={(e) => { parentStateSetter("port", e.target.value); }} className="ml-4 rounded-md border-2 border-gray-200 h-10 max-w-xl w-1/3 p-4 text-gray-500 transition focus:border-orange-300"type="number" defaultValue="21" placeholder="Port" ></input>
         </div>
-      <button action="submit" className="mt-4 flex justify-center items-center h-auto bg-gradient-to-r from-red-400 to-orange-300 p-4 rounded-md text-white font-bold" onClick={ tryToSave }>Push Changes to Live Server</button>
       </form>
+      <button action="" className="mt-8 flex justify-center items-center h-auto bg-gradient-to-r from-red-400 to-orange-300 p-4 rounded-md text-white font-bold" onClick={ () => tryToSave() }>Submit to Live Server</button>
     </motion.div>
   </Backdrop>
   )

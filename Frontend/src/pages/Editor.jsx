@@ -19,36 +19,32 @@ export default function Editor() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [hostname, setHostname] = useState("");
-  const [port, setPort] = useState("22");
+  const [port, setPort] = useState("21");
   const [isValidForm, setIsValidForm] = useState(false);
-  const [formStatus, setformStatus] = useState(false);
+  const [formStatus, setFormStatus] = useState(true);
 
 
   const isFormValid = () => {
-    if(username == ""){
+    if(username === ""){
       return false
     }
-
-    if(password == ""){
+    
+    if(password === ""){
       return false
     }
-
-    if(hostname == ""){
+    
+    if(hostname === ""){
       return false
     }
-
-    if(port == ""){
+    
+    if(port === ""){
       return false
     }
-
+    
     return true
   }
-
-  
   console.log(username)
-  console.log(password)
-  console.log(hostname)
-  console.log(port)
+  console.log(`Form is valid? ${isFormValid()}`)
 
   const handleInputChange = (label, value) => {
     if (label == "username"){
@@ -57,23 +53,26 @@ export default function Editor() {
     }
 
     if (label == "password"){
-      setUsername(value);
+      setPassword(value);
       setIsValidForm(isFormValid())
     }
 
     if (label == "hostname"){
-      setUsername(value);
+      setHostname(value);
       setIsValidForm(isFormValid())
     }
 
     if (label == "port"){
-      setUsername(value);
+      setPort(value);
       setIsValidForm(isFormValid())
+    }
+
+    if(isFormValid()){
+      setFormStatus(true)
     }
   }
 
   const save = (username, password, hostname, port) => {
-    
 
     let values = [];
     for (let key of Object.keys(changes)) {
@@ -100,7 +99,8 @@ export default function Editor() {
       body: body
     })
     .then((response) => {
-      setformStatus("Success")
+      setFormStatus(true)
+      close();
     })
     .catch(function(error){
       if (error.response) {
@@ -118,11 +118,10 @@ export default function Editor() {
         // Something happened in setting up the request that triggered an Error
         console.log('Error', error.message);
       }
-      setformStatus(error.message)
+      setFormStatus(false)
 
     });
 
-    close();
 }
 
   const [searchParams] = useSearchParams();
@@ -166,14 +165,15 @@ export default function Editor() {
           initial={false}
           mode={"wait"}
         >
-          {modalOpen && <SaveModal modalOpen={modalOpen} handleClose={close} handleSave={save} parentStateSetter={handleInputChange} formIsValid={isValidForm}/>}
+          {modalOpen && <SaveModal modalOpen={modalOpen} handleClose={close} handleSave={save} parentStateSetter={handleInputChange} formIsValid={isValidForm} setFormStatus={setFormStatus} setPort={port}/>}
         </AnimatePresence>
       </div>
       <div className="bg-white flex justify-center items-center w-full h-[calc(100vh-4rem)] p-4 pt-0">
         <iframe
-          className="w-full h-full"
+          className="w-full h-full border-2 border-gray-300"
           src={`http://localhost:5600/?proxy_url=${searchParams.get("url")}`}></iframe>
       </div>
+      { !formStatus && <p className="absolute right-4 bottom-4 rounded-md bg-red-500 bg-opacity-75 px-4 py-2 text-white font-bold">Something went wrong, please check your FTP information.</p>}
     </motion.div>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/SiteSliceLogo.svg";
 import TextCycleInput from "../components/TextCycleInput";
@@ -20,12 +20,22 @@ export default function Home() {
     setSiteLink(value);
     setIsValidUrl(isUrlHttp(value));
   };
+  
+  const buttonToPush = useRef(null)
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      if (isValidUrl){
+        buttonToPush.current.click()
+      }
+    }
+  }
 
 
   return (
     <motion.div
       className="w-full h-screen flex flex-col justify-center items-center p-8"
+      onKeyDown={handleKeyDown}
       initial={{ x: window.innerWidth }}
       animate={{ x: 0 }}
       exit={{ x: -window.innerWidth, transition: { duration: 0.2 } }}
@@ -50,6 +60,7 @@ export default function Home() {
         />
       { isValidUrl
         ? <Link
+        ref={buttonToPush}
         to={`/preview?url=${siteLink}`}
         className={`mt-4 h-10 relative hover-slice flex justify-center items-center h-auto bg-gradient-to-r from-red-400 to-orange-300 px-4 py-2 text-lg rounded-md text-white font-bold`}>
         Slice it!
