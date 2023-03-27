@@ -155,7 +155,7 @@ function getCSSPath(el) {
     return `${path.join(' > ')}`.toLowerCase();
 }
 
-let update
+let testfile = fs.readFileSync('../../Frontend/Testbench/Lundahl-backup/homedir/public_html/index.html');
 function update_element_in_html_by_css_query(css_query,html, new_inner_html) {
     
 }
