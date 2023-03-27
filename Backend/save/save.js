@@ -155,6 +155,11 @@ function getCSSPath(el) {
     return `${path.join(' > ')}`.toLowerCase();
 }
 
+let update
+function update_element_in_html_by_css_query(css_query,html, new_inner_html) {
+    
+}
+
 module.exports = { 
     save
 };
