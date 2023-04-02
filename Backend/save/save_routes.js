@@ -3,17 +3,26 @@ const router = require('express').Router();
 const cors = require('cors')
 const { checkSchema } = require('express-validator');
 const save = require('./save.js');
+const body_parser = require('body-parser');
 
+// Global backend constants
+const CONFIG = require('../../config');
 
-// CORS
-// const corsOptions = {
-//     origin: 'localhost:80', 
-//     optionsSuccessStatus: 200
-// }
+// setup middleware
 
-// Create the save route
+// cors
+router.use(cors(CONFIG.BACKEND.CORS_OPTIONS));
 
+// Set json as the body parser
+router.use(body_parser.json());
 
+// Parse url encoded params
+router.use(body_parser.urlencoded({ extended: false }));
+
+// debug
+router.use((req, res, next) => {
+    console.log(`[SAVE ROUTES] ${req.method} ${req.hostname}${req.url}`)
+});
 
 const save_schema = {
     url: {
@@ -66,6 +75,11 @@ const save_schema = {
 };
 
 router.post('/', save.save);
+
+// Add 404 error handler
+router.all('*', (req, res) => {
+    return res.status(404).send('SiteSlice save route not found');
+});
 
 // Export the router
 module.exports = router;

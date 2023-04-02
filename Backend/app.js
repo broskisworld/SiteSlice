@@ -1,68 +1,61 @@
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
+const vhost = require('vhost');
 const models = require('./db/models');
+const utils = require('./utils/utils');
+const {api_app, api_server} = require('./api_server');
+const {proxy_app, proxy_server} = require('./proxy/proxy_server');
 
 // Import middlewares
-const body_parser = require('body-parser');
 const querystring = require('querystring');
 
-// Global constants
-const CONFIG = {
-    SAVE_API_PORT: 5500,
-    PROXY_SERVICE_PORT: 5600
-};
+// Global backend constants
+const CONFIG = require('../config');
 
-// // CORS
-const corsOptions = {
-    origin: 'http://localhost:8080',
-    optionsSuccessStatus: 200,
-    methods: 'GET, PUT, OPTIONS, POST'
-}
-
+console.log('config loaded!');
+console.log(CONFIG);
 
 // Import routes
 const proxy_routes = require('./proxy/proxy_routes.js');
-const save_routes = require('./save/save_routes.js');
+const api_routes = require('./api_routes.js');
 
 // *** ANCHOR SETUP ***
-const save_api_app = express();
-const proxy_service_app = express();
+const app = express();
 
-save_api_app.use(cors(corsOptions))
-proxy_service_app.use(cors(corsOptions))
+// app.use((req, res, next) => {
+//     console.log(`[BACKEND] ${req.method} ${req.hostname}${req.url}`)
+//     next()
+// });
 
-// Set json as the body parser
-save_api_app.use(body_parser.json());
-proxy_service_app.use(body_parser.json());
+// TODO: Do the vhost via directly splitting up services into subapps (for better scalability per service usage) and/or Nginx vhost (for better performance in general than Node.js)
+app.use(vhost(new RegExp(`([-a-zA-Z0-9@:%._\+~#=]{0,256})${utils.preg_quote(CONFIG.API_HOSTNAME)}`, 'g'), function handle (req, res, next) {
+    console.log(`|  ${req.url}`);
+    console.log('-> Forwarding to API server');
+    api_server.emit('request', req, res);
+}))
+app.use(vhost(new RegExp(`([-a-zA-Z0-9@:%._\+~#=]{0,256})${utils.preg_quote(CONFIG.PROXY_HOSTNAME)}.*`, 'g'), function handle (req, res, next) {
+    console.log(`|  ${req.url}`);
+    console.log('-> Forwarding to proxy server');
+    proxy_server.emit('request', req, res);
+}))
 
-// Parse url encoded params
-save_api_app.use(body_parser.urlencoded({ extended: false }));
-proxy_service_app.use(body_parser.urlencoded({ extended: false }));
+app.all('*', (req, res) => res.status(500).send('Uncaught 404!'));
+
+// app.use(vhost(CONFIG.API_HOSTNAME, api_routes))
+// app.use(vhost(CONFIG.PROXY_HOSTNAME, proxy_routes))
 
 // Connect to the database
 console.log('Connecting to database...');
 const db = require('./db/db');
 console.log('Connected!');
 
-// Create new routes for proxy and save
-save_api_app.use('/save', save_routes);
-proxy_service_app.use('/', proxy_routes);
-
-// Add 404 error handler
-save_api_app.all('*', (req, res) => {
-    res.status(404).send('Not Found');
-});
 
 // *** ANCHOR START SERVER ***
-save_api_app.listen(CONFIG.SAVE_API_PORT, () => {
-    console.log(`Save API started on port ${CONFIG.SAVE_API_PORT}`);
-});
-proxy_service_app.listen(CONFIG.PROXY_SERVICE_PORT, () => {
-    console.log(`Proxy service started on port ${CONFIG.PROXY_SERVICE_PORT}`);
+app.listen(CONFIG.BACKEND_PORT, () => {
+    console.log(`Backend started on port ${CONFIG.BACKEND_PORT}`);
 });
 
 // Set router
 module.exports = {
-    save_api_app,
-    proxy_service_app
+    app
 };

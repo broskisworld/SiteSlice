@@ -2,17 +2,21 @@ import * as React from "react";
 import { json, Link, useSearchParams } from "react-router-dom";
 import logo from "../assets/SiteSliceLogo.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SaveModal from "../components/SaveModal";
 import axios from "axios";
+import *  as CONFIG from "../../../config";
 
 export default function Editor() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [iframeSrc, setIframeSrc] = useState('');
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
   const [changes, setChanges] = useState({});
+
+  console.log(`config: ${JSON.stringify(CONFIG, null, 2)}`)
 
   
   // Form Data
@@ -127,9 +131,47 @@ export default function Editor() {
 
     });
 
-}
+  }
 
   const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    let input_url = searchParams.get('url');
+
+    const url_regex = /((https?):)?(\/?\/?)([-a-zA-Z0-9@:%._\+~#=]{1,256})((\/?)([-a-zA-Z0-9@:%._\+~#=\/]{0,256})(\??)([\w-]+(=[\w-]*)?(&[\w-]+(=[\w-]*)?)*)?)?/g;
+
+    let matched_link = url_regex.exec(input_url)
+    let link_data = {
+        protocol_plus_colon: matched_link[1] || '',
+        protocol: matched_link[2] || '',
+        slashes: matched_link[3] || '',
+        hostname_or_path: matched_link[4] || '',
+        rest_of_url: matched_link[5] || '',
+        first_slash: matched_link[6] || '',
+        rest_of_path: matched_link[7] || '/',
+        query_param_separator: matched_link[8] || '',
+        query_params: matched_link[9] || '',
+        quotation_mark_2: matched_link[13] || '',
+        full_match_link_and_attr: matched_link[0],
+        starting_index: matched_link.index,
+        ending_index: matched_link.index + matched_link[0].length,
+        full_match_length: matched_link[0].length
+    };
+
+    // Assumptions: the URL provided will always be an absolute URL
+    let host = link_data.protocol_plus_colon + link_data.slashes + link_data.hostname_or_path;
+    let path_and_query = link_data.rest_of_url;
+    let iframe_src = `${host}.${CONFIG.PROXY_HOSTNAME}:${CONFIG.BACKEND_PORT}${path_and_query}`;
+
+    //if i have alink https://google.com/test, i need to separate
+    
+    console.log(`input_url: ${input_url}`);
+    console.log('host: ', host);
+    console.log(`iframe_src: ${iframe_src}`);
+
+    setIframeSrc(iframe_src);
+  }, [searchParams])
+  
 
   function getMessage(message) {
     if (message.data.message == "changed") {
@@ -176,7 +218,7 @@ export default function Editor() {
       <div className="bg-white flex justify-center items-center w-full h-[calc(100vh-4rem)] p-4 pt-0">
         <iframe
           className="w-full h-full border-2 border-gray-300"
-          src={`http://localhost:5600/?proxy_url=${searchParams.get("url")}`}></iframe>
+          src={iframeSrc}></iframe>
       </div>
       { !formStatus && <p className="absolute right-4 bottom-4 rounded-md bg-red-500 bg-opacity-75 px-4 py-2 text-white font-bold">Something went wrong, please check your FTP information.</p>}
     </motion.div>
