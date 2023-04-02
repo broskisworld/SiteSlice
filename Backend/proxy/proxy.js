@@ -1,86 +1,78 @@
 const axios = require('axios');
+const axiosRetry = require('axios-retry');
 const xpath = require('xpath');
 const cheerio = require('cheerio');
 const client = require('../db/db').client;
 const uuid = require('uuid').v4;
 const { DOMParser, XMLSerializer} = require('xmldom');
 
+const CONFIG = require('../../config');
+
 const MONGO_DB = 'SiteSliceDB';
 const MONGO_COLLECTION = 'elements';
 const DEBUG_MODE = false;
 
 const proxy = (async (req, res) => {
+    let proxy_url = req.vhost.hostname.slice(0, req.vhost.hostname.lastIndexOf(CONFIG.PROXY_HOSTNAME));
+
+    if(proxy_url === '') {
+        return res.status(404).send('No proxy domain specified');
+    }
+
+    // trim tailing '.'
+    proxy_url = proxy_url.slice(0, -1);
+
+    let parsed_url_test = '';
+
+    console.log(`proxy_url=${proxy_url}`)
+    console.log(`req.originalUrl=${req.originalUrl}`)
+
     try {
         let site_slice_header = 'SiteSlice Proxy';
 
-        elements_db = await client.db(MONGO_DB);
-        elements_collection = await elements_db.collection(MONGO_COLLECTION);
+        let full_resource_path = `${proxy_url}${req.originalUrl}`;
+        
+        let slashes = '//';
+        if(!full_resource_path.startsWith('http')) {
 
-        // Parse the url
-        let proxy_url = String(req.query.proxy_url);
-        let resource_path_with_proxy_url = req.url;
-
-        // new URL object
-        const full_resource_path_dirty = `${proxy_url}${resource_path_with_proxy_url}`;
-        console.log('Proxying url: ' + full_resource_path_dirty);
-
-        if(proxy_url == null) {
-            console.log('No proxy url specified for request. Returning 404!');
-            return res.status(404).send('No proxy url specified');
-        }
-
-        // Download url files
-        let full_resource_path_sanitized = full_resource_path_dirty.split('proxy_url=')[0];
-
-        // clean up url - remove query, make sure it has http
-        if(!full_resource_path_sanitized.startsWith('http')) {
-            full_resource_path_sanitized = 'http://' + full_resource_path_sanitized;
+            if(full_resource_path[0] == '/') {
+                if(full_resource_path[1] == '/') {
+                    slashes = '';
+                } else {
+                    slashes = '/';
+                }
+            }
+            console.log('does not start with http!')
+            full_resource_path = 'http:' + slashes + full_resource_path;
         }
         
-        if(full_resource_path_sanitized.endsWith('?'))
-            full_resource_path_sanitized = full_resource_path_sanitized.slice(0, -1);
-
+        let full_resource_path_sanitized = full_resource_path;
         console.log(`full resource path sanitized: ${full_resource_path_sanitized}`)
+
+        // get the actual url data
+        parsed_url_test = full_resource_path_sanitized;
+
+        if(parsed_url_test == 'http://siteslicetest.rainroomcreative.com/siteslicetest.rainroomcreative.com.proxy.iwontexplainit.com') {
+            console.log('BAD!')
+            console.log(`a: ${proxy_url}${req.url}`)
+            console.log(`b: ${slashes}`);
+            console.log(`c: ${full_resource_path}`)
+            console.log(`d: ${full_resource_path_sanitized}`)
+        }
+
         let original_url_response = await axios.get(full_resource_path_sanitized);
-        console.log('test')
-        let original_html = original_url_response.data;
+        let original_html =  original_url_response.data;
         console.log('got original data from ' + full_resource_path_sanitized);
 
-        console.log(`headers are:\n${original_url_response.headers['content-type']}`);
+        // console.log(`headers are:\n${original_url_response.headers['content-type']}`);
 
         res.setHeader('content-type', original_url_response.headers['content-type'].split(';')[0]);
 
         if(original_url_response.headers['content-type'].includes('text/html')) {
             // Replace links before doing any processing
-            const url_attr_regex = /(src|href)=(\"|\')((https?):)?(\/?\/?)([-a-zA-Z0-9@:%._\+~#=]{1,256})([-a-zA-Z0-9@:%._\+~#=\/]{1,256})(\??)([\w-]+(=[\w-]*)?(&[\w-]+(=[\w-]*)?)*)?(\"|\')/g;
-            //TODO: [V6+] support srcset, bgset
-            /* Explanation
-            1st capturing group is src or href
-            2nd capturing group is quotation mark #1
-            3rd capturing group is protocol & :
-            4th capturing group is http, https, or nothing
-            5th capturing group is //, /, or nothing
-                If "//", relative protocol. hostname MUST be included
-                If "/", relative path. hostname MUST NOT be included
-                If "", relative or absolute path. hostname MAY or MAY NOT be included
-            6th capturing group is hostname (or first part of relative path) -- may not have slashes
-            7th capturing group is rest of path -- can have slashes
-            8th capturing group is ? -- if present, there are query params
-            9th capturing group is anything else after the ? -- query params
-            10th capturing group is quotation mark #2
-
-            is equal to
-
-            $1=$2#3$5$6$7$8$9#13
-
-            need to replace with EITHER
-
-            $1=$2#3$5$6$7$8$9#13?proxy_url=${url}"
-
-            OR
-
-            $1=#2$3$5$6$7$8$9#13&proxy_url=${url}"
-            */
+            const url_attr_regex = /(src|href)=(\"|\')((https?):)?(\/?\/?)([-a-zA-Z0-9@:%._\+~#=]{1,256})([-a-zA-Z0-9@:%._\+~#=\/]{0,256})(\??)([\w-]+(=[\w-]*)?(&[\w-]+(=[\w-]*)?)*)?(\"|\')/g;
+            // TODO: [V6+] support srcset, bgset
+            // There is a weird edge case where there are no protocol slashes, but the site host starts with http or https and that's captured
 
             let matched_links = [];
             let matched_link = [];
@@ -89,6 +81,8 @@ const proxy = (async (req, res) => {
             let good_html = '';
 
             while ((matched_link = url_attr_regex.exec(remaining_html)) !== null) {
+                let attr_debug_msg = '';
+
                 let attr_data = {
                     attr_name: matched_link[1] || '',
                     quotation_mark_1: matched_link[2] || '',
@@ -100,7 +94,7 @@ const proxy = (async (req, res) => {
                     query_param_separator: matched_link[8] || '',
                     query_params: matched_link[9] || '',
                     quotation_mark_2: matched_link[13] || '',
-                    full_match_link_and_attr: matched_link[0],
+                    full_match_link_and_attr: matched_link[0] || '',
                     starting_index: matched_link.index,
                     ending_index: matched_link.index + matched_link[0].length,
                     full_match_length: matched_link[0].length
@@ -112,18 +106,38 @@ const proxy = (async (req, res) => {
 
                 // console.log(JSON.stringify(attr_data, null, 4))
 
-                let attr_replacement = `${attr_data.attr_name}=${attr_data.quotation_mark_1}${attr_data.protocol_plus_colon}${attr_data.slashes}${attr_data.hostname_or_path}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}${attr_data.query_params.length > 0 ? '&' : '?'}proxy_url=${proxy_url}${attr_data.quotation_mark_2}`;
+                // PROXY_URL_QUERY
+                // let attr_replacement = `${attr_data.attr_name}=${attr_data.quotation_mark_1}${attr_data.protocol_plus_colon}${attr_data.slashes}${attr_data.hostname_or_path}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}${attr_data.query_params.length > 0 ? '&' : '?'}proxy_url=${proxy_url}${attr_data.quotation_mark_2}`;
+
+                let hostname_or_path_with_protocol_capture = attr_data.protocol_plus_colon + attr_data.slashes + attr_data.hostname_or_path;    // Everything up to the first slash
+                let attr_original_url = hostname_or_path_with_protocol_capture + attr_data.rest_of_path + attr_data.query_param_separator + attr_data.query_params;   // The link w/o attr stuff
+                let attr_new_url = attr_original_url;
+
+                if(attr_data.slashes == '//') {
+                    // Absolute path with protocol slashes -- must include hostname
+                    attr_new_url = `${attr_data.hostname_or_path_with_protocol_capture}.${CONFIG.PROXY_HOSTNAME}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}`;
+                } else if(attr_data.slashes == '/') {
+                    // Relative path from hostname -- Hostname does not need to be included
+                    attr_new_url = `${attr_data.hostname_or_path_with_protocol_capture}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}`;
+                } else if(attr_data.slashes == '') {
+                    // Relative path -- hostname does not need to be included unless first part of the string is hostname
+                    // change in way it works: making assumptions that it is actually an absolute path because it has a . in the first part of the string doesnt work for href="index.html"
+                    if(attr_data.hostname_or_path == proxy_url /*| attr_data.hostname_or_path.includes('.')*/) {
+                        attr_new_url = `${proxy_url}.${CONFIG.PROXY_HOSTNAME}` + `${hostname_or_path_with_protocol_capture}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}`.slice(proxy_url.length)
+                    } else {
+                        attr_new_url = attr_original_url;
+                    }
+                }
+
+                let attr_replacement = `${attr_data.attr_name}=${attr_data.quotation_mark_1}${attr_new_url}${attr_data.quotation_mark_2}`;
 
                 let before_link = remaining_html.slice(0, attr_data.starting_index);
                 let after_link = remaining_html.slice(attr_data.ending_index);
-
-                // console.log(`converting\n\t${attr_data.full_match_link_and_attr}\nto\n\t${attr_replacement}\n\n (prev characters: "${before_link.slice(before_link.length - 10, before_link.length )}" next characters: "${after_link.slice(0, 10)}")`)
 
                 good_html += before_link;
                 good_html += attr_replacement;
                 remaining_html = after_link;
 
-                // console.log(`${remaining_html.length}/${original_html.length} characters remaining to process}`)
                 url_attr_regex.lastIndex = 0; // since we're eating stuff from the string, we need to reset the regex
             }
 
@@ -156,25 +170,31 @@ const proxy = (async (req, res) => {
                 // console.log(Object.keys(element));
             }
 
+            elements_db = await client.db(MONGO_DB);
+            elements_collection = await elements_db.collection(MONGO_COLLECTION);
+
             // add to DB
             console.log(`about to add ${list_of_uuid_refs.length} elements to the DB!`);
             const options = { ordered: true }; // this option prevents additional documents from being inserted if one fails
-            console.log(JSON.stringify(list_of_uuid_refs))
+            // console.log(JSON.stringify(list_of_uuid_refs))
             const add_refs_to_db_result = await elements_collection.insertMany(list_of_uuid_refs);
 
             console.log(`Added ${add_refs_to_db_result} elements to the DB!`);
             
-
             // Add Injectables.js
             $('head').append('<script src="http://localhost:8080/src/injectables/injectables.js"></script>')
             
             // Export cheerio doc
             let doc_output_str = $.root().html();
 
+            let headers_set_ct = 0;
             for(let header of original_url_response.headers) {
-                console.log(`setting header ${header[0]} to ${header[1]}`)
+                // console.log(`setting header ${header[0]} to ${header[1]}`)
                 res.setHeader(header[0], header[1]);
+
+                headers_set_ct++;
             }
+            console.log(`set ${headers_set_ct} headers to match proxied request`);
 
             let site_header_bar = `<div style="background:#fdba74;">${site_slice_header}</div></br>`;
             res.status(200).send(`${DEBUG_MODE ? site_header_bar : ''}${doc_output_str}`);
@@ -184,22 +204,37 @@ const proxy = (async (req, res) => {
         } else {
             /* Non HTML file !!! */
 
-            // console.log('=====================');
-            // console.log(original_url_response.data);
-            // console.log('=====================');
             console.log('Non html file, returning original response w/o additional preprocessing!');
             console.log(`total bytes: ${original_url_response.data.length / 1000}kb}`)
 
-            axios({
-                method: 'get',
-                url: full_resource_path_sanitized,
-                responseType: "stream"
-            }).then((axios_response) => {
-                axios_response.data.pipe(res);
-            });
+            try {
+                axiosRetry(axios, {
+                    retries: 3,
+                    retryDelay: axiosRetry.exponentialDelay
+                });
+                let get_non_html_file = axios({
+                    method: 'get',
+                    url: full_resource_path_sanitized,
+                    responseType: 'stream'
+                }).then((axios_response) => {
+                    axios_response.data.pipe(res);
+                });
+            } catch (error) {
+                console.log('Error in non-html file proxying!')
+                console.dir(error)
+                console.log(`
+ _____ _______ ____  _____  _ 
+ / ____|__   __/ __ \|  __ \| |
+| (___    | | | |  | | |__) | |
+ \___ \   | | | |  | |  ___/| |
+ ____) |  | | | |__| | |    |_|
+|_____/   |_|  \____/|_|    (_)
+`);
+                console.log('TELL JOSH YOU SAW THIS AND DONT REFRESH --> Josh saw this error but couldnt replicate. I want to figure out if retrying the stream is better than swapping from stream');
+            }
         }        
     } catch (error) {
-        res.status(500).send('Error from SiteSlice:' + error);
+        res.status(500).send(`[${parsed_url_test}] Error from SiteSlice: ${error}`);
     }
 });
 
