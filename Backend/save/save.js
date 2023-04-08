@@ -128,13 +128,14 @@ const save = async (req, res) => {
             let item = findItemWithCSSPath(test_selector);
 
             if(item != undefined) {
-                // TODO: Test file
+                // TODO: Run element tests
                 console.log("Found valid file: ", file_data);
                 ftp_file_loc = file_data.loc;
                 ftp_file_name = file_data.name;
                 break;
             }
         } catch (err) {
+            cleanTempFolder();
             console.log("Error loading file: ", err);
         }
     }
@@ -171,9 +172,16 @@ const save = async (req, res) => {
             console.log('uuid: ', change.uuid);
             console.log('selector: ', selector_str);
 
+            // Check inner html
+
+            if($(item).html() != change.old_inner_html) {
+                return res.status(400).json({ message: "Wrong element: " + " current html" + $(item).html() + " " + change.old_inner_html});
+            }
+
             $(item).html(change.new_inner_html);
         }
     } catch (err) {
+        cleanTempFolder();
         return res.status(500).json({ message: "Error updating element: " + err.toString()});
     }       
 
@@ -182,6 +190,7 @@ const save = async (req, res) => {
     try {
         fs.writeFileSync("save/tmp/" + ftp_file_name, $.root().html());
     } catch (err) {
+        cleanTempFolder();
         return res.status(500).json({ message: "Error writing file: " + err.toString()});
     }
 
@@ -190,9 +199,18 @@ const save = async (req, res) => {
     try {
         await ftp.uploadFile(ftp_file_loc, ftp_file_name, ftp_username, ftp_password, ftp_host, ftp_port);
     } catch (err) {
+        cleanTempFolder();
         return res.status(400).json({ message: "Error uploading file: " + err.toString()});
     }
 
+    // Clean tmp folder
+    cleanTempFolder();
+
+    console.log("Changes saved successfully");
+    return res.status(200).json({ message: "Success" });
+};
+
+function cleanTempFolder() {
     // Clean tmp folder
     console.log("Cleaning tmp folder...");
     const directory = "save/tmp";
@@ -206,10 +224,7 @@ const save = async (req, res) => {
         });
     }
     });
-
-    console.log("Changes saved successfully");
-    return res.status(200).json({ message: "Success" });
-};
+}
 
 function getCSSPath(el) {
     let path = [], parent;
