@@ -153,6 +153,7 @@ const save = async (req, res) => {
 
             let query = { uuid: change.uuid };
             let result = await collection.findOne(query);
+            console.log("Result: ", result);
             let element_selector = result.xpath;
 
             let selector_str = String(element_selector);
@@ -175,7 +176,7 @@ const save = async (req, res) => {
             // Check inner html
 
             if($(item).html() != change.old_inner_html) {
-                return res.status(400).json({ message: "Wrong element: " + " current html" + $(item).html() + " " + change.old_inner_html});
+                return res.status(400).json({ message: "Wrong element: " + " current html " + $(item).html() + " passed html " + change.old_inner_html});
             }
 
             $(item).html(change.new_inner_html);
