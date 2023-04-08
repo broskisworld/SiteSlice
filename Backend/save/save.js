@@ -8,25 +8,37 @@ const path = require("path");
 const DB_NAME = "SiteSliceDB";
 const DB_COLLECTION = "elements";
 
-// Test event
-// {
-//     "url": "https://www.testsite.com/page.html",
-//     "uuid": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
-//     "xpath": "/html/body/p",
-//     "inner_html": "This is a test paragraph"
-// }
+const COMMON_PATHS = [
+    "public_html",
+    "www",
+    "var/www",
+    "usr/share/nginx/html",
+    "usr/share/nginx/www",
+    //"*.com/public_html",
+];
 
-// const FTP_FILE_PATH = "/public_html/index-basic.html";
-// const FTP_FILE_NAME = "index-basic.html";
-
-const FTP_FILE_PATH = "public_html/index.html";
-const FTP_FILE_NAME = "index.html";
+const COMMON_FILE_NAMES = [
+    "index.html",
+];
 
 const save = async (req, res) => {
 
     console.log("Saving changes...");
 
-    console.log(req.body.body["ftp_username"], req.body.body["ftp_password"], req.body.body["ftp_host"], req.body.body["ftp_port"]);
+    // FIXME: Temporary body parser patch
+
+    let ftp_username = req.body.ftp_username != undefined ? req.body.ftp_username : req.body.body["ftp_username"];
+    let ftp_password = req.body.ftp_password != undefined ? req.body.ftp_password : req.body.body["ftp_password"];
+    let ftp_host = req.body.ftp_host != undefined ? req.body.ftp_host : req.body.body["ftp_host"];
+    let ftp_port = req.body.ftp_port != undefined ? req.body.ftp_port : req.body.body["ftp_port"];
+
+    let changes = req.body.changes != undefined ? req.body.changes : req.body.body["changes"];
+
+    console.log("FTP username: ", ftp_username);
+    console.log("FTP password: ", ftp_password);
+    console.log("FTP host: ", ftp_host);
+    console.log("FTP port: ", ftp_port);
+    console.log("Changes: ", changes);
 
     // Validate the request
 
@@ -36,114 +48,167 @@ const save = async (req, res) => {
         return res.status(422).json({ errors: errors.array() });
     }
 
+    // 11MVP - Search for element (file) in database
+
+    console.log("Searching for file in database...");
+
+    let ftp_potential_files = [];
+
+    for(let path of COMMON_PATHS) {
+        try{
+            let files = await ftp.listFiles(path, ftp_username, ftp_password, ftp_host, ftp_port);
+            for(let file of files) {
+                console.log("File: ", file.name);
+                if(COMMON_FILE_NAMES.includes(file.name)) {
+                    console.log("Found file: ", file);
+                    ftp_potential_files.push({
+                        path: path,
+                        name: file.name,
+                        loc: path + "/" + file.name
+                    })
+                }
+            }
+        } catch (err) {
+            console.log("Error listing files: ", err);
+        }
+    }
+
+    console.log("Potential files: ", ftp_potential_files);
+
+    // Access database
+    console.log("Accessing database...");
+    let db;
+    let collection;
+
+    try {
+        db = client.db(DB_NAME);
+        collection = db.collection(DB_COLLECTION);
+    } catch (err) {
+        return res.status(500).json({ message: "Error connecting to database: " + err.toString()});
+    }
+
     // Version 4, Login via FTP
 
+    let query = { uuid: changes[0].uuid };
+    let result = await collection.findOne(query);
+    let element_selector = result.xpath;
+
+    let test_selector = String(element_selector);
+
+    let $;
+
     let file;
-    try {
-        ftp.getFile(FTP_FILE_PATH, FTP_FILE_NAME, req.body.body["ftp_username"], req.body.body["ftp_password"], req.body.body["ftp_host"], req.body.body["ftp_port"], async () => {
-            file = fs.readFileSync("save/tmp/" + FTP_FILE_NAME);
 
-            // Access database
-            let db;
-            let collection;
+    console.log("Getting potential files via FTP...")
+    for(let file_data of ftp_potential_files) {
 
-            try {
-                db = client.db(DB_NAME);
-                collection = db.collection(DB_COLLECTION);
-            } catch (err) {
-                return res.status(500).json({ message: "Error connecting to database: " + err.toString()});
-            }
+        console.log("Getting file: ", file_data);
 
-            console.log("Connected to database");
+        try {
+            await ftp.getFile(file_data.loc, file_data.name, ftp_username, ftp_password, ftp_host, ftp_port);
+        } catch (err) {
+            return res.status(500).json({ message: "Error getting file: " + err.toString()});
+        }
+            
+        file = fs.readFileSync("save/tmp/" + file_data.name);
 
-            // Iterate through the changes
+        try {
+            $ = cheerio.load(file.toString());
 
-            let $;
+            function findItemWithCSSPath(cssPath) {
+                let all_elements = $('*');
 
-            try {
-                $ = cheerio.load(file.toString());
-                // console.log($.root().html())
-                
-                for(let i=0; i < req.body.body["changes"].length; i++) {
-                    let change = req.body.body["changes"][i];
-                    // For each change, get the xpath from the db given the uuid
-
-                    let query = { uuid: change.uuid };
-                    let result = await collection.findOne(query);
-                    let element_selector = result.xpath;
-
-                    let selector_str = String(element_selector);
-
-                    function findItemWithCSSPath(cssPath) {
-                        let all_elements = $('*');
-
-                        for(let element of all_elements) {
-                            if(getCSSPath(element) === selector_str) {
-                                return element;
-                            }
-                        }
+                for(let element of all_elements) {
+                    if(getCSSPath(element) === test_selector) {
+                        return element;
                     }
-
-                    let item = findItemWithCSSPath(selector_str);
-
-                    console.log('el uuid: ', change.uuid);
-                    console.log('el selector: ', selector_str);
-
-                    // Update the file via the xpath to reflect the change
-                    // let item = $(selector_str);
-                    /*console.log(item)
-                    let all_the_h2s = $('h2');
-                    
-                    for(let h2 of all_the_h2s) {
-                        console.log('[[h2]] ', $(h2).text(), getCSSPath(h2))
-                        console.log('is NOT ', element_selector);
-                        console.log($(element_selector).length, '\n')
-                    }*/
-                    // console.log('all the h2s: ', $('h2'))
-
-                    $(item).html(change.new_inner_html);
-                    //xpath.select(element_selector, doc)[0].firstChild.data = change.new_inner_html;
                 }
-
-            } catch (err) {
-                return res.status(500).json({ message: "Error updating element: " + err.toString()});
             }
 
-            // Save the file
-            try {
-                fs.writeFileSync("save/tmp/" + FTP_FILE_NAME, $.root().html());
-            } catch (err) {
-                return res.status(500).json({ message: "Error writing file: " + err.toString()});
+            let item = findItemWithCSSPath(test_selector);
+
+            if(item != undefined) {
+                // TODO: Test file
+                console.log("Found valid file: ", file_data);
+                ftp_file_loc = file_data.loc;
+                ftp_file_name = file_data.name;
+                break;
             }
-
-            // Version 4, Upload the file via FTP
-            try {
-                ftp.uploadFile(FTP_FILE_PATH, FTP_FILE_NAME,req.body.body["ftp_username"], req.body.body["ftp_password"], req.body.body["ftp_host"], req.body.body["ftp_port"], () => {
-                    // Clean tmp folder
-
-                    // const directory = "save/tmp";
-
-                    // fs.readdir(directory, (err, files) => {
-                    // if (err) throw err;
-
-                    // for (const file of files) {
-                    //     fs.unlink(path.join(directory, file), (err) => {
-                    //     if (err) throw err;
-                    //     });
-                    // }
-                    // });
-
-
-                    return res.status(200).json({ message: "Success" });
-                });
-            } catch (err) {
-                return res.status(400).json({ message: "Error uploading file: " + err.toString()});
-            }
-
-        });
-    } catch (err) {
-        return res.status(400).json({ message: "Error getting file: " + err.toString()});
+        } catch (err) {
+            console.log("Error loading file: ", err);
+        }
     }
+
+    // Iterate through the changes
+    console.log("Iterating through changes...");
+
+    try {
+        $ = cheerio.load(file.toString());
+        // console.log($.root().html())
+        
+        for(let i=0; i < changes.length; i++) {
+            let change = changes[i];
+            // For each change, get the xpath from the db given the uuid
+
+            let query = { uuid: change.uuid };
+            let result = await collection.findOne(query);
+            let element_selector = result.xpath;
+
+            let selector_str = String(element_selector);
+
+            function findItemWithCSSPath(cssPath) {
+                let all_elements = $('*');
+
+                for(let element of all_elements) {
+                    if(getCSSPath(element) === selector_str) {
+                        return element;
+                    }
+                }
+            }
+
+            let item = findItemWithCSSPath(selector_str);
+
+            console.log('uuid: ', change.uuid);
+            console.log('selector: ', selector_str);
+
+            $(item).html(change.new_inner_html);
+        }
+    } catch (err) {
+        return res.status(500).json({ message: "Error updating element: " + err.toString()});
+    }       
+
+    // Save the file
+    console.log("Saving file...");
+    try {
+        fs.writeFileSync("save/tmp/" + ftp_file_name, $.root().html());
+    } catch (err) {
+        return res.status(500).json({ message: "Error writing file: " + err.toString()});
+    }
+
+    // Version 4, Upload the file via FTP
+    console.log("Uploading file via FTP...")
+    try {
+        await ftp.uploadFile(ftp_file_loc, ftp_file_name, ftp_username, ftp_password, ftp_host, ftp_port);
+    } catch (err) {
+        return res.status(400).json({ message: "Error uploading file: " + err.toString()});
+    }
+
+    // Clean tmp folder
+    console.log("Cleaning tmp folder...");
+    const directory = "save/tmp";
+
+    fs.readdir(directory, (err, files) => {
+    if (err) throw err;
+
+    for (const file of files) {
+        fs.unlink(path.join(directory, file), (err) => {
+        if (err) throw err;
+        });
+    }
+    });
+
+    console.log("Changes saved successfully");
+    return res.status(200).json({ message: "Success" });
 };
 
 function getCSSPath(el) {
