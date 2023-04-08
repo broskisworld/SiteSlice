@@ -176,7 +176,7 @@ const save = async (req, res) => {
             // Check inner html
 
             if($(item).html() != change.old_inner_html) {
-                return res.status(400).json({ message: "Wrong element: " + " current html " + $(item).html() + " passed html " + change.old_inner_html});
+                return res.status(400).json({ message: "Wrong element: " + " current html" + $(item).html() + " " + change.old_inner_html});
             }
 
             $(item).html(change.new_inner_html);
