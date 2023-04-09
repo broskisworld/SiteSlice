@@ -1,5 +1,4 @@
 
-
 // Inject jQuery into the page
 
 var tag = document.createElement('script');
@@ -14,7 +13,8 @@ var head = document.head;
 var link = document.createElement("link");
 link.type = "text/css";
 link.rel = "stylesheet";
-link.href = "/injectables/injectables.css";
+// FIXME: This should be a relative path
+link.href = "http://localhost:8080/src/injectables/injectables.css";
 head.appendChild(link);
 
 
@@ -39,9 +39,13 @@ window.addEventListener('load', function () {
 
     $("*").attr("contenteditable", "false");
 
-    // Set all elements with UUIDs to contenteditable true with jQuery
+    // Set all elements with siteslicedata and no children to contenteditable true with jQuery
 
     $("*[siteslicedata]:not(:has(*))").attr("contenteditable", "true");
+    
+    // Add siteslice class to all elements with UUIDs
+    
+    $("*[siteslicedata]:not(:has(*))").addClass("sitesliteeditible");
 
     // Add a initialized class to html tag
 

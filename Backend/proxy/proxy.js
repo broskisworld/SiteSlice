@@ -183,6 +183,7 @@ const proxy = (async (req, res) => {
             // console.log(`Added ${add_refs_to_db_result} elements to the DB!`);
             
             // Add Injectables.js
+            // FIXME: This should be a relative path
             $('head').append('<script src="http://localhost:8080/src/injectables/injectables.js"></script>')
             
             // Export cheerio doc
