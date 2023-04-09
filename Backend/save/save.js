@@ -149,6 +149,7 @@ const save = async (req, res) => {
         
         for(let i=0; i < changes.length; i++) {
             let change = changes[i];
+            console.log("Change: ", change);
             // For each change, get the xpath from the db given the uuid
 
             let query = { uuid: change.uuid };
@@ -176,7 +177,7 @@ const save = async (req, res) => {
             // Check inner html
 
             if($(item).html() != change.old_inner_html) {
-                return res.status(400).json({ message: "Wrong element: " + " current html" + $(item).html() + " " + change.old_inner_html});
+                return res.status(400).json({ message: "Wrong element: " + " current html " + $(item).html() + " old html " + change.old_inner_html});
             }
 
             $(item).html(change.new_inner_html);

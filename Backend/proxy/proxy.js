@@ -154,16 +154,17 @@ const proxy = (async (req, res) => {
             for(let element of all_elements) {
                 let el_uuid = uuid();
                 let el_xpath = getCSSPath(element);
-                $(element).attr('uuid', el_uuid);
-                $(element).attr('xpath', el_xpath);
-                // TODO: [V4+] store old innnerHTML in the DB
 
                 const element_ref_doc = {
                     url: full_resource_path_sanitized,
                     uuid: el_uuid,
                     xpath: el_xpath,
-                    inner_html: 'NOT IMPLEMENTED'
+                    inner_html: $(element).html()
                 };
+
+                // TODO: [V4+] store old innnerHTML in the DB
+
+                $(element).attr('sitesliceData', encodeURIComponent(JSON.stringify(element_ref_doc)));
 
                 list_of_uuid_refs.push(element_ref_doc);
 

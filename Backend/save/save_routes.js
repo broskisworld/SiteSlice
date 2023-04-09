@@ -20,9 +20,9 @@ router.use(body_parser.json());
 router.use(body_parser.urlencoded({ extended: false }));
 
 // debug
-router.use((req, res, next) => {
-    console.log(`[SAVE ROUTES] ${req.method} ${req.hostname}${req.url}`)
-});
+// router.use((req, res, next) => {
+//     console.log(`[SAVE ROUTES] ${req.method} ${req.hostname}${req.url}`)
+// });
 
 const save_schema = {
     url: {

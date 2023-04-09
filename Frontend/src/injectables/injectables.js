@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
 
     // Set all elements with UUIDs to contenteditable true with jQuery
 
-    $("*[uuid]:not(:has(*))").attr("contenteditable", "true");
+    $("*[siteslicedata]:not(:has(*))").attr("contenteditable", "true");
 
     // Add a initialized class to html tag
 
@@ -68,11 +68,24 @@ window.addEventListener('load', function () {
 
         // window.parent.document.dispatchEvent(changed);
 
+        let sitesliceData = JSON.parse(decodeURIComponent($(this).attr("siteslicedata")));
+
+        console.log("SITESLICEDATA: ", sitesliceData);
+
         window.parent.postMessage({
             message: "changed",
-            uuid: $(this).attr("uuid"),
+            uuid: sitesliceData.uuid,
             new_inner_html: $(this).html(),
+            old_inner_html: sitesliceData.inner_html,
         }, "*");
+
+        sitesliceData.inner_html = $(this).html();
+
+        //console.log("SITESLICEDATA: ", sitesliceData);
+
+        // // TODO: This assumes that the save will succeed. If it doesn't, then the data will be out of sync.
+
+        //$(this).attr('siteslicedata', encodeURIComponent(JSON.stringify(sitesliceData)));
 
         // Stop propagation so only the lowest element emits.
 
