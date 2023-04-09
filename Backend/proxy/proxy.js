@@ -166,21 +166,21 @@ const proxy = (async (req, res) => {
 
                 $(element).attr('sitesliceData', encodeURIComponent(JSON.stringify(element_ref_doc)));
 
-                list_of_uuid_refs.push(element_ref_doc);
+                // list_of_uuid_refs.push(element_ref_doc);
 
                 // console.log(Object.keys(element));
             }
 
-            elements_db = await client.db(MONGO_DB);
-            elements_collection = await elements_db.collection(MONGO_COLLECTION);
+            // elements_db = await client.db(MONGO_DB);
+            // elements_collection = await elements_db.collection(MONGO_COLLECTION);
 
             // add to DB
-            console.log(`about to add ${list_of_uuid_refs.length} elements to the DB!`);
-            const options = { ordered: true }; // this option prevents additional documents from being inserted if one fails
-            // console.log(JSON.stringify(list_of_uuid_refs))
-            const add_refs_to_db_result = await elements_collection.insertMany(list_of_uuid_refs);
+            // console.log(`about to add ${list_of_uuid_refs.length} elements to the DB!`);
+            // const options = { ordered: true }; // this option prevents additional documents from being inserted if one fails
+            // // console.log(JSON.stringify(list_of_uuid_refs))
+            // const add_refs_to_db_result = await elements_collection.insertMany(list_of_uuid_refs);
 
-            console.log(`Added ${add_refs_to_db_result} elements to the DB!`);
+            // console.log(`Added ${add_refs_to_db_result} elements to the DB!`);
             
             // Add Injectables.js
             $('head').append('<script src="http://localhost:8080/src/injectables/injectables.js"></script>')

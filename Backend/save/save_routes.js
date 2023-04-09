@@ -52,6 +52,11 @@ const save_schema = {
         isInt: true,
         errorMessage: 'Invalid FTP port'
     },
+    xpath: {
+        in: 'body',
+        isString: true,
+        errorMessage: 'Invalid xpath'
+    },
     changes: {
         in: 'body',
         isArray: true,

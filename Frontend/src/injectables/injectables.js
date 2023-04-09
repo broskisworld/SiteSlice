@@ -75,6 +75,7 @@ window.addEventListener('load', function () {
         window.parent.postMessage({
             message: "changed",
             uuid: sitesliceData.uuid,
+            xpath: sitesliceData.xpath,
             new_inner_html: $(this).html(),
             old_inner_html: sitesliceData.inner_html,
         }, "*");
