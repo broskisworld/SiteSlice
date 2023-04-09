@@ -78,24 +78,24 @@ const save = async (req, res) => {
     // Access database
     // TODO: Remove database
 
-    console.log("Accessing database...");
-    let db;
-    let collection;
+    // console.log("Accessing database...");
+    // let db;
+    // let collection;
 
-    try {
-        db = client.db(DB_NAME);
-        collection = db.collection(DB_COLLECTION);
-    } catch (err) {
-        return res.status(500).json({ message: "Error connecting to database: " + err.toString()});
-    }
+    // try {
+    //     db = client.db(DB_NAME);
+    //     collection = db.collection(DB_COLLECTION);
+    // } catch (err) {
+    //     return res.status(500).json({ message: "Error connecting to database: " + err.toString()});
+    // }
 
     // Version 4, Login via FTP
 
-    let query = { uuid: changes[0].uuid };
-    let result = await collection.findOne(query);
-    let element_selector = result.xpath;
+    // let query = { uuid: changes[0].uuid };
+    // let result = await collection.findOne(query);
+    // let element_selector = result.xpath;
 
-    let test_selector = String(element_selector);
+    let test_selector = changes[0].xpath;
 
     let $;
 
@@ -154,12 +154,12 @@ const save = async (req, res) => {
             console.log("Change: ", change);
             // For each change, get the xpath from the db given the uuid
 
-            let query = { uuid: change.uuid };
-            let result = await collection.findOne(query);
-            console.log("Result: ", result);
-            let element_selector = result.xpath;
+            // let query = { uuid: change.uuid };
+            // let result = await collection.findOne(query);
+            // console.log("Result: ", result);
+            // let element_selector = result.xpath;
 
-            let selector_str = String(element_selector);
+            let selector_str = change.xpath;
 
             function findItemWithCSSPath(cssPath) {
                 let all_elements = $('*');

@@ -89,6 +89,7 @@ export default function Editor() {
         uuid: key,
         new_inner_html: changes[key].new_inner_html,
         old_inner_html: changes[key].old_inner_html,
+        xpath: changes[key].xpath
       });
     }
     
@@ -183,6 +184,7 @@ export default function Editor() {
         uuid: message.data.uuid,
         new_inner_html: message.data.new_inner_html,
         old_inner_html: message.data.old_inner_html,
+        xpath: message.data.xpath,
       };
 
       setChanges(changes);
