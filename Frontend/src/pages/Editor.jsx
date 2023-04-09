@@ -26,6 +26,7 @@ export default function Editor() {
   const [port, setPort] = useState("21");
   const [isValidForm, setIsValidForm] = useState(false);
   const [formStatus, setFormStatus] = useState(true);
+  const [iFrameReset, setIFrameReset] = useState(1);
 
 
   const isFormValid = () => {
@@ -87,6 +88,7 @@ export default function Editor() {
       values.push({
         uuid: key,
         new_inner_html: changes[key].new_inner_html,
+        old_inner_html: changes[key].old_inner_html,
       });
     }
     
@@ -101,7 +103,7 @@ export default function Editor() {
         changes: values
     }
 
-    axios.post("http://localhost:5500/save", {
+    axios.post(`http://${CONFIG.API_HOSTNAME}:${CONFIG.BACKEND_PORT}/save`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -109,6 +111,8 @@ export default function Editor() {
     })
     .then((response) => {
       setFormStatus(true)
+      setIFrameReset(iFrameReset + 1);
+      setChanges({})
       close();
     })
     .catch(function(error){
@@ -178,6 +182,7 @@ export default function Editor() {
       changes[message.data.uuid] = {
         uuid: message.data.uuid,
         new_inner_html: message.data.new_inner_html,
+        old_inner_html: message.data.old_inner_html,
       };
 
       setChanges(changes);
@@ -218,6 +223,7 @@ export default function Editor() {
       <div className="bg-white flex justify-center items-center w-full h-[calc(100vh-4rem)] p-4 pt-0">
         <iframe
           className="w-full h-full border-2 border-gray-300"
+          key={iFrameReset}
           src={iframeSrc}></iframe>
       </div>
       { !formStatus && <p className="absolute right-4 bottom-4 rounded-md bg-red-500 bg-opacity-75 px-4 py-2 text-white font-bold">Something went wrong, please check your FTP information.</p>}
