@@ -104,12 +104,7 @@ export default function Editor() {
         changes: values
     }
 
-    axios.post(`http://${CONFIG.API_HOSTNAME}:${CONFIG.BACKEND_PORT}/save`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: body
-    })
+    axios.post(`http://${CONFIG.API_HOSTNAME}:${CONFIG.BACKEND_PORT}/save`, body)
     .then((response) => {
       setFormStatus(true)
       setIFrameReset(iFrameReset + 1);

@@ -25,20 +25,7 @@ const save = async (req, res) => {
 
     console.log("Saving changes...");
 
-    // FIXME: Temporary body parser patch
-
-    let ftp_username = req.body.ftp_username != undefined ? req.body.ftp_username : req.body.body["ftp_username"];
-    let ftp_password = req.body.ftp_password != undefined ? req.body.ftp_password : req.body.body["ftp_password"];
-    let ftp_host = req.body.ftp_host != undefined ? req.body.ftp_host : req.body.body["ftp_host"];
-    let ftp_port = req.body.ftp_port != undefined ? req.body.ftp_port : req.body.body["ftp_port"];
-
-    let changes = req.body.changes != undefined ? req.body.changes : req.body.body["changes"];
-
-    console.log("FTP username: ", ftp_username);
-    console.log("FTP password: ", ftp_password);
-    console.log("FTP host: ", ftp_host);
-    console.log("FTP port: ", ftp_port);
-    console.log("Changes: ", changes);
+    console.log("Body: ", req.body);
 
     // Validate the request
 
@@ -100,6 +87,15 @@ const save = async (req, res) => {
     let $;
 
     let file;
+
+    // Add tmp folder if it doesn't exist
+    try {
+        if(!fs.existsSync("save/tmp")) {
+            fs.mkdirSync("save/tmp");
+        }
+    } catch (err) {
+        console.log("Error creating tmp folder: ", err);
+    }
 
     console.log("Getting potential files via FTP...")
     for(let file_data of ftp_potential_files) {
