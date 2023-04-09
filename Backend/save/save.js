@@ -76,6 +76,8 @@ const save = async (req, res) => {
     console.log("Potential files: ", ftp_potential_files);
 
     // Access database
+    // TODO: Remove database
+
     console.log("Accessing database...");
     let db;
     let collection;
