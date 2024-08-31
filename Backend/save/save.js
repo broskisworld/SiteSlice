@@ -9,11 +9,12 @@ const DB_NAME = "SiteSliceDB";
 const DB_COLLECTION = "elements";
 
 const COMMON_PATHS = [
+    "lic/Lundahl-backup/homedir/public_html",
     "public_html",
     "www",
     "var/www",
     "usr/share/nginx/html",
-    "usr/share/nginx/www",
+    "usr/share/nginx/www"
     //"*.com/public_html",
 ];
 
@@ -34,6 +35,12 @@ const save = async (req, res) => {
     if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });
     }
+
+    let ftp_username = req.body["ftp_username"];
+    let ftp_password = req.body["ftp_password"];
+    let ftp_host = req.body["ftp_host"];
+    let ftp_port = req.body["ftp_port"];
+    let changes = req.body["changes"];
 
     // 11MVP - Search for element (file) in database
 
@@ -81,6 +88,8 @@ const save = async (req, res) => {
     // let query = { uuid: changes[0].uuid };
     // let result = await collection.findOne(query);
     // let element_selector = result.xpath;
+
+    console.log(JSON.stringify(req.body));
 
     let test_selector = changes[0].xpath;
 

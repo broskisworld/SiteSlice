@@ -60,7 +60,9 @@ const proxy = (async (req, res) => {
             console.log(`d: ${full_resource_path_sanitized}`)
         }
 
-        let original_url_response = await axios.get(full_resource_path_sanitized);
+        // full_resource_path_sanitized = full_resource_path_sanitized.replace('._com', '.com');
+
+        let original_url_response = await axios.get(full_resource_path_sanitized.replace('._com', '.com'));
         let original_html =  original_url_response.data;
         console.log('got original data from ' + full_resource_path_sanitized);
 
@@ -109,16 +111,26 @@ const proxy = (async (req, res) => {
                 // PROXY_URL_QUERY
                 // let attr_replacement = `${attr_data.attr_name}=${attr_data.quotation_mark_1}${attr_data.protocol_plus_colon}${attr_data.slashes}${attr_data.hostname_or_path}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}${attr_data.query_params.length > 0 ? '&' : '?'}proxy_url=${proxy_url}${attr_data.quotation_mark_2}`;
 
-                let hostname_or_path_with_protocol_capture = attr_data.protocol_plus_colon + attr_data.slashes + attr_data.hostname_or_path;    // Everything up to the first slash
+                let hostname_or_path_tld_safe = attr_data.hostname_or_path.replace('.com', '._com');
+                // TODO: handle https
+                let hostname_or_path_with_protocol_capture = /* attr_data.protocol_plus_colon*/'http:' + attr_data.slashes + hostname_or_path_tld_safe;    // Everything up to the first slash
                 let attr_original_url = hostname_or_path_with_protocol_capture + attr_data.rest_of_path + attr_data.query_param_separator + attr_data.query_params;   // The link w/o attr stuff
                 let attr_new_url = attr_original_url;
 
                 if(attr_data.slashes == '//') {
                     // Absolute path with protocol slashes -- must include hostname
-                    attr_new_url = `${attr_data.hostname_or_path_with_protocol_capture}.${CONFIG.PROXY_HOSTNAME}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}`;
+                    console.log('----')
+                    console.log(`attr_name: ${attr_data.attr_name}`)
+                    console.log(`quotation_mark_1: ${attr_data.quotation_mark_1}`)
+                    console.log(`protocol_plus_colon: ${attr_data.protocol_plus_colon}`)
+                    console.log(`protocol: ${attr_data.protocol}`)
+                    console.log(`slashes: ${attr_data.slashes}`)
+                    console.log(`hostname_or_path: ${attr_data.hostname_or_path}`)
+                    console.log(`hostname_or_path_with_protocol_capture: ${hostname_or_path_with_protocol_capture}`);
+                    attr_new_url = `${hostname_or_path_with_protocol_capture}.${CONFIG.PROXY_HOSTNAME}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}`;
                 } else if(attr_data.slashes == '/') {
                     // Relative path from hostname -- Hostname does not need to be included
-                    attr_new_url = `${attr_data.hostname_or_path_with_protocol_capture}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}`;
+                    attr_new_url = `${hostname_or_path_with_protocol_capture}${attr_data.rest_of_path}${attr_data.query_param_separator}${attr_data.query_params}`;
                 } else if(attr_data.slashes == '') {
                     // Relative path -- hostname does not need to be included unless first part of the string is hostname
                     // change in way it works: making assumptions that it is actually an absolute path because it has a . in the first part of the string doesnt work for href="index.html"
@@ -196,7 +208,9 @@ const proxy = (async (req, res) => {
 
                 headers_set_ct++;
             }
-            console.log(`set ${headers_set_ct} headers to match proxied request`);
+            res.removeHeader('X-Frame-Options');
+            // TODO: implement Content-Security-Policy header parsing. The CSP policy "frame-ancestors" has replaced X-Frame-Options in modern browsers.
+            console.log(`set ${headers_set_ct} headers to match proxied request except to override X-Frame-Options`);
 
             let site_header_bar = `<div style="background:#fdba74;">${site_slice_header}</div></br>`;
             res.status(200).send(`${DEBUG_MODE ? site_header_bar : ''}${doc_output_str}`);
@@ -216,7 +230,7 @@ const proxy = (async (req, res) => {
                 });
                 let get_non_html_file = axios({
                     method: 'get',
-                    url: full_resource_path_sanitized,
+                    url: full_resource_path_sanitized.replace('._com', '.com'),
                     responseType: 'stream'
                 }).then((axios_response) => {
                     axios_response.data.pipe(res);

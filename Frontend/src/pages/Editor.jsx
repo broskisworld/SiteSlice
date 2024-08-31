@@ -161,7 +161,8 @@ export default function Editor() {
     // Assumptions: the URL provided will always be an absolute URL
     let host = link_data.protocol_plus_colon + link_data.slashes + link_data.hostname_or_path;
     let path_and_query = link_data.rest_of_url;
-    let iframe_src = `${host}.${CONFIG.PROXY_HOSTNAME}:${CONFIG.BACKEND_PORT}${path_and_query}`;
+    let host_safe_tld = host.replace('.com', '._com');
+    let iframe_src = `${host_safe_tld}.${CONFIG.PROXY_HOSTNAME}:${CONFIG.BACKEND_PORT}${path_and_query}`;
 
     //if i have alink https://google.com/test, i need to separate
     
