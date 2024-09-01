@@ -1,11 +1,12 @@
 # SiteSlice
 
 [![Site Slice Demo 🌐 - Watch Video](https://cdn.loom.com/sessions/thumbnails/e800c3ff27f24cb8b561e78d790bb51e-86c6cea38da8aa0b-full-play.gif)](https://www.loom.com/share/e800c3ff27f24cb8b561e78d790bb51e)
+
 [Site Slice Demo 🌐 - Watch Video](https://www.loom.com/share/e800c3ff27f24cb8b561e78d790bb51e)
 
 Example site used in demo: [lic.0thdraft.com](http://lic.0thdraft.com)
 
-[Figjam](https://www.figma.com/board/VycCxXxoyuFOHKiP6GqBw8/JB-SiteSlice?node-id=0-1&t=5XpbVy4f0RP6OwKX-1)
+[SiteSlice Design Figjam](https://www.figma.com/board/VycCxXxoyuFOHKiP6GqBw8/JB-SiteSlice?node-id=0-1&t=5XpbVy4f0RP6OwKX-1)
 
 ## Launch commands
 
